@@ -1,0 +1,287 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "b338a794-9f76-49a8-a22c-5e6489b8daf4" ],
+    "widgets" : [ {
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "default" : "All",
+      "enumeratedList" : [ {
+        "label" : "All",
+        "value" : "All"
+      }, {
+        "label" : "New",
+        "value" : "New"
+      }, {
+        "label" : "Update",
+        "value" : "Update"
+      }, {
+        "label" : "Reminder",
+        "value" : "Reminder"
+      } ],
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : "Type",
+      "name" : "DroplistNotificationType",
+      "row" : 1,
+      "type" : "Droplist",
+      "uuid" : "05673258-bfa3-447c-b07f-a142f64cda45",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "allValuesAreStrings" : true,
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "default" : "All",
+      "enumeratedList" : [ {
+        "label" : "All",
+        "value" : "All"
+      }, {
+        "label" : "Received",
+        "value" : "Received"
+      }, {
+        "label" : "Acknowledged",
+        "value" : "Ack"
+      } ],
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : "Status",
+      "name" : "DroplistNotificationStatus",
+      "row" : 0,
+      "type" : "Droplist",
+      "uuid" : "1c1864e4-b6f9-421f-8411-fa56fa371347",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "borderThickness" : 0,
+      "children" : [ "6e5aa4a9-7ef1-4d8b-b792-2c39a98c610e" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "horzMargin" : 0,
+      "name" : "HorizontalLayout71",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "27d2f5d9-e958-4e8c-a36c-bef4c48c00e8",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "vertWeight" : 10,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "buttonLabel" : "Refresh Now",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "right",
+      "name" : "Button25",
+      "row" : -1,
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "2d16b45b-9a83-4330-8391-a67fd8679f56",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "allValuesAreStrings" : true,
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "default" : "All",
+      "enumeratedList" : [ {
+        "label" : "All",
+        "value" : "All"
+      }, {
+        "label" : "1",
+        "value" : "1"
+      }, {
+        "label" : "2",
+        "value" : "2"
+      }, {
+        "label" : "3",
+        "value" : "3"
+      }, {
+        "label" : "4",
+        "value" : "4"
+      }, {
+        "label" : "5",
+        "value" : "5"
+      } ],
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : "Level",
+      "name" : "DroplistNotificationLevel",
+      "row" : -1,
+      "type" : "Droplist",
+      "uuid" : "45f7bbfb-cf29-469b-b51e-5be253360872",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#1e293b",
+      "borderColor" : "Default",
+      "children" : [ "c15b891d-ae16-4a75-8871-3a4e67b92236", "2d16b45b-9a83-4330-8391-a67fd8679f56" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "left",
+      "name" : "HorizontalLayout29",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "5f753963-6e18-49ec-af8d-773c5e6c6bb8",
+      "v" : 19,
+      "vertGravity" : "top",
+      "vertMargin" : 0,
+      "vertWeight" : 1,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "clearOnDataArrive" : true,
+      "column" : -1,
+      "columnDescriptors" : [ {
+        "colorRules" : null,
+        "dataType" : "DateTime",
+        "propertyName" : "createdAt",
+        "selected" : false,
+        "title" : "Received"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "incident_level",
+        "selected" : false,
+        "title" : "Level"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "messageBody",
+        "selected" : false,
+        "title" : "Message"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "notificationType",
+        "selected" : false,
+        "title" : "Type"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "status",
+        "selected" : false,
+        "title" : "Status"
+      } ],
+      "columnSort" : false,
+      "dataStreamGroupedByFiltersString" : "",
+      "dataStreamUUID" : "1511a609-4efb-47a6-8192-e63345b4591f",
+      "dataType" : null,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "left",
+      "name" : "DataTableNotifications",
+      "operation" : "insert",
+      "row" : -1,
+      "rowBackgroundColor" : "#1e293b",
+      "rowsPerPage" : 15,
+      "showMaximizeButton" : false,
+      "showPaging" : true,
+      "type" : "DataTable",
+      "uuid" : "6e5aa4a9-7ef1-4d8b-b792-2c39a98c610e",
+      "v" : 19,
+      "vertGravity" : "top",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#1e293b",
+      "borderColor" : "Default",
+      "children" : [ "1c1864e4-b6f9-421f-8411-fa56fa371347", "05673258-bfa3-447c-b07f-a142f64cda45", "45f7bbfb-cf29-469b-b51e-5be253360872", "a9cfa7cc-2caa-4f5e-a756-9d06ae5a8870", "f65157f0-e50c-4ec7-8550-9af91c9dbcf4" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "name" : "HorizontalLayout30",
+      "row" : 2,
+      "type" : "HorizontalLayout",
+      "uuid" : "90533593-e08a-41e0-9bfa-50d4091a2c50",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "vertWeight" : 1,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "defaultValue" : "",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "inputType" : "text",
+      "label" : "Search",
+      "name" : "InputStringNotificationSearch",
+      "optional" : true,
+      "placeholder" : "",
+      "row" : 0,
+      "type" : "InputString",
+      "uuid" : "a9cfa7cc-2caa-4f5e-a756-9d06ae5a8870",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "borderThickness" : 0,
+      "children" : [ "5f753963-6e18-49ec-af8d-773c5e6c6bb8", "90533593-e08a-41e0-9bfa-50d4091a2c50", "27d2f5d9-e958-4e8c-a36c-bef4c48c00e8" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 10,
+      "name" : "VerticalLayout81",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "b338a794-9f76-49a8-a22c-5e6489b8daf4",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "transparent",
+      "borderColor" : "Default",
+      "column" : -1,
+      "fontFamily" : "default",
+      "fontSize" : 32,
+      "fontStyle" : "default",
+      "fontWeight" : "default",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "left",
+      "name" : "StaticText16",
+      "row" : -1,
+      "text" : "VANTIQ Incident Notification Dashboard",
+      "type" : "StaticText",
+      "uuid" : "c15b891d-ae16-4a75-8871-3a4e67b92236",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "platform",
+      "borderColor" : "Default",
+      "buttonLabel" : "Clear Filters",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : ".",
+      "labelColor" : "#22252b",
+      "name" : "Button11",
+      "row" : 2,
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "f65157f0-e50c-4ec7-8550-9af91c9dbcf4",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

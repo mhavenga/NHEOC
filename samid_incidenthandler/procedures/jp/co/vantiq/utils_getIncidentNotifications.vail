@@ -1,0 +1,80 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE utils.getIncidentNotifications(In_incident_id)
+
+var qResult = select createdAt,  messageBody, notificationType from jp.co.vantiq.notifications
+where incidentId == In_incident_id
+order by createdAt
+
+//for (q in qResult){
+//	q = Utils.stripSystemProperties(q)
+//}
+
+return qResult
+
+/*
+{
+      "_id": "69f7023949dc1231140d97d9",
+      "id": "1c5d7898-46c7-11f1-ab40-9edf9b065935",
+      "incidentId": "93147",
+      "messageBody": "Alert Level 1 New Incident \nIncident: Technological hazards - مخاطر تكنولوجية Electricity outages - انقطاع الكهرباء at مستشفى الاهلي السعودي\nEvent Date: 2026-05-03 09:42:59\n\nفرضية",
+      "createdAt": "2026-05-03T08:07:21.352Z",
+      "notificationType": "New",
+      "status": "Received",
+      "metadata": {
+         "incident_id": 93147,
+         "incident_type": "Technological hazards - مخاطر تكنولوجية",
+         "incident_subtype": "Electricity outages - انقطاع الكهرباء",
+         "casualties": 0,
+         "casualties_Major": 0,
+         "casualties_Moderate": 0,
+         "casualties_Minor": 0,
+         "occurred_at": "2026-05-03T06:42:59.000+0000",
+         "IncidentDateTime": "2026-05-03T06:42:59.000+0000",
+         "RegionReceiveDate": "2026-05-03T07:42:59.000+0000",
+         "region": "مكة",
+         "description": "Technological hazards - مخاطر تكنولوجية Electricity outages - انقطاع الكهرباء",
+         "facility_type": "Private hospital - مستشفى - خاص",
+         "facilityName": "مستشفى الأهلي السعودي ",
+         "IncidentLocationType": "Inside the Facility - داخل المنشأة",
+         "status": "Open - مفتوح",
+         "IncidentStatus": "Open - مفتوح",
+         "entrydate": "2026-05-03T08:01:53.763+0000",
+         "recordnumber": "05-26-01515",
+         "employeePosition": "HCF Mekkah Saudi National Hospital",
+         "notes": "فرضية",
+         "IncidentLocation": "مستشفى الاهلي السعودي",
+         "IsFacility": true,
+         "HealthCareFacilityName": "مستشفى الأهلي السعودي ",
+         "response_level": 1,
+         "incidentCloseDateTime": null,
+         "hospital_id": null,
+         "Hospitals": "[{\"id\":\"1960\",\"name\":\"مستشفى الأهلي السعودي \"}]",
+         "newIncident": true,
+         "review_result": {
+            "approved": true,
+            "message": "[Approved] The content is appropriate. Pass to Action Agent."
+         },
+         "4s_capability": {
+            "er_beds": 0,
+            "er_ccupied": 0,
+            "er_available": 0,
+            "occupancy_rate": 0
+         },
+         "case_number": 1,
+         "incident_level": {
+            "level": 1,
+            "patientRatio": 0
+         },
+         "suggestedLevel": 1
+      },
+      "incident_level": "1",
+      "occurred_at": "2026-05-03T06:42:59.000Z",
+      "ars_namespace": "NHEOC_SAMID",
+      "ars_version": 1,
+      "ars_createdAt": "2026-05-03T08:07:21.355Z",
+      "ars_createdBy": "dev"
+   },
+
+
+*/

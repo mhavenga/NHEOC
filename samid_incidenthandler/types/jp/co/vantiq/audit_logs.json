@@ -1,0 +1,76 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : {
+    "sortOrder" : [ "incident_id", "event_type", "agent_name", "input_snapshot", "output_snapshot", "log_content", "created_at" ]
+  },
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "jp.co.vantiq.audit_logs",
+  "naturalKey" : [ ],
+  "properties" : {
+    "agent_name" : {
+      "description" : "investigation/diagnostic/orchestrator/action/null",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "created_at" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "DateTime",
+      "unique" : false
+    },
+    "event_type" : {
+      "description" : "agent/incident",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "incident_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "input_snapshot" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "log_content" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "output_snapshot" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

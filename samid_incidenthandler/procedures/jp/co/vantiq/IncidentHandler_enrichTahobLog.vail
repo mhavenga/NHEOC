@@ -1,0 +1,8 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.enrichTahobLog(tahobLog Object REQUIRED): Object
+/*
+	TODO: Implement to attach necessary data
+	Currently, EOS member manually fills out deails
+	This procedure may call for LLM depending on requirements
+*/
+return tahobLog

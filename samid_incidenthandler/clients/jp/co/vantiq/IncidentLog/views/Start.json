@@ -1,0 +1,43 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "10c6b88a-b8a5-4b3b-8835-2eea88e85d4c" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "a4eebc97-7ab2-486f-8919-27ba649b3e74" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "VerticalLayout22",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "10c6b88a-b8a5-4b3b-8835-2eea88e85d4c",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderThickness" : 1,
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "horzizontalScrollPolicy" : "auto",
+      "html" : "<div id=\"mhIncidentLog1Root\" class=\"mh-incidentlog1\">\n  <div class=\"mh-incidentlog1__container\">\n    <header class=\"mh-incidentlog1__header\">\n      <div class=\"mh-incidentlog1__header-left\">\n        <h1 class=\"mh-incidentlog1__title\"><strong>SAMID - Incident Status Dashboard</strong></h1>  Powered by Vantiq\n      </div>\n      <div class=\"mh-incidentlog1__header-controls\">\n        <input type=\"text\" id=\"mhIncidentLog1ApiEndpoint\" class=\"mh-incidentlog1__api-endpoint\" placeholder=\"API Endpoint URL\" readonly>\n        <button id=\"mhIncidentLog1RefreshBtn\" class=\"mh-incidentlog1__btn mh-incidentlog1__btn--primary\">Refresh Now</button>\n        <button id=\"mhIncidentLog1LogoutBtn\" class=\"mh-incidentlog1__btn mh-incidentlog1__btn--primary\">Logout</button>\n        <label class=\"mh-incidentlog1__auto-refresh-toggle\">\n          <input type=\"checkbox\" id=\"mhIncidentLog1AutoRefreshToggle\" checked>\n          <span>Auto-refresh (30s)</span>\n        </label>\n      </div>\n    </header>\n\n    <div class=\"mh-incidentlog1__filters\">\n      <div class=\"mh-incidentlog1__filter-group\">\n        <label for=\"mhIncidentLog1StatusFilter\">Status:</label>\n        <select id=\"mhIncidentLog1StatusFilter\">\n          <option value=\"\">All</option>\n          <option value=\"open\">Open</option>\n          <option value=\"closed\">Closed</option>\n        </select>\n      </div>\n\n      <div class=\"mh-incidentlog1__filter-group\">\n        <label for=\"mhIncidentLog1LevelFilter\">Level:</label>\n        <select id=\"mhIncidentLog1LevelFilter\">\n          <option value=\"\">All</option>\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n        </select>\n      </div>\n\n      <div class=\"mh-incidentlog1__filter-group\">\n        <label for=\"mhIncidentLog1SearchInput\">Search:</label>\n        <input type=\"text\" id=\"mhIncidentLog1SearchInput\" placeholder=\"Search incidents...\">\n      </div>\n\n      <button id=\"mhIncidentLog1ClearFiltersBtn\" class=\"mh-incidentlog1__btn mh-incidentlog1__btn--secondary\">Clear Filters</button>\n    </div>\n\n    <div class=\"mh-incidentlog1__stats\">\n      <div class=\"mh-incidentlog1__stat-card\">\n        <span class=\"mh-incidentlog1__stat-label\">Total Incidents</span>\n        <span class=\"mh-incidentlog1__stat-value\" id=\"mhIncidentLog1TotalIncidents\">0</span>\n      </div>\n      <div class=\"mh-incidentlog1__stat-card\">\n        <span class=\"mh-incidentlog1__stat-label\">Open</span>\n        <span class=\"mh-incidentlog1__stat-value mh-incidentlog1__stat-value--open\" id=\"mhIncidentLog1OpenCount\">0</span>\n      </div>\n      <div class=\"mh-incidentlog1__stat-card\">\n        <span class=\"mh-incidentlog1__stat-label\">Closed</span>\n        <span class=\"mh-incidentlog1__stat-value mh-incidentlog1__stat-value--closed\" id=\"mhIncidentLog1ClosedCount\">0</span>\n      </div>\n      <div class=\"mh-incidentlog1__stat-card\">\n        <span class=\"mh-incidentlog1__stat-label\">Last Updated</span>\n        <span class=\"mh-incidentlog1__stat-value\" id=\"mhIncidentLog1LastUpdated\">-</span>\n      </div>\n    </div>\n\n    <div class=\"mh-incidentlog1__table-wrapper\">\n      <table id=\"mhIncidentLog1Table\" class=\"mh-incidentlog1__table\">\n        <thead id=\"mhIncidentLog1TableHead\"></thead>\n        <tbody id=\"mhIncidentLog1TableBody\">\n          <tr>\n            <td style=\"text-align:center;color:#666;\">Loading incidents...</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n\n    <div id=\"mhIncidentLog1LoadingSpinner\" class=\"mh-incidentlog1__loading\" style=\"display:none;\">\n      <div class=\"mh-incidentlog1__spinner\"></div>\n      <p>Loading incidents...</p>\n    </div>\n\n    <div id=\"mhIncidentLog1ErrorMessage\" class=\"mh-incidentlog1__error-message\" style=\"display:none;\"></div>\n  </div>\n\n  <div id=\"mhIncidentLog1DetailModal\" class=\"mh-incidentlog1__modal\">\n    <div class=\"mh-incidentlog1__modal-content\">\n      <span class=\"mh-incidentlog1__close\">&times;</span>\n      <h2>Incident Details</h2>\n      <div id=\"mhIncidentLog1DetailContent\"></div>\n    </div>\n  </div>\n</div>",
+      "name" : "StaticHtml3",
+      "row" : -1,
+      "type" : "StaticHtml",
+      "uuid" : "a4eebc97-7ab2-486f-8919-27ba649b3e74",
+      "v" : 19,
+      "vertGravity" : "center",
+      "verticalScrollPolicy" : "auto",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

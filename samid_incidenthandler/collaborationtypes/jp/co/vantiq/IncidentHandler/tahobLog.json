@@ -1,0 +1,414 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "0fc733cb-a605-4e2a-8d32-727d165ee7be" : {
+          "x" : -454.85000133514404,
+          "y" : 640
+        },
+        "3f84c88a-1fe3-4181-820b-90e2e7a03147" : {
+          "x" : -122.59634113311768,
+          "y" : 400
+        },
+        "42551276-0d47-43b4-952e-473e0d318af1" : {
+          "x" : -580.3382349014282,
+          "y" : 720
+        },
+        "47476c9a-83ab-42fd-9236-32963908b459" : {
+          "x" : -270.22515392303467,
+          "y" : 640
+        },
+        "4ad6e9a5-a473-4269-84a4-e14074eb1a97" : {
+          "x" : -84.25109386444092,
+          "y" : 640
+        },
+        "59103f9e-1326-473b-825b-0bcdf724706a" : {
+          "x" : 35.10502052307129,
+          "y" : 240
+        },
+        "5b048f0b-a5ba-47a1-9279-e6537179d5ca" : {
+          "x" : -117.51157855987549,
+          "y" : 720
+        },
+        "6517c47c-c043-4762-9e45-8a287b31477e" : {
+          "x" : -43.70689105987549,
+          "y" : 560
+        },
+        "69cef2f9-92d8-4348-90bf-7de015839599" : {
+          "x" : 39.95793628692627,
+          "y" : 640
+        },
+        "6ab849ce-d435-486d-82bd-3157dc54839e" : {
+          "x" : -363.21218395233154,
+          "y" : 640
+        },
+        "7e1d96d4-f056-4f8d-8811-eff0e97a2d5a" : {
+          "x" : 308.62349224090576,
+          "y" : 720
+        },
+        "9951592f-8498-4ba1-a101-f8da8adef948" : {
+          "x" : -349.0534830093384,
+          "y" : 720
+        },
+        "aafda947-a89c-491c-8937-ad0a3f9226e8" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "ab27d296-5f62-47c6-8c25-9f02616cf970" : {
+          "x" : 92.16188335418701,
+          "y" : 320
+        },
+        "ab7d5770-b236-4608-8f4d-2a1b22b2aca5" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "b0892849-62c9-4458-9fc1-2bbeb40e17f2" : {
+          "x" : -37.94499206542969,
+          "y" : 240
+        },
+        "b5eb807c-9568-4216-8ffe-a376d0b65d6c" : {
+          "x" : 83.82460308074951,
+          "y" : 720
+        },
+        "ccfcebbd-ca65-4db6-8030-02e13c7a25c0" : {
+          "x" : -177.2381238937378,
+          "y" : 640
+        },
+        "db6bce30-08bf-4490-8d25-2b3b05303070" : {
+          "x" : -122.59634113311768,
+          "y" : 480
+        },
+        "ef31c004-4026-4595-ab97-3989021103cb" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "f20e746a-e3b5-4a3b-9ed0-6987337865dd" : {
+          "x" : -191.16042613983154,
+          "y" : 560
+        },
+        "f4660f1d-8ab9-436d-a60f-c988a3204cd4" : {
+          "x" : -122.59634113311768,
+          "y" : 320
+        },
+        "fa96e301-d8d2-443b-96f0-4d2b45940cc0" : {
+          "x" : -810.4195070266724,
+          "y" : 720
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.7595164103720041,
+      "translate" : [ 722.6783192029424, -149.42590628525892 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "minimizeErrors" : true,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AttachDetails" : {
+      "configuration" : {
+        "childStreams" : [ "IsCBRNE" ],
+        "imports" : null,
+        "parameters" : {
+          "tahobLog" : "event"
+        },
+        "parentStreams" : [ "TahobLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.enrichTahobLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "AttachDetails",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "aafda947-a89c-491c-8937-ad0a3f9226e8"
+    },
+    "BranchByLevel" : {
+      "configuration" : {
+        "Level1Streams" : [ "Level1_Notification" ],
+        "Level2Streams" : [ "Level2_Notification" ],
+        "Level3Streams" : [ "Level3_Notification" ],
+        "Level4Streams" : [ "Level4_Notification" ],
+        "Level5Streams" : [ "Level5_Notification" ],
+        "OutOfThresholdStreams" : [ "OutOfThreshold_NoAction" ],
+        "childStreams" : [ ],
+        "conditions" : [ {
+          "code" : "event.incident_level == null",
+          "label" : "OutOfThreshold",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.incident_level == 1",
+          "label" : "Level1",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.incident_level == 2",
+          "label" : "Level2",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.incident_level == 3",
+          "label" : "Level3",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.incident_level == 4",
+          "label" : "Level4",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.incident_level == 5",
+          "label" : "Level5",
+          "language" : "VAIL"
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "ClassifyLevel" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "Level0" : "6bde6f95-5cb8-40cd-845c-3c96fda8d557",
+        "Level1" : "0fc733cb-a605-4e2a-8d32-727d165ee7be",
+        "Level2" : "6ab849ce-d435-486d-82bd-3157dc54839e",
+        "Level3" : "47476c9a-83ab-42fd-9236-32963908b459",
+        "Level4" : "ccfcebbd-ca65-4db6-8030-02e13c7a25c0",
+        "Level5" : "4ad6e9a5-a473-4269-84a4-e14074eb1a97",
+        "OutOfThreshold" : "69cef2f9-92d8-4348-90bf-7de015839599"
+      },
+      "name" : "BranchByLevel",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "f20e746a-e3b5-4a3b-9ed0-6987337865dd"
+    },
+    "ClassifyAsLevel5" : {
+      "configuration" : {
+        "childStreams" : [ "Level5_Notification" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "IsCBRNE:YES" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "level" : {
+            "expression" : "5",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyAsLevel5",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "ab27d296-5f62-47c6-8c25-9f02616cf970"
+    },
+    "ClassifyCase" : {
+      "configuration" : {
+        "childStreams" : [ "ClassifyLevel" ],
+        "imports" : null,
+        "parameters" : {
+          "occupancyRate" : "event.4s_capability.occupancy_rate"
+        },
+        "parentStreams" : [ "Get4sCapability" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.classifyCaseNumber",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "case_number",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyCase",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "3f84c88a-1fe3-4181-820b-90e2e7a03147"
+    },
+    "ClassifyLevel" : {
+      "configuration" : {
+        "childStreams" : [ "BranchByLevel", "LogStream" ],
+        "imports" : null,
+        "parameters" : {
+          "IncidentLocationType" : "event.IncidentLocationType",
+          "caseNumber" : "event.case_number",
+          "casualties" : "event.casualties",
+          "erAvailable" : "event.4s_capability.er_available",
+          "facility_type" : "event.facility_type"
+        },
+        "parentStreams" : [ "ClassifyCase" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.classifyIncidentLevel",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "incident_level",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyLevel",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "db6bce30-08bf-4490-8d25-2b3b05303070"
+    },
+    "Get4sCapability" : {
+      "configuration" : {
+        "childStreams" : [ "ClassifyCase" ],
+        "imports" : null,
+        "parameters" : {
+          "FacilityName" : "event.HealthCareFacilityName",
+          "regionId" : "event.region_id"
+        },
+        "parentStreams" : [ "IsCBRNE:NO" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.get4sCapability",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "4s_capability",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Get4sCapability",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "f4660f1d-8ab9-436d-a60f-c988a3204cd4"
+    },
+    "IsCBRNE" : {
+      "configuration" : {
+        "NOStreams" : [ "Get4sCapability" ],
+        "YESStreams" : [ "ClassifyAsLevel5" ],
+        "childStreams" : null,
+        "conditions" : [ {
+          "code" : "event.incident_type == \"CBRNE\"",
+          "label" : "YES",
+          "language" : ""
+        }, {
+          "code" : "event.incident_type != \"CBRNE\"",
+          "label" : "NO",
+          "language" : ""
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "AttachDetails" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "NO" : "b0892849-62c9-4458-9fc1-2bbeb40e17f2",
+        "YES" : "59103f9e-1326-473b-825b-0bcdf724706a"
+      },
+      "name" : "IsCBRNE",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "ef31c004-4026-4595-ab97-3989021103cb"
+    },
+    "Level1_Notification" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:Level1" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Level1_Notification",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "fa96e301-d8d2-443b-96f0-4d2b45940cc0"
+    },
+    "Level2_Notification" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:Level2" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Level2_Notification",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "42551276-0d47-43b4-952e-473e0d318af1"
+    },
+    "Level3_Notification" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:Level3" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Level3_Notification",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "9951592f-8498-4ba1-a101-f8da8adef948"
+    },
+    "Level4_Notification" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:Level4" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Level4_Notification",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "5b048f0b-a5ba-47a1-9279-e6537179d5ca"
+    },
+    "Level5_Notification" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:Level5", "ClassifyAsLevel5" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Level5_Notification",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "b5eb807c-9568-4216-8ffe-a376d0b65d6c"
+    },
+    "LogStream" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "ClassifyLevel" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "LogStream",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "6517c47c-c043-4762-9e45-8a287b31477e"
+    },
+    "OutOfThreshold_NoAction" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "BranchByLevel:OutOfThreshold" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "OutOfThreshold_NoAction",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "7e1d96d4-f056-4f8d-8811-eff0e97a2d5a"
+    },
+    "TahobLog" : {
+      "configuration" : {
+        "childStreams" : [ "AttachDetails" ],
+        "eventTypeName" : "tahobLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.IncidentHandler",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "TahobLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "ab7d5770-b236-4608-8f4d-2a1b22b2aca5"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.IncidentHandler.tahobLog"
+}

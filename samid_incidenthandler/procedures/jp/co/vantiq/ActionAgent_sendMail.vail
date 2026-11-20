@@ -1,0 +1,28 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendMail(messageObj Object)
+
+/*
+messageObj = {
+	"level": 1,
+	"subject": "This is the message subject",
+	"body": "This is the message body"
+	
+}
+*/
+var doSend = false
+var mailList = select one email FROM jp.co.vantiq.emailGroups
+where emailGroup == "POC"  //toString(messageObj.level)
+
+
+if (doSend){
+	PUBLISH {text: "Email message"} TO SOURCE jp.co.vantiq.email 
+		USING {
+			from: "nheoc.poc@gmail.com",
+			to : mailList.email,
+			subject: messageObj.subject,
+			text: messageObj.message
+		}
+}else{
+	log.info(messageObj.message)
+}
+	

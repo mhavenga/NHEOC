@@ -1,0 +1,4 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.acknowledgeNotification(id String REQUIRED)
+
+update jp.co.vantiq.notifications(status: "Ack") WHERE id == id

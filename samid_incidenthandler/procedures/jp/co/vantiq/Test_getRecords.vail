@@ -1,0 +1,6 @@
+package jp.co.vantiq
+stateless PROCEDURE Test.getRecords()
+
+select * from jp.co.vantiq.TahobData
+where incident_id == "94207"
+order by ts

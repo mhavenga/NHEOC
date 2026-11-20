@@ -1,0 +1,12 @@
+package jp.co.vantiq
+stateless PROCEDURE AuditLogManager.getIncidentIDs()
+
+var incidentList = [{value = "All", label = "All"}]
+for (incident in select incident_id from jp.co.vantiq.incident_statuses){
+	var item = {}
+	item.value = incident.incident_id
+	item.label = incident.incident_id
+	push(incidentList, item)
+}
+
+return incidentList

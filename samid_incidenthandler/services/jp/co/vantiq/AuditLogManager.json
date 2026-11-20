@@ -1,0 +1,150 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "actionAgentInputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/ActionAgentInputLog",
+      "isReliable" : false
+    },
+    "actionAgentOutputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/ActionAgentOutputLog",
+      "isReliable" : false
+    },
+    "diagnosticAgentInputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/DiagnosticAgentInputLog",
+      "isReliable" : false
+    },
+    "diagnosticAgentOutputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/DiagnosticAgentOutputLog",
+      "isReliable" : false
+    },
+    "incidentLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/IncidentLog",
+      "isReliable" : false
+    },
+    "investigationAgentInputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/InvestigationAgentInputLog",
+      "isReliable" : false
+    },
+    "investigationAgentOutputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/InvestigationAgentOutputLog",
+      "isReliable" : false
+    },
+    "orchestratorAgentInputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/OrchestratorAgentInputLog",
+      "isReliable" : false
+    },
+    "orchestratorAgentOutputLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.AuditLogManager.LogHandler/OrchestratorAgentOutputLog",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "buildAgentInputLog",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "agentName",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "inputSnapshot",
+      "required" : true,
+      "type" : null
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "buildAgentOutputLog",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "agentName",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "outputSnapshot",
+      "required" : true,
+      "type" : null
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "buildIncidentLog",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "logContent",
+      "required" : true,
+      "type" : null
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "getIncidentIDs",
+    "parameters" : [ ]
+  }, {
+    "name" : "transformDiagnosticAgentResult",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "diagnosticAgentResult",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "String"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.AuditLogManager",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

@@ -1,0 +1,22 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.getRegionBeds()
+
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT Region, Network_TypeEN, status,  count(*) as beds FROM [NHEOC-AI02].[dbo].[BedStatus] "+
+//			"where General_Sector_ENU = 'Emergency Beds' " +
+//			"where Region = N'الرياض'"+
+  			"group by Region, Network_TypeEN, status"
+
+
+
+	FOR (row in results) {
+			if (row.status == "Available"){
+				UPSERT jp.co.vantiq.region_beds(region: row.Region, networktype: row.Network_TypeEN, available: row.beds)
+			}else{
+				UPSERT jp.co.vantiq.region_beds(region: row.Region, networktype: row.Network_TypeEN, occupied: row.beds)
+			}
+      }
+
+	update jp.co.vantiq.region_beds(occupied: 0) where occupied == null
+
+	return results

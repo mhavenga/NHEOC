@@ -1,0 +1,73 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "description" : "ID, Pattern, Region\n\t1   Case1, Outside threshold (RG01 - 75% occupancy)\n\t2   Case1, Level1 (RG01)\n\t3   Case1, Level2 (RG01)\n\t4   Case1, Level3 (RG01)\n\t5   Case1, Level4 (RG01)\n\t6   Case1, Level5 (RG01)\n\t7   Case2, Level1 (RG02 - 85% occupancy)\n\t8   Case2, Level2 (RG02)\n\t9   Case2, Level3 (RG02)\n\t10  Case2, Level4 (RG02)\n\t11  Case2, Level5 (RG02)\n\t12  Case3, Level1 (RG03 - 95% occupancy)\n\t13  Case3, Level2 (RG03)\n\t14  Case3, Level3 (RG03)\n\t15  Case3, Level4 (RG03)\n\t16  Case3, Level5 - CBRNE (RG03)",
+    "name" : "publishNewIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "id",
+      "required" : true,
+      "type" : "Integer"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "description" : "- Original Incident Mapping from publishNewIncident Procedure - \n\tID, Pattern, Region\n\t1   Case1, Outside threshold (RG01 - 75% occupancy)\n\t2   Case1, Level1 (RG01)\n\t3   Case1, Level2 (RG01)\n\t4   Case1, Level3 (RG01)\n\t5   Case1, Level4 (RG01)\n\t6   Case1, Level5 (RG01)\n\t7   Case2, Level1 (RG02 - 85% occupancy)\n\t8   Case2, Level2 (RG02)\n\t9   Case2, Level3 (RG02)\n\t10  Case2, Level4 (RG02)\n\t11  Case2, Level5 (RG02)\n\t12  Case3, Level1 (RG03 - 95% occupancy)\n\t13  Case3, Level2 (RG03)\n\t14  Case3, Level3 (RG03)\n\t15  Case3, Level4 (RG03)\n\t16  Case3, Level5 - CBRNE (RG03)",
+    "name" : "publishUpdatedIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "id",
+      "required" : true,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "casualties",
+      "required" : true,
+      "type" : "Integer"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "description" : "- Original Incident Mapping from publishNewIncident Procedure - \n\tID, Pattern, Region\n\t1   Case1, Outside threshold (RG01 - 75% occupancy)\n\t2   Case1, Level1 (RG01)\n\t3   Case1, Level2 (RG01)\n\t4   Case1, Level3 (RG01)\n\t5   Case1, Level4 (RG01)\n\t6   Case1, Level5 (RG01)\n\t7   Case2, Level1 (RG02 - 85% occupancy)\n\t8   Case2, Level2 (RG02)\n\t9   Case2, Level3 (RG02)\n\t10  Case2, Level4 (RG02)\n\t11  Case2, Level5 (RG02)\n\t12  Case3, Level1 (RG03 - 95% occupancy)\n\t13  Case3, Level2 (RG03)\n\t14  Case3, Level3 (RG03)\n\t15  Case3, Level4 (RG03)\n\t16  Case3, Level5 - CBRNE (RG03)",
+    "name" : "publishCloseIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "id",
+      "required" : true,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "casualties",
+      "required" : true,
+      "type" : "Integer"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.Tahob",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

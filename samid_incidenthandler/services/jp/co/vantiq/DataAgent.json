@@ -1,0 +1,79 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "newIncidents" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.DataAgent.newIncidents/EventStream",
+      "isReliable" : false
+    },
+    "updateRegionBeds" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.DataAgent.updateRegionBeds/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : "jp.co.vantiq.DataAgent.GlobalState",
+  "interface" : [ {
+    "name" : "backupIncidents",
+    "parameters" : [ ]
+  }, {
+    "name" : "checkRegion",
+    "parameters" : [ ]
+  }, {
+    "name" : "getHospitalBedsAll",
+    "parameters" : [ ]
+  }, {
+    "name" : "getIncidents",
+    "parameters" : [ ]
+  }, {
+    "name" : "getRegionBeds",
+    "parameters" : [ ]
+  }, {
+    "name" : "getlastUpdate",
+    "parameters" : [ ]
+  }, {
+    "name" : "getnewIncidents",
+    "parameters" : [ ]
+  }, {
+    "name" : "publishNewIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "queryData",
+    "parameters" : [ ]
+  }, {
+    "name" : "test",
+    "parameters" : [ ]
+  }, {
+    "name" : "updatelastUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "newValue",
+      "required" : false,
+      "type" : "DateTime"
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.DataAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

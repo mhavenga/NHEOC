@@ -1,0 +1,45 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "expiresAfter" : "10 days",
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "jp.co.vantiq.TahobData",
+  "naturalKey" : [ ],
+  "properties" : {
+    "Data" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Object",
+      "unique" : false
+    },
+    "incident_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "ts" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

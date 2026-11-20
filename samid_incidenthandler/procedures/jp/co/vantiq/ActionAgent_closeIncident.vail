@@ -1,0 +1,5 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.closeIncident(incidentID)
+
+
+update jp.co.vantiq.incident_statuses("status": "Closed - مغلق","is_open": false) WHERE incident_id == incidentID

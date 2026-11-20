@@ -1,0 +1,41 @@
+package jp.co.vantiq
+stateless PROCEDURE utils.calculateIncidentDuration(In_incident_id)
+
+var qResult = select one IncidentDateTime, incidentCloseDateTime FROM jp.co.vantiq.incident_statuses
+where incident_id == In_incident_id
+
+var IncidentDateTime = date(qResult.IncidentDateTime, "date", "epochMilliseconds")
+var IncidentEndDateTime = date(now(), "date", "epochMilliseconds")
+
+if (qResult.incidentCloseDateTime){
+	IncidentEndDateTime = date(qResult.incidentCloseDateTime, "date", "epochMilliseconds")
+	
+}
+var duration = (IncidentEndDateTime - IncidentDateTime)/1000
+
+var days = Math.floor(duration / 86400)
+var remainingAfterDays = duration - (days * 86400)
+var hours = Math.floor(remainingAfterDays / 3600)
+var remainingAfterHours = remainingAfterDays - (hours * 3600)
+var minutes = Math.floor(remainingAfterHours/60)
+
+var durationString 
+
+if (days > 0){
+	durationString = toInteger(days) +" days, "+toInteger(hours)+" hours,  "+ toInteger(minutes)+ " minutes"
+}else{
+	if (hours > 0){
+		durationString = toInteger(hours)+" hours,  "+ toInteger(minutes)+ " minutes"
+	}else{
+		durationString = toInteger(minutes)+ " minutes"
+	}
+}
+
+
+//return toInteger(days)+"d "+toInteger(hours)+"h "+ toInteger(minutes)+ "m"
+
+return durationString 
+
+//return date(duration, "epochMilliseconds", "epochHours")
+
+//epochMinutes

@@ -1,0 +1,19 @@
+{
+  "activationConstraint" : "",
+  "active" : false,
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "autoUnwind" : false,
+  "config" : {
+    "host" : "smtp.gmail.com",
+    "password" : "/system.secrets/gmail",
+    "passwordType" : "secret",
+    "port" : 587,
+    "username" : "nheoc.poc@gmail.com"
+  },
+  "isUnavailable" : false,
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "jp.co.vantiq.email",
+  "type" : "EMAIL"
+}

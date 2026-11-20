@@ -1,0 +1,17 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.getUpdates()
+
+
+var offset = jp.co.vantiq.Telegram.updateOffsetGet()
+
+var response = SELECT ONE FROM SOURCE Telegram WITH method = "GET", 
+					headers = {}, 
+					body = {},
+					query = { offset: offset, timeout: 5 },
+					path = "getUpdates"
+
+if (length(response.result) > 0){
+	jp.co.vantiq.Telegram.updateOffsetUpdate(response.result[length(response.result)-1].update_id+1)	
+}
+
+return response

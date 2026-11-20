@@ -1,0 +1,82 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "ff64b26d-413f-483d-96c5-4e12ac002ecc" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "ff7d5080-30ac-4b36-901f-00f1eb97b38c" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 4.849366945097819,
+      "translate" : [ 679.8850739954673, 157.45782682080394 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "sendUpdateReminderMessage" ],
+        "eventTypeName" : "triggerReminder",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.ActionAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "ff7d5080-30ac-4b36-901f-00f1eb97b38c"
+    },
+    "sendUpdateReminderMessage" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "incidentID" : "event.incident",
+          "translate" : "false"
+        },
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendUpdateReminderMessage",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendUpdateReminderMessage",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ff64b26d-413f-483d-96c5-4e12ac002ecc"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.ActionAgent.triggerReminder"
+}

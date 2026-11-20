@@ -1,0 +1,25 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "investigationAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.DiagnosticAgent.DiagnosticResultHandler/InvestigationAgentResult",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.DiagnosticAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

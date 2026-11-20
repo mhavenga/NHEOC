@@ -1,0 +1,353 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "09610562-10cb-49c4-82b6-64f5123dc1a2" : {
+          "x" : -203.40897846221924,
+          "y" : 400
+        },
+        "1fbfd9c1-305b-44f2-8a6e-3115a3e956c9" : {
+          "x" : -203.40897846221924,
+          "y" : 320
+        },
+        "3603ef07-f457-45ab-871c-c8c12bb7bc6c" : {
+          "x" : 10.494864463806152,
+          "y" : 400
+        },
+        "623c241e-e5df-4aec-ac4d-53d9c53df779" : {
+          "x" : -81.4517560005188,
+          "y" : 160
+        },
+        "719b5f2e-01e5-4ff3-a150-e9b2780ed730" : {
+          "x" : -87.73534536361694,
+          "y" : 640
+        },
+        "84a3af41-25a8-4788-8425-12d3be015b33" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "88bffc94-51a0-451d-bdd6-7806a57f102d" : {
+          "x" : -45.10208749771118,
+          "y" : 240
+        },
+        "8ecc9680-7281-4dec-833f-9c7c6a5b3924" : {
+          "x" : 10.494864463806152,
+          "y" : 480
+        },
+        "92cb8539-7edf-43fd-8db2-218b5d918709" : {
+          "x" : 240.87217807769775,
+          "y" : 0
+        },
+        "a644d304-9f52-404f-92c3-aa8668a55903" : {
+          "x" : -115.40650606155396,
+          "y" : 240
+        },
+        "b1d51c84-616b-407c-8e50-75c8b59d55c9" : {
+          "x" : 10.494864463806152,
+          "y" : 560
+        },
+        "be18650d-f163-44b9-80f1-ed780d830f47" : {
+          "x" : 96.12136030197144,
+          "y" : 640
+        },
+        "c9c1763b-2a5b-4aa6-a68a-f9c10b912615" : {
+          "x" : -81.4517560005188,
+          "y" : 80
+        },
+        "cf764101-0918-4bcc-890a-06c6dc5bd5ba" : {
+          "x" : 88.26396989822388,
+          "y" : 80
+        },
+        "ed7009b7-bf59-4c9d-811b-9ab4df84235e" : {
+          "x" : 12.88722630315179,
+          "y" : 318.8038190803272
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.8359939400082735,
+      "translate" : [ 494.9115827139558, -78.51805601905181 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "modifiers" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "ClassifyAsLevel5" : {
+      "configuration" : {
+        "childStreams" : [ "VAIL" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "IsCBRNE:Yes" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "level" : {
+            "expression" : "5",
+            "type" : "expression"
+          },
+          "suggestedLevel" : {
+            "expression" : "5",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyAsLevel5",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "1fbfd9c1-305b-44f2-8a6e-3115a3e956c9"
+    },
+    "ClassifyCase" : {
+      "configuration" : {
+        "childStreams" : [ "ClassifyLevel" ],
+        "imports" : null,
+        "parameters" : {
+          "occupancyRate" : "event.4s_capability.occupancy_rate"
+        },
+        "parentStreams" : [ "Get4sCapability" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.classifyCaseNumber",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "case_number",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyCase",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "3603ef07-f457-45ab-871c-c8c12bb7bc6c"
+    },
+    "ClassifyLevel" : {
+      "configuration" : {
+        "childStreams" : [ "GetsuggestedLevel" ],
+        "imports" : null,
+        "parameters" : {
+          "IncidentLocationType" : "event.IncidentLocationType",
+          "caseNumber" : "event.case_number",
+          "casualties" : "event.casualties",
+          "erAvailable" : "event.4s_capability.er_available",
+          "facility_type" : "event.facility_type"
+        },
+        "parentStreams" : [ "ClassifyCase" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.classifyIncidentLevel",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "incident_level",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "ClassifyLevel",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "8ecc9680-7281-4dec-833f-9c7c6a5b3924"
+    },
+    "ForUI_Delay5sec" : {
+      "configuration" : {
+        "childStreams" : [ "IsCBRNE" ],
+        "delay" : "100",
+        "imports" : null,
+        "parentStreams" : [ "InvestigationAgentResult" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay5sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "c9c1763b-2a5b-4aa6-a68a-f9c10b912615"
+    },
+    "Get4sCapability" : {
+      "configuration" : {
+        "childStreams" : [ "ClassifyCase" ],
+        "imports" : null,
+        "parameters" : {
+          "FacilityName" : "event.facilityName",
+          "regionId" : "event.region"
+        },
+        "parentStreams" : [ "IsCBRNE:No" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.get4sCapability",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "4s_capability",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Get4sCapability",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ed7009b7-bf59-4c9d-811b-9ab4df84235e"
+    },
+    "GetsuggestedLevel" : {
+      "configuration" : {
+        "childStreams" : [ "PassToOrchestrator", "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incidentLog" : "event"
+        },
+        "parentStreams" : [ "ClassifyLevel" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.getsuggestedLevel",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : "incident_level",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "GetsuggestedLevel",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "b1d51c84-616b-407c-8e50-75c8b59d55c9"
+    },
+    "InvestigationAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentStart", "ForUI_Delay5sec" ],
+        "eventTypeName" : "investigationAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.DiagnosticAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "84a3af41-25a8-4788-8425-12d3be015b33"
+    },
+    "IsCBRNE" : {
+      "configuration" : {
+        "NoStreams" : [ "Get4sCapability" ],
+        "YesStreams" : [ "ClassifyAsLevel5" ],
+        "childStreams" : null,
+        "conditions" : [ {
+          "code" : "startsWith(event.incident_type , \"Hazardous materials\")",
+          "label" : "Yes",
+          "language" : "VAIL"
+        }, {
+          "code" : "!startsWith(event.incident_type , \"Hazardous materials\")",
+          "label" : "No",
+          "language" : "VAIL"
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "ForUI_Delay5sec" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "No" : "88bffc94-51a0-451d-bdd6-7806a57f102d",
+        "Yes" : "a644d304-9f52-404f-92c3-aa8668a55903"
+      },
+      "name" : "IsCBRNE",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "623c241e-e5df-4aec-ac4d-53d9c53df779"
+    },
+    "LogAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentOutputLog",
+        "parentStreams" : [ "GetsuggestedLevel", "VAIL" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "719b5f2e-01e5-4ff3-a150-e9b2780ed730"
+    },
+    "LogAgentStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentInputLog",
+        "parentStreams" : [ "InvestigationAgentResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "cf764101-0918-4bcc-890a-06c6dc5bd5ba"
+    },
+    "PassToOrchestrator" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentResult",
+        "parentStreams" : [ "GetsuggestedLevel", "VAIL" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.OrchestratorAgent"
+      },
+      "downstreamReferences" : { },
+      "name" : "PassToOrchestrator",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "be18650d-f163-44b9-80f1-ed780d830f47"
+    },
+    "VAIL" : {
+      "configuration" : {
+        "VAIL" : "event.incident_level = {}\nevent.incident_level.level = event.level",
+        "childStreams" : [ "LogAgentResult", "PassToOrchestrator" ],
+        "imports" : null,
+        "parentStreams" : [ "ClassifyAsLevel5" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAIL",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "09610562-10cb-49c4-82b6-64f5123dc1a2"
+    },
+    "updateIncidentLevel" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "incidentId" : "event.incident_id",
+          "notes" : "event.incident_level.notes",
+          "patientRatio" : "event.incident_level.patientRatio",
+          "suggestedLevel" : "event.incident_level.suggestedLevel"
+        },
+        "parentStreams" : [ ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.OrchestratorAgent.updateIncidentLevel",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "updateIncidentLevel",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "92cb8539-7edf-43fd-8db2-218b5d918709"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.DiagnosticAgent.DiagnosticResultHandler"
+}

@@ -1,0 +1,4 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.deleteScheduledEvents(incident)
+
+delete system.scheduledevents where  name == "jp.co.vantiq."+incident 

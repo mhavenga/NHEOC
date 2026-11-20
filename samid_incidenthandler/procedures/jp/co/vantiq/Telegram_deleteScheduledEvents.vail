@@ -1,0 +1,4 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.deleteScheduledEvents(incident)
+
+delete system.scheduledevents where  name == "jp.co.vantiq."+incident 

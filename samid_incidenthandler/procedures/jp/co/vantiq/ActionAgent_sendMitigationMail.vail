@@ -1,0 +1,13 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendMitigationMail(data Object)
+
+var messageString  = replace(data.lastMessage.msg,"\<br>\<br>Do you want to send this as Email notification\?\<br>","")
+
+
+//ActionAgent.routeMessage("Level1", messageString, "Mitigation")
+
+insert jp.co.vantiq.notifications(id: uuid(), incidentId: data.data.incident_id, messageBody: messageString, createdAt: now(),
+									notificationType: "Mitigation", status: "Received", metadata: data.data, 
+									incident_level: data.data.suggested_level, occurred_at: data.data.occurred_at)
+
+//log.info(data)

@@ -1,0 +1,2000 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "02428d95-0e0e-41a1-be5d-7e08e75f0907" : {
+          "x" : -1580.6327173569623,
+          "y" : 320
+        },
+        "037a9025-dec1-41b9-a95a-e11dd28cfa3d" : {
+          "x" : -2512.5198938706344,
+          "y" : 560
+        },
+        "07266fe0-f7ae-4710-b39f-15e5ec14a90e" : {
+          "x" : -747.2959825852338,
+          "y" : 320
+        },
+        "0781d2f2-e0f0-430c-9d00-dd770469fb42" : {
+          "x" : -1335.1841852524701,
+          "y" : 400
+        },
+        "089031e8-b745-4482-8acc-4a4eece68cb8" : {
+          "x" : 1206.7484519621905,
+          "y" : 400
+        },
+        "08aa1578-ee2d-4331-9670-4f09121cde7e" : {
+          "x" : -1580.6327173569623,
+          "y" : 400
+        },
+        "0993137e-eebc-4ac5-8674-63154d27d8d5" : {
+          "x" : 1257.119233860689,
+          "y" : 240
+        },
+        "0abba0a4-d500-449d-822d-a25912e6d3e3" : {
+          "x" : -256.41540454415724,
+          "y" : 320
+        },
+        "0dc2affb-6341-46ca-aaad-a63fd2806d46" : {
+          "x" : 252.9784314772662,
+          "y" : 240
+        },
+        "0ef5f685-1d9a-4b86-8f73-8d7aa6b72568" : {
+          "x" : 373.68770386190977,
+          "y" : 240
+        },
+        "131f4b5e-22f4-4ce5-984f-d86a2c17ff2f" : {
+          "x" : 716.7468955657062,
+          "y" : 400
+        },
+        "1548645a-09c4-434c-a10a-bed8c7ea737e" : {
+          "x" : -1846.6304323533002,
+          "y" : 320
+        },
+        "15fc6479-385a-4651-b08c-2aac59c5e65b" : {
+          "x" : -1335.1841852524701,
+          "y" : 480
+        },
+        "160b431c-1a39-428c-80bb-07492e320782" : {
+          "x" : -1154.628475413603,
+          "y" : 480
+        },
+        "18c5850c-c925-4ff9-8b41-3dd122d5381c" : {
+          "x" : -348.6502742767334,
+          "y" : 160
+        },
+        "19898fdd-6e0c-42ec-8d90-a351f7f9e20e" : {
+          "x" : -2512.5198938706344,
+          "y" : 400
+        },
+        "1c3a7491-6973-4d60-8a71-3121ff0a23f3" : {
+          "x" : 853.6762378356036,
+          "y" : 560
+        },
+        "1c9a1ca2-3f62-437b-82d7-8b29d5f14cfc" : {
+          "x" : 1658.0594604155597,
+          "y" : 320
+        },
+        "1f0a8ead-bdb4-4470-8c78-f55926af49d0" : {
+          "x" : 779.8214223525104,
+          "y" : 240
+        },
+        "21d66e98-2e1b-4b03-87f5-cb6d40430aa2" : {
+          "x" : -438.40956328896914,
+          "y" : 240
+        },
+        "2329299e-2e2b-429c-8d52-35466bc2e7d5" : {
+          "x" : -381.0676243164961,
+          "y" : 320
+        },
+        "272d2b6c-7bfa-4307-8398-86df5956be8b" : {
+          "x" : -2512.5198938706344,
+          "y" : 480
+        },
+        "2bf0410b-b2cf-4c46-a808-c5b39d6e968b" : {
+          "x" : -1154.628475413603,
+          "y" : 560
+        },
+        "2d4e9f40-3f69-405d-86a9-846b8c98f553" : {
+          "x" : 541.9514720580157,
+          "y" : 400
+        },
+        "2de06e13-6d01-4822-84f0-ce6312785ca8" : {
+          "x" : 206.2088394165039,
+          "y" : 160
+        },
+        "2e8d3118-34f4-4b01-8264-7f9db98b4a3a" : {
+          "x" : -1872.006571040434,
+          "y" : 240
+        },
+        "2f2f5e3b-c30e-45aa-8a6a-01cb0827baca" : {
+          "x" : 1346.3038146636065,
+          "y" : 320
+        },
+        "3495dfa2-0fed-44c5-a373-8330c2a699d6" : {
+          "x" : -107.90611951803092,
+          "y" : 400
+        },
+        "35600d2c-7764-468d-bd35-e5d5699e71db" : {
+          "x" : -1335.1841852524701,
+          "y" : 320
+        },
+        "3a535c8f-b2f0-4e48-bb7c-bfb7de8fff49" : {
+          "x" : -1154.628475413603,
+          "y" : 400
+        },
+        "3a88d2e1-fae6-43c0-9ab5-d5291eab2d6b" : {
+          "x" : -582.8467323639815,
+          "y" : 320
+        },
+        "3e5f981a-0faf-43e4-8f1a-4dfe640c8b88" : {
+          "x" : -747.2959825852338,
+          "y" : 400
+        },
+        "3e9c3242-ef0f-4495-9f74-d8c8e16b5c64" : {
+          "x" : -164.43107414245605,
+          "y" : 160
+        },
+        "3ffe74bf-a38d-47fe-8b87-3b176745369c" : {
+          "x" : -1580.6327173569623,
+          "y" : 480
+        },
+        "44891bc9-201f-4518-9bb3-2a113559b679" : {
+          "x" : -256.52144050598145,
+          "y" : 160
+        },
+        "4a59e086-864f-4a25-9573-e206045cb3e3" : {
+          "x" : 977.7121284148272,
+          "y" : 320
+        },
+        "4ed53a62-b7c4-4ab4-89c8-9e1a094bb95f" : {
+          "x" : 853.6762378356036,
+          "y" : 400
+        },
+        "4ed96725-96cc-418c-88eb-0e63690ce018" : {
+          "x" : -582.8467323639815,
+          "y" : 400
+        },
+        "4f2b5031-fcfc-4880-a14b-93e7cec705ee" : {
+          "x" : -71.14289474487305,
+          "y" : 160
+        },
+        "4f6dd862-a8a4-4ce0-86be-96d2381c83e3" : {
+          "x" : -1846.6304323533002,
+          "y" : 480
+        },
+        "50c7dbef-764b-481c-8bb2-de470e65fce1" : {
+          "x" : -594.4754068711225,
+          "y" : 240
+        },
+        "510232c4-4b6b-4644-85f1-5c7efee0378e" : {
+          "x" : 687.3571488997516,
+          "y" : 240
+        },
+        "52b796dd-440b-4199-8941-7812e6c76e33" : {
+          "x" : -2107.616153941435,
+          "y" : 400
+        },
+        "56342247-ae7f-4dec-aa6a-66cc5687caca" : {
+          "x" : 541.9514720580157,
+          "y" : 320
+        },
+        "567eccf7-f017-4cb8-877c-aee9f34eead4" : {
+          "x" : -107.90611951803092,
+          "y" : 560
+        },
+        "5a902faa-3cd9-4519-8fa2-49a1e0719a96" : {
+          "x" : 1389.2932288786944,
+          "y" : 400
+        },
+        "5c082695-5e27-4ef3-bbc5-8c445d4e8c87" : {
+          "x" : 1148.8420837065753,
+          "y" : 320
+        },
+        "5cc5a338-4c7d-4055-baa9-5d5a75c95bd0" : {
+          "x" : 556.8380184173584,
+          "y" : 160
+        },
+        "60b520dd-a1e2-4bef-86ce-63c93c4cc2a8" : {
+          "x" : 1561.9393146178302,
+          "y" : 400
+        },
+        "678b7787-0fce-47d4-855c-2f48b75dab12" : {
+          "x" : 380.52395248413086,
+          "y" : 160
+        },
+        "6a5943d1-af9e-473e-8da8-ea5a9e059031" : {
+          "x" : 69.0930679514515,
+          "y" : 400
+        },
+        "6b0f9c9a-7566-41d4-b9a6-c62b345f2bc6" : {
+          "x" : 456.1143872878131,
+          "y" : 240
+        },
+        "6e2f981c-9744-4db7-a1c3-0fb26136cae0" : {
+          "x" : 1561.9393146178302,
+          "y" : 560
+        },
+        "6fb8bb6a-f3f0-44b0-9ec7-86e1eef90776" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "7800fd76-a200-4767-a00e-9fd5cdb8aea2" : {
+          "x" : 467.2253475189209,
+          "y" : 160
+        },
+        "7b3c3c26-b86b-4d3f-8a18-9e6352e82602" : {
+          "x" : 853.6762378356036,
+          "y" : 480
+        },
+        "7ce11e86-acd4-4b33-8f5e-32ec7754c03a" : {
+          "x" : 843.6892192503985,
+          "y" : 320
+        },
+        "8098fe02-3fa1-4275-b775-ad0ca601584e" : {
+          "x" : 1682.4982268950519,
+          "y" : 480
+        },
+        "84066386-46b0-43cd-bf8c-679d3ff4fe0d" : {
+          "x" : 1845.5598495146808,
+          "y" : 400
+        },
+        "8582a4c3-6722-4f13-9135-36c656702dd9" : {
+          "x" : -2512.5198938706344,
+          "y" : 320
+        },
+        "86472358-60cc-48fb-8526-e2d125e9fb89" : {
+          "x" : -613.0594177246094,
+          "y" : 160
+        },
+        "87e77ae8-55fc-4dd0-8559-4be2d5ba5856" : {
+          "x" : 17.024566425996667,
+          "y" : 240
+        },
+        "88152dee-9045-485c-822d-a7970222ab01" : {
+          "x" : 293.3663959503174,
+          "y" : 160
+        },
+        "8962cd0b-e2f7-481b-bfa1-18aa29d211d9" : {
+          "x" : -2324.6341402390426,
+          "y" : 320
+        },
+        "8c4c2b8b-c246-4924-8fcc-c5c370c95133" : {
+          "x" : 646.0815525054932,
+          "y" : 160
+        },
+        "8c50fd3a-a09c-49f5-8a05-9a1fe2cd2053" : {
+          "x" : 1389.2932288786944,
+          "y" : 480
+        },
+        "8cc5d39a-0873-4b4a-96bf-1af589218771" : {
+          "x" : -2107.616153941435,
+          "y" : 320
+        },
+        "8d5bbada-0488-4d5f-bcfa-d4a2fb91faca" : {
+          "x" : -1300.3641931870404,
+          "y" : 240
+        },
+        "8e87536c-e985-4a47-84fe-86e00573cedb" : {
+          "x" : -717.7367401123047,
+          "y" : 160
+        },
+        "9112e695-242e-4bed-b715-bb884a01972f" : {
+          "x" : -1626.9042456009809,
+          "y" : 240
+        },
+        "921586e9-553c-414f-a858-6f1e503f962e" : {
+          "x" : -2107.616153941435,
+          "y" : 480
+        },
+        "939b4ddb-9a07-453b-9683-4e6ad580445f" : {
+          "x" : 22.627424240112305,
+          "y" : 160
+        },
+        "9464a63d-1ea8-4b69-83c8-652cbbde4b8d" : {
+          "x" : -1846.6304323533002,
+          "y" : 400
+        },
+        "95be7ab6-2a05-4463-b812-fc434eb5038d" : {
+          "x" : -523.1111183166504,
+          "y" : 160
+        },
+        "981a484b-977a-46d8-b62e-c2a4395318ca" : {
+          "x" : -1049.8648226120893,
+          "y" : 240
+        },
+        "99999d34-a6cb-4cd1-867d-d7bf80df62f2" : {
+          "x" : 1682.4982268950519,
+          "y" : 400
+        },
+        "9ec73d77-1597-4d7f-82f6-f308e12dba19" : {
+          "x" : -967.65741370706,
+          "y" : 240
+        },
+        "a375d742-683e-4bcf-8c5d-13a0782ea9e8" : {
+          "x" : 541.9514720580157,
+          "y" : 480
+        },
+        "a51edf59-76ac-49e5-af0a-23c8c1c46f6c" : {
+          "x" : -125.36318992165957,
+          "y" : 240
+        },
+        "a531f738-4ac0-4438-b6a7-7f5403580baf" : {
+          "x" : 116.2839412689209,
+          "y" : 160
+        },
+        "a5f1c5d1-3ce5-48cd-b48d-a56541a55395" : {
+          "x" : 732.4397869110107,
+          "y" : 160
+        },
+        "a7fe1720-43bb-4693-8743-4ab9acc1bea2" : {
+          "x" : -747.2959825852338,
+          "y" : 240
+        },
+        "ab39e360-51e6-401c-802c-e462a7e78640" : {
+          "x" : 1494.6417148253497,
+          "y" : 320
+        },
+        "ac869e69-a8bc-4016-9390-79a3deabe918" : {
+          "x" : -967.65741370706,
+          "y" : 320
+        },
+        "ad959c67-4c15-4fcf-8f2e-679ca158fa10" : {
+          "x" : -437.5246696472168,
+          "y" : 160
+        },
+        "b14b51df-dfcd-461d-845b-ab12a8f9d215" : {
+          "x" : -1539.2351095536176,
+          "y" : 240
+        },
+        "b642de27-b6b8-4caa-b174-e445b668ee01" : {
+          "x" : -1423.6128179886762,
+          "y" : 240
+        },
+        "b6d87fea-6cc5-426c-a79b-2b54cba2790a" : {
+          "x" : -282.48781608132754,
+          "y" : 240
+        },
+        "b9039282-a1f1-43a1-adb4-398b0b3072b9" : {
+          "x" : 1136.8171880385455,
+          "y" : 240
+        },
+        "bd80de64-7d1c-4bed-a55b-ec9bebf955e7" : {
+          "x" : 541.9514720580157,
+          "y" : 560
+        },
+        "c5c3c8a8-c93d-482a-bcbc-263bf4feee2e" : {
+          "x" : 1021.9420173308429,
+          "y" : 400
+        },
+        "d43e32a6-48bf-41dc-8b84-05ac6d91a446" : {
+          "x" : -1730.3388521531049,
+          "y" : 240
+        },
+        "d6121b0e-6cc1-4c65-8484-144b99c8fcd3" : {
+          "x" : 882.6102864882525,
+          "y" : 240
+        },
+        "d62f3342-ac86-431d-931c-eec66586db3c" : {
+          "x" : -381.0676243164961,
+          "y" : 400
+        },
+        "dc148b1c-e5ff-4bdb-85db-23f7b4d8f7e8" : {
+          "x" : -1154.628475413603,
+          "y" : 640
+        },
+        "df74acad-3f68-4c73-ac6d-ba65dff3ae45" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "e3c20b4a-d7aa-45de-8f3b-d79e5285d218" : {
+          "x" : -1154.628475413603,
+          "y" : 320
+        },
+        "e3dd558e-44f9-4e37-b19c-be20f7be7081" : {
+          "x" : -399.89278690655567,
+          "y" : 480
+        },
+        "e663e460-f564-4a9f-8bb8-0409808a27b0" : {
+          "x" : 1561.9393146178302,
+          "y" : 480
+        },
+        "ed52dd65-4632-4eec-b51b-aeefebe3b489" : {
+          "x" : -399.89278690655567,
+          "y" : 560
+        },
+        "ee95459e-4fbb-42d0-963b-1febe5f7fba9" : {
+          "x" : 129.2181069991168,
+          "y" : 240
+        },
+        "f5889968-a124-4f26-8ee0-235f36dbc568" : {
+          "x" : -107.90611951803092,
+          "y" : 480
+        },
+        "f742f5da-a9aa-47fb-8024-15c0fb3b729d" : {
+          "x" : 1705.4155795714435,
+          "y" : 560
+        },
+        "fa2d8452-ee31-4ddd-a698-7cf79b2a831e" : {
+          "x" : 1845.5598495146808,
+          "y" : 320
+        },
+        "fc23cc2c-8926-4e2b-bdde-68ac9a53b648" : {
+          "x" : 716.7468955657062,
+          "y" : 320
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.9979817632533237,
+      "translate" : [ 2215.637744593099, -121.61516684034711 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "mobile" : true,
+        "modifiers" : true,
+        "serviceevents" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : {
+        "events" : true,
+        "procedures" : true
+      },
+      "serviceGroupOpenHash" : {
+        "Chat" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Notification" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Utils" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-ActionAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-AuditLogManager" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-DataAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-DiagnosticAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-IncidentHandler" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-IntegrationAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-InvestigationAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-MultiAgentFlow" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-OrchestratorAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Slack" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Tahob" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Telegram" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Test" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Tester" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-UIEventBridger" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-utils" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 226.648,
+    "propertyWidth" : 300
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Branch" : {
+      "configuration" : {
+        "childStreams" : [ "BranchQ" ],
+        "conditions" : [ {
+          "code" : "event.step == 0",
+          "label" : "step0",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 1",
+          "label" : "step1",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 2",
+          "label" : "step2",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 3",
+          "label" : "step3",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 4",
+          "label" : "step4",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 5",
+          "label" : "step5",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 6",
+          "label" : "step6",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 7",
+          "label" : "step7",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 8",
+          "label" : "step8",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 9",
+          "label" : "step9",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 10",
+          "label" : "step10",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 11",
+          "label" : "step11",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 12",
+          "label" : "step12",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 13",
+          "label" : "step13",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 14",
+          "label" : "step14",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 15",
+          "label" : "step15",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 16",
+          "label" : "step16",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.step == 17",
+          "label" : "step17",
+          "language" : ""
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "EventStream" ],
+        "step10Streams" : [ "Delay10" ],
+        "step11Streams" : [ "Delay11" ],
+        "step12Streams" : [ "Delay12" ],
+        "step13Streams" : [ "Delay13" ],
+        "step14Streams" : [ "Delay14" ],
+        "step15Streams" : [ "Delay15" ],
+        "step16Streams" : [ "FilterRecoveryPlan" ],
+        "step17Streams" : [ "FilterSendRecoveryPlan" ],
+        "step1Streams" : [ "Delay1" ],
+        "step2Streams" : [ "Delay2", "FilterSendMail" ],
+        "step3Streams" : [ ],
+        "step4Streams" : [ "Delay3", "FilterActivationEmail" ],
+        "step5Streams" : [ "Delay4" ],
+        "step6Streams" : [ "Filter" ],
+        "step7Streams" : [ "Delay7" ],
+        "step8Streams" : [ "Delay8" ],
+        "step9Streams" : [ "Delay9" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "step1" : "ad959c67-4c15-4fcf-8f2e-679ca158fa10",
+        "step10" : "18c5850c-c925-4ff9-8b41-3dd122d5381c",
+        "step11" : "44891bc9-201f-4518-9bb3-2a113559b679",
+        "step12" : "3e9c3242-ef0f-4495-9f74-d8c8e16b5c64",
+        "step13" : "4f2b5031-fcfc-4880-a14b-93e7cec705ee",
+        "step14" : "939b4ddb-9a07-453b-9683-4e6ad580445f",
+        "step15" : "a531f738-4ac0-4438-b6a7-7f5403580baf",
+        "step16" : "86472358-60cc-48fb-8526-e2d125e9fb89",
+        "step17" : "5cc5a338-4c7d-4055-baa9-5d5a75c95bd0",
+        "step2" : "95be7ab6-2a05-4463-b812-fc434eb5038d",
+        "step3" : "348c2b1a-06b6-4720-899c-297a869caea5",
+        "step4" : "88152dee-9045-485c-822d-a7970222ab01",
+        "step5" : "678b7787-0fce-47d4-855c-2f48b75dab12",
+        "step6" : "7800fd76-a200-4767-a00e-9fd5cdb8aea2",
+        "step7" : "8c4c2b8b-c246-4924-8fcc-c5c370c95133",
+        "step8" : "2de06e13-6d01-4822-84f0-ce6312785ca8",
+        "step9" : "a5f1c5d1-3ce5-48cd-b48d-a56541a55395"
+      },
+      "name" : "Branch",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "df74acad-3f68-4c73-ac6d-ba65dff3ae45"
+    },
+    "BranchQ" : {
+      "configuration" : {
+        "bedsStreams" : [ "getRegionBeds" ],
+        "casualtiesStreams" : [ "getCasualtyBreakdown" ],
+        "childStreams" : [ "VAILNoAnswer" ],
+        "conditions" : [ {
+          "code" : "includes(toLowerCase(event.prompt), \"capability\") || includes(toLowerCase(event.prompt), \"capacity\") || includes(toLowerCase(event.prompt), \"available\") || includes(toLowerCase(event.prompt), \"availability\") || includes(toLowerCase(event.prompt), \"occupancy\")|| includes(toLowerCase(event.prompt), \"beds\")|| includes(toLowerCase(event.prompt), \"bed\")",
+          "label" : "beds",
+          "language" : "VAIL"
+        }, {
+          "code" : "includes(toLowerCase(event.prompt), \"duration\") ||  includes(toLowerCase(event.prompt), \"time\")",
+          "label" : "time",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.prompt == \"...\"",
+          "label" : "waiting",
+          "language" : "VAIL"
+        }, {
+          "code" : "includes(toLowerCase(event.prompt), \"notification\") || includes(toLowerCase(event.prompt), \"message\") || includes(toLowerCase(event.prompt), \"alert\")",
+          "label" : "notify",
+          "language" : "VAIL"
+        }, {
+          "code" : "includes(toLowerCase(event.prompt), \"casualties\") || includes(toLowerCase(event.prompt), \"injuries\")",
+          "label" : "casualties",
+          "language" : ""
+        } ],
+        "imports" : null,
+        "notifyStreams" : [ "getIncidentNotifications" ],
+        "parentStreams" : [ "Branch" ],
+        "timeStreams" : [ "calculateIncidentDuration" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "beds" : "2e8d3118-34f4-4b01-8264-7f9db98b4a3a",
+        "casualties" : "b14b51df-dfcd-461d-845b-ab12a8f9d215",
+        "notify" : "9112e695-242e-4bed-b715-bb884a01972f",
+        "time" : "b642de27-b6b8-4caa-b174-e445b668ee01"
+      },
+      "name" : "BranchQ",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "8e87536c-e985-4a47-84fe-86e00573cedb"
+    },
+    "BuildRecoveryOut" : {
+      "configuration" : {
+        "VAIL" : "var message = event.recoveryPlan.plan+\"<br><br>\"\nmessage+= \"Do you want me to send the Recovery Objectives to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat17" ],
+        "imports" : null,
+        "parentStreams" : [ "getRecoveryPlan" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildRecoveryOut",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "0781d2f2-e0f0-430c-9d00-dd770469fb42"
+    },
+    "CalcActivationLevel" : {
+      "configuration" : {
+        "VAIL" : "var message = \"ICS Activation is requested:<br>\"\nmessage += \"Suggested operations<br>\"\n\nif (event.data.suggested_level == \"5\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.suggested_level == \"4\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.suggested_level == \"3\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.suggested_level == \"2\"){\n\tmessage += \"Level 2 (Partial ICS Activation)<br>\"\n\tevent.data.activeLevel  = 2\n}\nif (event.data.suggested_level == \"1\"){\n\tmessage += \"Level 1 (Routine ICS Activation)<br>\"\n\tevent.data.activeLevel  = 1\n}\n\n\nmessage += \"Do you want me to send Activation to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "Delay" ],
+        "imports" : null,
+        "parentStreams" : [ "endChat2" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "CalcActivationLevel",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "160b431c-1a39-428c-80bb-07492e320782"
+    },
+    "Delay" : {
+      "configuration" : {
+        "childStreams" : [ "endChat2b" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "CalcActivationLevel" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "2bf0410b-b2cf-4c46-a808-c5b39d6e968b"
+    },
+    "Delay1" : {
+      "configuration" : {
+        "childStreams" : [ "Step1" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step1" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay1",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "a7fe1720-43bb-4693-8743-4ab9acc1bea2"
+    },
+    "Delay10" : {
+      "configuration" : {
+        "childStreams" : [ "Filter3" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step10" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay10",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "50c7dbef-764b-481c-8bb2-de470e65fce1"
+    },
+    "Delay11" : {
+      "configuration" : {
+        "childStreams" : [ "deesculateMessaage" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step11" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay11",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "21d66e98-2e1b-4b03-87f5-cb6d40430aa2"
+    },
+    "Delay12" : {
+      "configuration" : {
+        "childStreams" : [ "Filter2" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step12" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay12",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "b6d87fea-6cc5-426c-a79b-2b54cba2790a"
+    },
+    "Delay13" : {
+      "configuration" : {
+        "childStreams" : [ "Filter4" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step13" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay13",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "a51edf59-76ac-49e5-af0a-23c8c1c46f6c"
+    },
+    "Delay14" : {
+      "configuration" : {
+        "childStreams" : [ "Filter3" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step14" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay14",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "87e77ae8-55fc-4dd0-8559-4be2d5ba5856"
+    },
+    "Delay15" : {
+      "configuration" : {
+        "childStreams" : [ "RecoveryPlanAsk" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step15" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay15",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "ee95459e-4fbb-42d0-963b-1febe5f7fba9"
+    },
+    "Delay16" : {
+      "configuration" : {
+        "childStreams" : [ "EsculationMessage" ],
+        "delay" : "2 seconds",
+        "imports" : null,
+        "parentStreams" : [ "Filter1" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay16",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "4ed53a62-b7c4-4ab4-89c8-9e1a094bb95f"
+    },
+    "Delay17" : {
+      "configuration" : {
+        "childStreams" : [ "deEsculationMessage" ],
+        "delay" : "2 seconds",
+        "imports" : null,
+        "parentStreams" : [ "Filter2" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay17",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "3495dfa2-0fed-44c5-a373-8330c2a699d6"
+    },
+    "Delay2" : {
+      "configuration" : {
+        "childStreams" : [ "Step2" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step2" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay2",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "981a484b-977a-46d8-b62e-c2a4395318ca"
+    },
+    "Delay3" : {
+      "configuration" : {
+        "childStreams" : [ "Step4" ],
+        "delay" : "3 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step4" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay3",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "0ef5f685-1d9a-4b86-8f73-8d7aa6b72568"
+    },
+    "Delay4" : {
+      "configuration" : {
+        "childStreams" : [ "getActionPlan" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step5" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay4",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "510232c4-4b6b-4644-85f1-5c7efee0378e"
+    },
+    "Delay5" : {
+      "configuration" : {
+        "childStreams" : [ "VAIL2" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "sendIAP" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay5",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "60b520dd-a1e2-4bef-86ce-63c93c4cc2a8"
+    },
+    "Delay6" : {
+      "configuration" : {
+        "childStreams" : [ "VAIL1" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "sendRecoveryPlan" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay6",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "99999d34-a6cb-4cd1-867d-d7bf80df62f2"
+    },
+    "Delay7" : {
+      "configuration" : {
+        "childStreams" : [ "EsculationLevel" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step7" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay7",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "b9039282-a1f1-43a1-adb4-398b0b3072b9"
+    },
+    "Delay8" : {
+      "configuration" : {
+        "childStreams" : [ "Filter1" ],
+        "delay" : "1 second",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step8" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay8",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "0dc2affb-6341-46ca-aaad-a63fd2806d46"
+    },
+    "Delay9" : {
+      "configuration" : {
+        "childStreams" : [ "Filter4" ],
+        "delay" : "1 seconds",
+        "imports" : null,
+        "parentStreams" : [ "Branch:step9" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay9",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "0993137e-eebc-4ac5-8674-63154d27d8d5"
+    },
+    "EsculaciontPlan" : {
+      "configuration" : {
+        "VAIL" : "var message = event.actionPlan.plan+\"<br><br>\"\nmessage+= \"Do you want me to send Incident Action Plan to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat14" ],
+        "imports" : null,
+        "parentStreams" : [ "getActionPlan1" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "EsculaciontPlan",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "a375d742-683e-4bcf-8c5d-13a0782ea9e8"
+    },
+    "EsculationLevel" : {
+      "configuration" : {
+        "VAIL" : "var message = \"ICS Esculation request:<br>\"\nmessage += \"Suggested operations<br>\"\n\nif (event.data.evaluatedLevel == \"5\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"4\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"3\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"2\"){\n\tmessage += \"Level 2 (Partial ICS Activation)<br>\"\n\tevent.data.activeLevel  = 2\n}\nif (event.data.evaluatedLevel == \"1\"){\n\tmessage += \"Level 1 (Routine ICS Activation)<br>\"\n\tevent.data.activeLevel  = 1\n}\n\n\nmessage += \"Do you want me to send esculation request to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat10" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay7" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "EsculationLevel",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "fa2d8452-ee31-4ddd-a698-7cf79b2a831e"
+    },
+    "EsculationMessage" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Esculation Request sent to ICS members.<br>\"\nmessage += \"Do you want me to suggest Response Objectives?\"\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat11" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay16" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "EsculationMessage",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "7b3c3c26-b86b-4d3f-8a18-9e6352e82602"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "Branch" ],
+        "eventTypeName" : "startChat",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.chatService",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "6fb8bb6a-f3f0-44b0-9ec7-86e1eef90776"
+    },
+    "Filter" : {
+      "configuration" : {
+        "childStreams" : [ "sendIAP" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Branch:step6" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Filter",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "1f0a8ead-bdb4-4470-8c78-f55926af49d0"
+    },
+    "Filter1" : {
+      "configuration" : {
+        "childStreams" : [ "sendEsculationRequest", "Delay16" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Delay8" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Filter1",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "7ce11e86-acd4-4b33-8f5e-32ec7754c03a"
+    },
+    "Filter2" : {
+      "configuration" : {
+        "childStreams" : [ "sendDeEsculationRequest", "Delay17" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Delay12" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Filter2",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "0abba0a4-d500-449d-822d-a25912e6d3e3"
+    },
+    "Filter3" : {
+      "configuration" : {
+        "childStreams" : [ "Procedure" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Delay14", "Delay10" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Filter3",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "3a88d2e1-fae6-43c0-9ab5-d5291eab2d6b"
+    },
+    "Filter4" : {
+      "configuration" : {
+        "childStreams" : [ "getActionPlan1" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Delay13", "Delay9" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "Filter4",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "56342247-ae7f-4dec-aa6a-66cc5687caca"
+    },
+    "FilterActivationEmail" : {
+      "configuration" : {
+        "childStreams" : [ "sendActivationRequest" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Branch:step4" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "FilterActivationEmail",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "6b0f9c9a-7566-41d4-b9a6-c62b345f2bc6"
+    },
+    "FilterRecoveryPlan" : {
+      "configuration" : {
+        "childStreams" : [ "getRecoveryPlan" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Branch:step16" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "FilterRecoveryPlan",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "8d5bbada-0488-4d5f-bcfa-d4a2fb91faca"
+    },
+    "FilterSendMail" : {
+      "configuration" : {
+        "childStreams" : [ "sendMitigationMail" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Branch:step2" ],
+        "rejectionStreams" : [ ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "rejected" : "fbe82ee0-62a9-4cb8-b74a-d88e47841231"
+      },
+      "name" : "FilterSendMail",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "9ec73d77-1597-4d7f-82f6-f308e12dba19"
+    },
+    "FilterSendRecoveryPlan" : {
+      "configuration" : {
+        "childStreams" : [ "sendRecoveryPlan" ],
+        "condition" : "startsWith(toUpperCase(event.prompt) ,\"Y\")",
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "Branch:step17" ],
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "FilterSendRecoveryPlan",
+      "pattern" : "Filter",
+      "patternVersion" : 5,
+      "uuid" : "d6121b0e-6cc1-4c65-8484-144b99c8fcd3"
+    },
+    "Procedure" : {
+      "configuration" : {
+        "childStreams" : [ "VAIL" ],
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "Filter3" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendIAP",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Procedure",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "4ed96725-96cc-418c-88eb-0e63690ce018"
+    },
+    "RecoveryPlanAsk" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Incident Closed.<br>\"\nmessage += \"Do you want me to suggest Recovery Objectives?\"\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat16" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay15" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "RecoveryPlanAsk",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "fc23cc2c-8926-4e2b-bdde-68ac9a53b648"
+    },
+    "Step1" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Incident Mitigation actions:<br>\"\nmessage += \"Activate surge capacity for negative pressure isolation beds within 1 hour.<br>\"\nmessage += \"Notify health cluster EOC to coordinate for ECMO team readiness within 3 hours.<br><br>\"\n\nmessage += \"Do you want to send this as Email notification?<br>\"\n\n\n/*\nvar message = \"Incident Identified<br>\"\nmessage += \"Details<br>\"\nmessage += \"Hazard: Natural<br>\"\nmessage += \"Type: Outbreak<br>\"\nmessage += \"Emergency Response: Level1<br>\"\nmessage += \"Type of Outbreak: A<br>\"\n*/\nevent.llmResponse = message",
+        "childStreams" : [ "endChat1" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay1" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "Step1",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "07266fe0-f7ae-4710-b39f-15e5ec14a90e"
+    },
+    "Step2" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Incident Identified<br>\"\nmessage += \"Details<br>\"\n//message += \"Hazard: Natural<br>\"\nmessage += \"Hazard: \"+ event.data.incident_type+\"<br>\"\n//message += \"Type: Outbreak<br>\"\nmessage += \"Type: \"+event.data.incident_subtype+\"<br>\"\nmessage += \"Casualties: \"+event.data.casualties+\"<br>\"\nmessage += \"Emergency Response: \"+event.data.suggested_level+\"<br>\"\n\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat2" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay2" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "Step2",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "e3c20b4a-d7aa-45de-8f3b-d79e5285d218"
+    },
+    "Step4" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Messages sent to ICS members.<br>\"\nmessage += \"Do you want me to suggest Response Objectives?\"\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat4" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay3" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "Step4",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "4a59e086-864f-4a25-9573-e206045cb3e3"
+    },
+    "VAIL" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Incident Action Plan Sent\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat15" ],
+        "imports" : null,
+        "parentStreams" : [ "Procedure" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAIL",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "e3dd558e-44f9-4e37-b19c-be20f7be7081"
+    },
+    "VAIL1" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Recovery objectives sent\"\n\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat18" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay6" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAIL1",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "8098fe02-3fa1-4275-b775-ad0ca601584e"
+    },
+    "VAIL2" : {
+      "configuration" : {
+        "VAIL" : "var message = \"Incident Action Plan Sent\"\n\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat3" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay5" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAIL2",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "e663e460-f564-4a9f-8bb8-0409808a27b0"
+    },
+    "VAILBuildBedString" : {
+      "configuration" : {
+        "VAIL" : "var available = 0\nvar occupied = 0\nvar region = \"\"\n\nvar message = \"\"\n\nif (length(event.regionBeds)){\n\tfor (i in range(0,length(event.regionBeds),1)) {\n\t\tavailable += event.regionBeds[i].available\n\t\toccupied += event.regionBeds[i].occupied\n\t\tregion = event.regionBeds[i].region\n\t}\n\n\tmessage += \"**Bed information for region: \"+ region +\"**<br>\" \n\tmessage += \"Available beds: \"+available+\"<br>\"\n\tmessage += \"Occupied beds: \"+occupied+\"<br><br>\"\n}\n\nif (length(event.hospitalBeds)){\n\tvar havailable = 0\n\tvar hoccupied = 0\n\tvar hospital = \"\"\n\n\tfor (i in range(0,length(event.hospitalBeds),1)) {\n\t\t\thavailable += event.hospitalBeds[i].available\n\t\t\thoccupied += event.hospitalBeds[i].occupied\n\t\t\thospital = event.hospitalBeds[i].hospital\n\t}\n\n\tmessage += \"**Bed information for : \"+ hospital +\"**<br>\" \n\tmessage += \"Available beds: \"+havailable+\"<br>\"\n\tmessage += \"Occupied beds: \"+hoccupied+\"<br><br>\"\n}\n\nif (message == \"\"){\n\tmessage = \"No bed information currently avalialbe for this region\"\n}\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat5" ],
+        "imports" : null,
+        "parentStreams" : [ "getHospitalBeds" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAILBuildBedString",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "272d2b6c-7bfa-4307-8398-86df5956be8b"
+    },
+    "VAILNoAnswer" : {
+      "configuration" : {
+        "VAIL" : "var llmResponse = \"I don't have enough information to give you a reliable answer right now.<br>\"\n\nevent.llmResponse = llmResponse",
+        "childStreams" : [ "endChat6" ],
+        "imports" : null,
+        "parentStreams" : [ "BranchQ" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAILNoAnswer",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "d43e32a6-48bf-41dc-8b84-05ac6d91a446"
+    },
+    "VAILbuildPlanMessage" : {
+      "configuration" : {
+        "VAIL" : "/*var message = \"Incident action objectives:<br>\"\nmessage += \"- Activate surge capacity for negative pressure isolation beds within 1 hour.<br>\"\nmessage += \"- Notify health cluster EOC to coordinate for ECMO team readiness within 3 hours.<br><br>\"\nmessage += \"Do you want me to send Incident Action Plan to ICS members?<br>\"\n*/\n\nvar message = event.actionPlan.plan+\"<br><br>\"\nmessage+= \"Do you want me to send Incident Action Plan to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat" ],
+        "imports" : null,
+        "parentStreams" : [ "getActionPlan" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "VAILbuildPlanMessage",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "5a902faa-3cd9-4519-8fa2-49a1e0719a96"
+    },
+    "buildResponse" : {
+      "configuration" : {
+        "VAIL" : "var llmResponse = \"\"\n\nif (length(event.notifications)){\n\tfor (message in event.notifications){\n\t\tllmResponse += message..messageBody+\"<br><br>\" \t\n\t}\n}else{\n\tllmResponse = \"No notifications found for this incident.\"\n}\n//llmResponse = event.notifications[0].messageBody\n\n\nevent.llmResponse = llmResponse",
+        "childStreams" : [ "endChat9" ],
+        "imports" : null,
+        "parentStreams" : [ "getIncidentNotifications" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "buildResponse",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "52b796dd-440b-4199-8941-7812e6c76e33"
+    },
+    "buildResponseCasualties" : {
+      "configuration" : {
+        "VAIL" : "var llmResponse = \"Casualty breakdown: <br><br>\"\n\nllmResponse += \"Major: \"+event.casualties.casualties_Major+\"<br>\"\nllmResponse += \"Moderate: \"+event.casualties.casualties_Moderate+\"<br>\"\nllmResponse += \"Minor: \"+event.casualties.casualties_Minor+\"<br>\"\n\n\nevent.llmResponse = llmResponse",
+        "childStreams" : [ "endChat8" ],
+        "imports" : null,
+        "parentStreams" : [ "getCasualtyBreakdown" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "buildResponseCasualties",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "9464a63d-1ea8-4b69-83c8-652cbbde4b8d"
+    },
+    "calculateDuration" : {
+      "configuration" : {
+        "VAIL" : "//var llmResponse = \"Busy building this, please check in later\"\n\n//log.info(event.data)\nvar duration = event.incidentDuration\nvar llmResponse = \"The duration of the incident \"\n\nif (event.data.is_open){\n\tllmResponse += \"is currently \"+duration+\".<br>\"\n\tllmResponse += \"The final duration can be calculated as soon as the incident is closed.\"\n}else{\n\tllmResponse += \"was \"+duration\n}\nevent.llmResponse = llmResponse",
+        "childStreams" : [ "endChat7" ],
+        "imports" : null,
+        "parentStreams" : [ "calculateIncidentDuration" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "calculateDuration",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "08aa1578-ee2d-4331-9670-4f09121cde7e"
+    },
+    "calculateIncidentDuration" : {
+      "configuration" : {
+        "childStreams" : [ "calculateDuration" ],
+        "imports" : null,
+        "parameters" : {
+          "In_incident_id" : "event.data.incident_id"
+        },
+        "parentStreams" : [ "BranchQ:time" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.utils.calculateIncidentDuration",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "incidentDuration",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "calculateIncidentDuration",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "02428d95-0e0e-41a1-be5d-7e08e75f0907"
+    },
+    "deEsculationMessage" : {
+      "configuration" : {
+        "VAIL" : "var message = \"De-Esculation Request sent to ICS members.<br>\"\nmessage += \"Do you want me to suggest Response Objectives?\"\n\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat13" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay17" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "deEsculationMessage",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "f5889968-a124-4f26-8ee0-235f36dbc568"
+    },
+    "deesculateMessaage" : {
+      "configuration" : {
+        "VAIL" : "var message = \"ICS De-Esculation request:<br>\"\nmessage += \"Suggested operations<br>\"\n\nif (event.data.evaluatedLevel == \"5\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"4\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"3\"){\n\tmessage += \"Level 3 (Full ICS Activation)<br>\"\n\tevent.data.activeLevel  = 3\n}\nif (event.data.evaluatedLevel == \"2\"){\n\tmessage += \"Level 2 (Partial ICS Activation)<br>\"\n\tevent.data.activeLevel  = 2\n}\nif (event.data.evaluatedLevel == \"1\"){\n\tmessage += \"Level 1 (Routine ICS Activation)<br>\"\n\tevent.data.activeLevel  = 1\n}\n\n\nmessage += \"Do you want me to send de-esculation request to ICS members?<br>\"\n\nevent.llmResponse = message",
+        "childStreams" : [ "endChat12" ],
+        "imports" : null,
+        "parentStreams" : [ "Delay11" ],
+        "redeliverOnError" : null,
+        "schema" : null,
+        "useEventValue" : true
+      },
+      "downstreamReferences" : { },
+      "name" : "deesculateMessaage",
+      "pattern" : "VAIL",
+      "patternVersion" : 6,
+      "uuid" : "2329299e-2e2b-429c-8d52-35466bc2e7d5"
+    },
+    "endChat" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAILbuildPlanMessage" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "8c50fd3a-a09c-49f5-8a05-9a1fe2cd2053"
+    },
+    "endChat1" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "Step1" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat1",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "3e5f981a-0faf-43e4-8f1a-4dfe640c8b88"
+    },
+    "endChat10" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "EsculationLevel" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat10",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "84066386-46b0-43cd-bf8c-679d3ff4fe0d"
+    },
+    "endChat11" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "EsculationMessage" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat11",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "1c3a7491-6973-4d60-8a71-3121ff0a23f3"
+    },
+    "endChat12" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "deesculateMessaage" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat12",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "d62f3342-ac86-431d-931c-eec66586db3c"
+    },
+    "endChat13" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "deEsculationMessage" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat13",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "567eccf7-f017-4cb8-877c-aee9f34eead4"
+    },
+    "endChat14" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "EsculaciontPlan" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat14",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "bd80de64-7d1c-4bed-a55b-ec9bebf955e7"
+    },
+    "endChat15" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAIL" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat15",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "ed52dd65-4632-4eec-b51b-aeefebe3b489"
+    },
+    "endChat16" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "RecoveryPlanAsk" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat16",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "131f4b5e-22f4-4ce5-984f-d86a2c17ff2f"
+    },
+    "endChat17" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "BuildRecoveryOut" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat17",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "15fc6479-385a-4651-b08c-2aac59c5e65b"
+    },
+    "endChat18" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAIL1" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat18",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "f742f5da-a9aa-47fb-8024-15c0fb3b729d"
+    },
+    "endChat2" : {
+      "configuration" : {
+        "childStreams" : [ "CalcActivationLevel" ],
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "Step2" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat2",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "3a535c8f-b2f0-4e48-bb7c-bfb7de8fff49"
+    },
+    "endChat2b" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "Delay" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat2b",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "dc148b1c-e5ff-4bdb-85db-23f7b4d8f7e8"
+    },
+    "endChat3" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAIL2" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat3",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "6e2f981c-9744-4db7-a1c3-0fb26136cae0"
+    },
+    "endChat4" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "Step4" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat4",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "089031e8-b745-4482-8acc-4a4eece68cb8"
+    },
+    "endChat5" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAILBuildBedString" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat5",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "037a9025-dec1-41b9-a95a-e11dd28cfa3d"
+    },
+    "endChat6" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "VAILNoAnswer" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat6",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "8962cd0b-e2f7-481b-bfa1-18aa29d211d9"
+    },
+    "endChat7" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "calculateDuration" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat7",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "3ffe74bf-a38d-47fe-8b87-3b176745369c"
+    },
+    "endChat8" : {
+      "configuration" : {
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "buildResponseCasualties" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat8",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "4f6dd862-a8a4-4ce0-86be-96d2381c83e3"
+    },
+    "endChat9" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "endChat",
+        "parentStreams" : [ "buildResponse" ],
+        "service" : "jp.co.vantiq.chatService"
+      },
+      "downstreamReferences" : { },
+      "name" : "endChat9",
+      "pattern" : "PublishToEventType",
+      "patternVersion" : 3,
+      "uuid" : "921586e9-553c-414f-a858-6f1e503f962e"
+    },
+    "getActionPlan" : {
+      "configuration" : {
+        "childStreams" : [ "VAILbuildPlanMessage" ],
+        "imports" : null,
+        "parameters" : {
+          "inSubType" : "event.data.incident_subtype",
+          "inType" : "event.data.incident_type"
+        },
+        "parentStreams" : [ "Delay4" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.chatService.getActionPlan",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "actionPlan",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getActionPlan",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "2f2f5e3b-c30e-45aa-8a6a-01cb0827baca"
+    },
+    "getActionPlan1" : {
+      "configuration" : {
+        "childStreams" : [ "EsculaciontPlan" ],
+        "imports" : null,
+        "parameters" : {
+          "inSubType" : "event.data.incident_subtype",
+          "inType" : "event.data.incident_type"
+        },
+        "parentStreams" : [ "Filter4" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.chatService.getActionPlan",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "actionPlan",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getActionPlan1",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "2d4e9f40-3f69-405d-86a9-846b8c98f553"
+    },
+    "getCasualtyBreakdown" : {
+      "configuration" : {
+        "childStreams" : [ "buildResponseCasualties" ],
+        "imports" : null,
+        "parameters" : {
+          "inIncidentID" : "event.data.incident_id"
+        },
+        "parentStreams" : [ "BranchQ:casualties" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.utils.getCasualtyBreakdown",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "casualties",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getCasualtyBreakdown",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "1548645a-09c4-434c-a10a-bed8c7ea737e"
+    },
+    "getHospitalBeds" : {
+      "configuration" : {
+        "childStreams" : [ "VAILBuildBedString" ],
+        "imports" : null,
+        "parameters" : {
+          "inHospital" : "event.data.facilityName"
+        },
+        "parentStreams" : [ "getRegionBeds" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.getHospitalBeds",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "hospitalBeds",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getHospitalBeds",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "19898fdd-6e0c-42ec-8d90-a351f7f9e20e"
+    },
+    "getIncidentNotifications" : {
+      "configuration" : {
+        "childStreams" : [ "buildResponse" ],
+        "imports" : null,
+        "parameters" : {
+          "In_incident_id" : "event.data.incident_id"
+        },
+        "parentStreams" : [ "BranchQ:notify" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.utils.getIncidentNotifications",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notifications",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getIncidentNotifications",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "8cc5d39a-0873-4b4a-96bf-1af589218771"
+    },
+    "getRecoveryPlan" : {
+      "configuration" : {
+        "childStreams" : [ "BuildRecoveryOut" ],
+        "imports" : null,
+        "parameters" : {
+          "inSubType" : "event.data.incident_subtype",
+          "inType" : "event.data.incident_type"
+        },
+        "parentStreams" : [ "FilterRecoveryPlan" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.chatService.getRecoveryPlan",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "recoveryPlan",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getRecoveryPlan",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "35600d2c-7764-468d-bd35-e5d5699e71db"
+    },
+    "getRegionBeds" : {
+      "configuration" : {
+        "childStreams" : [ "getHospitalBeds" ],
+        "imports" : null,
+        "parameters" : {
+          "inRegion" : "event.data.region"
+        },
+        "parentStreams" : [ "BranchQ:beds" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.getRegionBeds",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "regionBeds",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getRegionBeds",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "8582a4c3-6722-4f13-9135-36c656702dd9"
+    },
+    "sendActivationRequest" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "FilterActivationEmail" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendActivationRequest",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendActivationRequest",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "5c082695-5e27-4ef3-bbc5-8c445d4e8c87"
+    },
+    "sendDeEsculationRequest" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "Filter2" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendDeEsculationRequest",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendDeEsculationRequest",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "6a5943d1-af9e-473e-8da8-ea5a9e059031"
+    },
+    "sendEsculationRequest" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "Filter1" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendEsculationRequest",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendEsculationRequest",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "c5c3c8a8-c93d-482a-bcbc-263bf4feee2e"
+    },
+    "sendIAP" : {
+      "configuration" : {
+        "childStreams" : [ "Delay5" ],
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "Filter" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendIAP",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendIAP",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ab39e360-51e6-401c-802c-e462a7e78640"
+    },
+    "sendMitigationMail" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "FilterSendMail" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendMitigationMail",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendMitigationMail",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ac869e69-a8bc-4016-9390-79a3deabe918"
+    },
+    "sendRecoveryPlan" : {
+      "configuration" : {
+        "childStreams" : [ "Delay6" ],
+        "imports" : null,
+        "parameters" : {
+          "data" : "event"
+        },
+        "parentStreams" : [ "FilterSendRecoveryPlan" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.sendRecoveryPlan",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendRecoveryPlan",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "1c9a1ca2-3f62-437b-82d7-8b29d5f14cfc"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.chatService.startChat"
+}

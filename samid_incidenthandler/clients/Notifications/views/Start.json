@@ -1,0 +1,77 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "d3b58857-846d-4a59-8aed-efe7aea2a24c" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "HorizontalLayout71",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "7278b97c-4541-487e-a16d-d1eb98a6a41b",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertWeight" : 10,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "transparent",
+      "borderColor" : "Default",
+      "column" : -1,
+      "fontFamily" : "default",
+      "fontSize" : 32,
+      "fontStyle" : "default",
+      "fontWeight" : "default",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "left",
+      "name" : "StaticText13",
+      "row" : -1,
+      "text" : "VANTIQ Incident Notification Dashboard",
+      "type" : "StaticText",
+      "uuid" : "9369b7d2-cbdc-4234-8b05-714ca9eb96ae",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "naturalSize"
+    }, {
+      "backgroundColor" : "#1e293b",
+      "borderColor" : "Default",
+      "children" : [ "9369b7d2-cbdc-4234-8b05-714ca9eb96ae" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "left",
+      "name" : "HorizontalLayout23",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "aba78c1b-d515-49ab-9f18-cf1e0cae844e",
+      "v" : 19,
+      "vertGravity" : "top",
+      "vertMargin" : 0,
+      "vertWeight" : 1,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "aba78c1b-d515-49ab-9f18-cf1e0cae844e", "7278b97c-4541-487e-a16d-d1eb98a6a41b" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 10,
+      "name" : "VerticalLayout81",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "d3b58857-846d-4a59-8aed-efe7aea2a24c",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

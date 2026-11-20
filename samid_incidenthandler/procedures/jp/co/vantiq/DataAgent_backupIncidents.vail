@@ -1,0 +1,17 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.backupIncidents()
+
+var lastdate = now().minusMillis(6 days)
+
+
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT * "+ 
+  			"FROM [NHEOC-AI02].[dbo].[table_6] "+
+			"WHERE entrydate > '" + lastdate + "' " +
+ 			"and prevdataid = 0 "+
+			"order by record_date desc "
+
+	for (record in results){
+		insert jp.co.vantiq.TahobData(Data: record)	
+	}
+	

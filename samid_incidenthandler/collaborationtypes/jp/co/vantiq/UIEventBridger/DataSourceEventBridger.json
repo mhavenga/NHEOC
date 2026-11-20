@@ -1,0 +1,74 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "2044ed66-985c-400e-9f8e-864a4be8f7dd" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "7960208d-cfef-4935-88c8-4601e3c60166" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.766824701382505,
+      "translate" : [ 378, 89.8270172219991 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "DataRetrieval" : {
+      "configuration" : {
+        "childStreams" : [ "PublishDataRetrievalOut" ],
+        "eventTypeName" : "dataRetrieval",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DataRetrieval",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "2044ed66-985c-400e-9f8e-864a4be8f7dd"
+    },
+    "PublishDataRetrievalOut" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "dataRetrievalOut",
+        "parentStreams" : [ "DataRetrieval" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishDataRetrievalOut",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "7960208d-cfef-4935-88c8-4601e3c60166"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.UIEventBridger.DataSourceEventBridger"
+}

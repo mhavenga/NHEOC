@@ -1,0 +1,183 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "0990be60-7d58-462a-ae7a-2290d6f8c6d7" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "5501f28d-e043-49c7-a671-de8fb2eeb5c7" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "6a2ce90d-6f3f-4113-818d-0446c04ce39e" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.353657990939408,
+      "translate" : [ 510.5, 109.69064277143576 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "modifiers" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : {
+        "events" : true,
+        "procedures" : true
+      },
+      "serviceGroupOpenHash" : {
+        "Chat" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Notification" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Utils" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-ActionAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-AuditLogManager" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-DataAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-DiagnosticAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-IncidentHandler" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-InvestigationAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-MultiAgentFlow" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-OrchestratorAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Slack" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Tahob" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Telegram" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-UIEventBridger" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-chatService" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-utils" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 298,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Esculate" : {
+      "configuration" : {
+        "childStreams" : [ "publishNewIncident" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.Test.Esculate",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Esculate",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "5501f28d-e043-49c7-a671-de8fb2eeb5c7"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "Esculate" ],
+        "eventTypeName" : "exculate",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.Test",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "6a2ce90d-6f3f-4113-818d-0446c04ce39e"
+    },
+    "publishNewIncident" : {
+      "configuration" : {
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "Esculate" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.publishNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "publishNewIncident",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "0990be60-7d58-462a-ae7a-2290d6f8c6d7"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.Test.exculate"
+}

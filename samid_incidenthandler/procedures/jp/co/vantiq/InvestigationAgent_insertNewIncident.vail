@@ -1,0 +1,93 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.insertNewIncident(incidentLog Object)
+
+
+var incidentStatus = {
+	"incident_id": incidentLog.incident_id
+}
+incidentStatus.recordnumber = incidentLog.recordnumber
+incidentStatus.region = incidentLog.region	
+incidentStatus.employeePosition = incidentLog.employeePosition
+if incidentLog.IncidentStatus {
+	incidentStatus.status = incidentLog.IncidentStatus
+	if (startsWith(incidentLog.IncidentStatus, "Open")){
+		incidentStatus.is_open = true
+//		incidentStatus.ActionRequired = "Activate"
+		
+	}else{
+		incidentStatus.is_open = false
+//		incidentStatus.ActionRequired = "Close"
+		incidentStatus.ActionRequired = "Recovery"
+	}
+}
+if (incidentLog.IsFacility != null){
+	incidentStatus.IsFacility = incidentLog.IsFacility
+/*	if (incidentLog.IsFacility || incidentLog.casualties == 0){
+		incidentStatus.response_level = 1
+	}else{
+		incidentStatus.response_level = 3
+	}
+*/
+}
+
+incidentStatus.response_level = 1  // This it the ICS Activation Level. default = 1, 1 = Routine, 2 = Partial, 3 = Full Activation 
+
+
+if (incidentLog.IncidentDateTime){
+	incidentStatus.occurred_at = incidentLog.IncidentDateTime
+	incidentStatus.IncidentDateTime = incidentLog.IncidentDateTime
+}
+else{
+	incidentStatus.occurred_at = incidentLog.RegionReceiveDate
+	incidentStatus.IncidentDateTime = incidentLog.RegionReceiveDate
+}
+
+incidentStatus.incident_type = incidentLog.incident_type
+incidentStatus.incident_subtype = incidentLog.incident_subtype
+incidentStatus.incidentLocation = incidentLog.IncidentLocation
+//incidentStatus.incident_level   = 
+incidentStatus.updated_at = incidentLog.entrydate
+//incidentStatus.incidentStatus.hospital_id = hospital_id
+
+
+incidentStatus.casualties = incidentLog.casualties
+
+incidentStatus.incidentCloseDateTime = incidentLog.incidentCloseDateTime
+
+incidentStatus.casualties_Major = incidentLog.casualties_Major
+incidentStatus.casualties_Moderate = incidentLog.casualties_Moderate
+incidentStatus.casualties_Minor =  incidentLog.casualties_Minor
+
+//incidentStatus.description = incidentLog.incidentReasonCategory+" "+incidentLog.incidentReasonSubCategory
+incidentStatus.facility_type = incidentLog.facility_type
+incidentStatus.IncidentLocationType = incidentLog.IncidentLocationType
+incidentStatus.HealthCareFacilityName = incidentLog.HealthCareFacilityName
+incidentStatus.notes = incidentLog.notes
+incidentStatus.facilityName = incidentLog.facilityName
+//incidentStatus.entrydate = incidentLog.entrydate
+
+incidentStatus.incident_level = "Evaluating..."
+
+var prevLevel = select one suggested_level FROM jp.co.vantiq.incident_statuses
+where incident_id  == toString(incidentLog.incident_id)  
+
+if (prevLevel == null){
+	incidentStatus.suggested_level = "Evaluating..."
+	if (startsWith(incidentLog.IncidentStatus, "Open")){
+		incidentStatus.ActionRequired = "Activate"
+
+	}else{
+		incidentStatus.ActionRequired = "Recovery"
+	}
+}
+
+if incidentLog.facility_type {
+	if (startsWith(incidentLog.IncidentLocationType, "Inside the Facility")){
+		incidentStatus.inside_facility = true
+	}else{
+		incidentStatus.inside_facility = false
+	}
+}
+
+UPSERT incident_statuses(incidentStatus)
+return incidentStatus

@@ -1,0 +1,73 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "calculateIncidentDuration",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "In_incident_id",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "convertToLocalDate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "utcDate",
+      "required" : false,
+      "type" : "DateTime"
+    } ]
+  }, {
+    "name" : "getIncidentDetail",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "Inrecordnumber",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getIncidentDetailFromID",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "In_incident_id",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getIncidentNotifications",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "In_incident_id",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getCasualtyBreakdown",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "inIncidentID",
+      "required" : false,
+      "type" : null
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.utils",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

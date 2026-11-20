@@ -1,0 +1,15 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "jp.co.vantiq.ActionAgent.GlobalState",
+  "properties" : {
+    "notifyType" : {
+      "encrypted" : false,
+      "getterProcedure" : "notifyTypeReset",
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

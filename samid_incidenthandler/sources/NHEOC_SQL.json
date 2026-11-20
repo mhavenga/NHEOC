@@ -1,0 +1,28 @@
+{
+  "activationConstraint" : "",
+  "active" : false,
+  "ars_properties" : {
+    "additionalConfigProps" : [ "jdbcConfig.general.username", "jdbcConfig.general.password", "jdbcConfig.general.dbURL" ]
+  },
+  "ars_relationships" : [ ],
+  "autoUnwind" : false,
+  "config" : {
+    "jdbcConfig" : {
+      "general" : {
+        "dbURL" : "jdbc:sqlserver://tahob-pr-db1\tahobdb:1435;databaseName=NHEOC-AI02;encrypt=true;trustServerCertificate=true",
+        "password" : "Aahs@mohapp533423",
+        "pollQuery" : "SELECT TOP (10) * FROM [NHEOC-AI02].[dbo].[table_6]",
+        "pollTime" : 3000,
+        "username" : "MOH\nheoc-ai_svc"
+      }
+    },
+    "vantiq" : {
+      "packageRows" : "true"
+    }
+  },
+  "isUnavailable" : false,
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "NHEOC_SQL",
+  "type" : "JDBC"
+}

@@ -1,0 +1,102 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "22596aa9-9217-4123-a6bc-7f40cfb613dd" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "3babe05e-e844-4f75-95de-e6deabe680db" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "cb03bfa0-1e05-4386-85eb-2a888991f206" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.9528697588658837,
+      "translate" : [ 378, 45.770404391515456 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "IncidentLog" : {
+      "configuration" : {
+        "childStreams" : [ "TransformIncidentLog" ],
+        "eventTypeName" : "incidentLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "IncidentLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "cb03bfa0-1e05-4386-85eb-2a888991f206"
+    },
+    "PublishIncidentLog" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "incidentLogOut",
+        "parentStreams" : [ "TransformIncidentLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishIncidentLog",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "3babe05e-e844-4f75-95de-e6deabe680db"
+    },
+    "TransformIncidentLog" : {
+      "configuration" : {
+        "childStreams" : [ "PublishIncidentLog" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "IncidentLog" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "message" : {
+            "expression" : "event",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformIncidentLog",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "22596aa9-9217-4123-a6bc-7f40cfb613dd"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.UIEventBridger.InputEventBridger"
+}

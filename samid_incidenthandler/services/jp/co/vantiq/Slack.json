@@ -1,0 +1,44 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : { },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "notifyToChannel",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "channelName",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "text",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "codeBlock",
+      "required" : false,
+      "type" : null
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.Slack",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

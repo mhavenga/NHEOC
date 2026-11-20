@@ -1,0 +1,7 @@
+{
+  "baseConfigProperties" : [ "jdbcConfig.general.username", "jdbcConfig.general.password", "jdbcConfig.general.dbURL" ],
+  "baseType" : "EXTENSION",
+  "config" : { },
+  "name" : "JDBC",
+  "verticle" : "service:extensionSource"
+}

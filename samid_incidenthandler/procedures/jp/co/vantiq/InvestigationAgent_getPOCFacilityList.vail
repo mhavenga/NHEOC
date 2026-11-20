@@ -1,0 +1,11 @@
+package jp.co.vantiq
+import service system.Utils
+stateless PROCEDURE InvestigationAgent.getPOCFacilityList()
+
+var pocFacilityList = []
+var pocFacilities = select * from jp.co.vantiq.pocFacilities
+
+for (fac in pocFacilities){
+	pocFacilityList.push(Utils.stripSystemProperties(fac))
+}
+return pocFacilityList

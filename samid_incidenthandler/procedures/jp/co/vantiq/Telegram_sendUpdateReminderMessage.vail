@@ -1,0 +1,33 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.sendUpdateReminderMessage(
+	incidentID String REQUIRED,
+	translate	Boolean REQUIRED
+)
+
+
+var newSched = jp.co.vantiq.Telegram.updateScheduledEvents(incidentID)
+
+if (newSched.message.intervalIndex > 0){
+	var body = {}
+	body.chat_id = -1003483158844
+
+	var text = "This is a friendly reminder to update incident "+incidentID
+
+	if (translate){
+		body.text = text +"\n\n"
+		body.text += jp.co.vantiq.Telegram.translateEnglishArabic(text) 
+
+	}else{
+		body.text = text
+	}
+
+	var incidentDetail = select ONE telegram_message_id FROM jp.co.vantiq.incident_statuses where incident_id == incidentID
+
+	body.reply_to_message_id = incidentDetail.telegram_message_id
+
+	var response = SELECT ONE FROM SOURCE Telegram WITH method = "POST", headers = {}, body = body, path = "sendMessage"
+
+	return response
+}
+
+

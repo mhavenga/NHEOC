@@ -1,0 +1,16 @@
+{
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "groupBy" : "",
+  "name" : "jp.co.vantiq.Global",
+  "properties" : {
+    "lastDate" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

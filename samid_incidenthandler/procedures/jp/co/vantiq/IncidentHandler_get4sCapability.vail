@@ -1,0 +1,47 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.get4sCapability(regionId String REQUIRED, FacilityName String): Object
+// For UI
+PUBLISH { "data_type": "4s_capability" } TO SERVICE EVENT "jp.co.vantiq.UIEventBridger/dataRetrieval"
+
+/* Main Process */
+//var hospitals = SELECT FROM hospitals WHERE region_id == regionId
+var hospitals = SELECT FROM region_beds WHERE region == regionId
+
+
+var Available = 0
+var Beds      = 0
+var Occupied  = 0
+var OccRate   = 0
+
+if (length(hospitals)){
+	for h in hospitals {
+		Available     += h.available
+		Occupied += h.occupied
+	}
+	Beds = Available + Occupied
+	OccRate = Occupied / Beds * 100
+}
+
+// Get bed for hospital not Region
+if FacilityName {
+	Available = 0
+	Beds      = 0
+	Occupied  = 0
+	
+	hospitals = SELECT FROM hospital_beds WHERE hospital == FacilityName
+	if (length(hospitals)){
+		for h in hospitals {
+			Available     += h.available
+			Occupied += h.occupied
+		}
+		Beds = Available + Occupied
+		OccRate = Occupied / Beds * 100
+	}
+}
+
+return {
+    er_beds       	: Beds,
+    er_ccupied    	: Occupied,
+    er_available  	: Available,
+    occupancy_rate 	: OccRate 
+}

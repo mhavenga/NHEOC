@@ -1,0 +1,29 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.getIncidents()
+
+var lastdate = now().minusMillis(6 days)
+ var lastDates = select status , thedate =  max(updated_at) from jp.co.vantiq.incident_statuses 
+	group by status
+
+	for (record in lastDates){
+		if (record.thedate > lastdate){
+			lastdate = record.thedate
+		}
+	}
+
+
+var testDataid = 81185
+try {
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT * "+ 
+  			"FROM [NHEOC-AI02].[dbo].[table_6] "+
+  			"where prevdataid = 0 "+
+			"and entrydate > '" + lastdate + "' " +
+//	"and dataid = " + testDataid + " "+
+			"order by record_date desc "
+	
+	return results
+} catch (error) {
+    exception(error.code, error.message)
+}
+

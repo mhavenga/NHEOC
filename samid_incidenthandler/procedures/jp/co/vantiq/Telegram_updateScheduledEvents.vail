@@ -1,0 +1,35 @@
+package jp.co.vantiq
+import service system.Utils
+stateless PROCEDURE Telegram.updateScheduledEvents(incident)
+
+var evt = select one * from system.scheduledevents where  name == "jp.co.vantiq."+incident 
+var currentDate = now()
+
+evt = Utils.stripSystemProperties(evt)
+var intervalIndex = evt.message.intervalIndex
+var nextIntervalIndex = intervalIndex +1
+var nextInterval = intervalIndex +1
+
+var standardIntervals = Telegram.getAlertSchedule("L1")
+if (nextIntervalIndex > size(standardIntervals)-1){
+	nextIntervalIndex = size(standardIntervals)-1
+}
+var nextInterval = standardIntervals[nextIntervalIndex]
+
+evt.interval =   nextInterval
+evt.occursAt = currentDate.plusMillis(nextInterval)
+evt.message.intervalIndex = nextIntervalIndex
+
+
+update system.scheduledevents(
+      "name": evt.name,
+      "periodic": evt.periodic,
+      "message": evt.message,
+      "interval":  evt.interval,
+      "active": true,
+      "occursAt":  evt.occursAt,
+      "resource":  evt.resource
+	) 
+where name == incident 
+
+return evt 

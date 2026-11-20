@@ -1,0 +1,82 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.notifyIncident(
+	channelName String REQUIRED, 
+	incidentDetails Object REQUIRED
+): Object
+
+
+var messageBody = ""
+
+incidentDetails.notifyType  = "Update"
+if (incidentDetails.newIncident && startsWith(incidentDetails.IncidentStatus,"Open")){
+	incidentDetails.notifyType = "New"
+//	messageBody = "Alert Level "+incidentDetails.suggestedLevel+" New Incident \n"
+	
+}else{
+	if (startsWith(incidentDetails.IncidentStatus,"Open"))
+	{
+		//notifyType = "Update"	
+//		messageBody = "Update Level "+incidentDetails.suggestedLevel+" Incident Ongoing \n"
+	}else{
+//		messageBody = "Update Level "+incidentDetails.suggestedLevel+" Incident Resolved \n"
+		incidentDetails.notifyType = "Closed"
+		
+	}
+} 
+
+messageBody += "Incident: " + incidentDetails.description + " at "+incidentDetails.IncidentLocation +"\n"
+
+try{
+	var theDate = toDate(substr(incidentDetails.IncidentDateTime,0,19)+"z")
+	theDate = theDate.plusMillis(3 hours)
+	var dateString =  substr(replace(toString(theDate), "T", " "),0,19)
+	messageBody += "Event Date: " + dateString +"\n"
+}catch(errorVar) {
+
+	var theDate = now()
+	theDate = theDate.plusMillis(3 hours)
+	var dateString =  substr(replace(toString(theDate), "T", " "),0,19)
+	messageBody += "Event Date: " + dateString +"\n"
+}
+
+
+if (incidentDetails.casualties > 0){
+	messageBody += "Casualties: "+incidentDetails.casualties +"\n"	
+}
+
+messageBody += "\n"
+messageBody += incidentDetails.notes
+
+var openIncident = true
+
+var emailObj = {}
+var emailObj = ActionAgent.BuildIncidentNotification(incidentDetails)
+jp.co.vantiq.ActionAgent.routeMessage(emailObj)
+
+// Save the notivications
+if (startsWith(incidentDetails.status,"Open")){
+	insert jp.co.vantiq.notifications(id: uuid(), incidentId: incidentDetails.incident_id, messageBody: emailObj.message, createdAt: now(),
+									notificationType: incidentDetails.notifyType, status: "Received", metadata: incidentDetails, 
+									incident_level: emailObj.level, occurred_at: incidentDetails.occurred_at)
+
+	//  Send email notification
+}else{
+	insert jp.co.vantiq.notifications(id: uuid(), incidentId: incidentDetails.incident_id, messageBody: emailObj.message, createdAt: now(),
+									notificationType: "Closed", status: "Received", metadata: incidentDetails, 
+									incident_level: emailObj.level, occurred_at: incidentDetails.occurred_at)
+	openIncident = false
+}
+
+
+
+// Create and delete scheduledEvents for Update reminders
+/*
+if (incidentDetails.newIncident && startsWith(incidentDetails.status,"Open")){
+	jp.co.vantiq.ActionAgent.createScheduledEvents(incidentDetails.incident_id)
+}
+
+if (!openIncident){
+	jp.co.vantiq.ActionAgent.deleteScheduledEvents(incidentDetails.incident_id)
+}
+*/
+return emailObj

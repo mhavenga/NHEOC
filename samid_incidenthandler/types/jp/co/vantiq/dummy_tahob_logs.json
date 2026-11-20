@@ -1,0 +1,117 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : {
+    "sortOrder" : [ "id", "incident_id", "incident_type", "incident_location", "description", "casualties", "sector_type", "facility_type", "hospital_id", "health_cluster_id", "region_id", "_pattern" ]
+  },
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "id" ],
+    "options" : {
+      "unique" : true
+    }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "jp.co.vantiq.dummy_tahob_logs",
+  "naturalKey" : [ "id" ],
+  "properties" : {
+    "_pattern" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "casualties" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "description" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "facility_type" : {
+      "description" : "hospital/others",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "health_cluster_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "hospital_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "incident_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "incident_location" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "GeoJSON",
+      "unique" : false
+    },
+    "incident_type" : {
+      "description" : "CBRNE/etc.",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "region_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "sector_type" : {
+      "description" : "moh/private/others",
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

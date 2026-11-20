@@ -1,0 +1,13 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.checkIfIncidentExists(IncidentNumber String)
+
+var exist = select * from jp.co.vantiq.incident_statuses
+where recordnumber ==  IncidentNumber
+
+
+if (length(exist) == 0){
+	return true
+}else{
+	return false
+}
+

@@ -1,0 +1,7 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.getAlertSchedule(level)
+
+var qResult = select one schedule from jp.co.vantiq.alertSchedule
+				where level == level
+
+return qResult.schedule

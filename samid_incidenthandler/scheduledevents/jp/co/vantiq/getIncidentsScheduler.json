@@ -1,0 +1,11 @@
+{
+  "active" : false,
+  "ars_relationships" : [ ],
+  "interval" : 60000,
+  "message" : { },
+  "name" : "jp.co.vantiq.getIncidentsScheduler",
+  "occursAt" : "2026-05-07T19:12:09.000Z",
+  "op" : "publish",
+  "periodic" : true,
+  "resource" : "/services/jp.co.vantiq.InvestigationAgent/getNewIncidents"
+}

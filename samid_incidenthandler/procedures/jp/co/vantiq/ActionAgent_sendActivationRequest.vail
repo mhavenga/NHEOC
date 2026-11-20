@@ -1,0 +1,41 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendActivationRequest(data Object)
+
+
+var messageString = "Activate Operational Level"+data.data.activeLevel+" for Incident "+data.data.recordnumber
+
+
+// Set activated = true
+update jp.co.vantiq.incident_statuses(activated: true, response_level: data.data.activeLevel, ActionRequired: "None") where incident_id == data.data.incident_id 
+
+
+// from Esculation Test
+//update jp.co.vantiq.incident_statuses(evaluatedLevel: toInteger(data.data.activeLevel)+1, ActionRequired: "Esculate") where incident_id == data.data.incident_id 
+
+
+
+
+var messageObj
+
+messageObj =  ActionAgent.BuildIncidentNotification(data.data)
+messageObj.subject = "Activation request for "+data.data.recordnumber
+ActionAgent.routeMessage(messageObj)
+
+
+insert jp.co.vantiq.notifications(id: uuid(), incidentId: data.data.incident_id, messageBody: messageString, createdAt: now(),
+									notificationType: "Activation", status: "Received", metadata: data.data, 
+									incident_level: data.data.suggested_level, occurred_at: data.data.occurred_at)
+
+
+
+
+
+/*
+= {
+	"level": 1,
+	"subject": Activation request for "+data.data.recordnumber,
+	"body": messageString
+	
+}*/
+
+

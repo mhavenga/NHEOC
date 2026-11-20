@@ -1,0 +1,14 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.classifyCaseNumber(occupancyRate Real REQUIRED): Integer
+
+var CASE2_THRESHOLD = 80
+var CASE3_THRESHOLD = 91
+
+var caseNumber = 1
+if occupancyRate >= CASE3_THRESHOLD {
+    caseNumber = 3
+} else if occupancyRate >= CASE2_THRESHOLD {
+    caseNumber = 2
+}
+
+return caseNumber

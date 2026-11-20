@@ -1,0 +1,105 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE InvestigationAgent.publishNewIncident(incident Object REQUIRED): Object
+
+ 
+var log =  {}
+
+var casualties = 0
+var casualties_Major = 0
+var casualties_Moderate = 0
+var casualties_Minor = 0
+
+try {
+//	casualties = toInteger(incident.DangerousCasesNo) + toInteger(incident.SimpleCasesNo) + toInteger(incident.MediumCasesNo) 
+		casualties = toInteger(incident.ResponseLevelCasesNumber)
+} catch(errorVar) {
+    log.error("Error in casualties")
+}
+
+try {
+	casualties_Major = toInteger(incident.DangerousCasesNo)
+} catch(errorVar) {
+	
+}
+
+try{
+	casualties_Moderate = toInteger(incident.MediumCasesNo) 
+}catch(errorVar) {
+	
+}	
+
+try{
+	casualties_Minor = toInteger(incident.SimpleCasesNo)
+}catch(errorVar) {
+	
+}	
+
+ 
+//casualties = 1700
+
+
+// incident.DangerousCasesNo incident.SimpleCasesNo incident.MediumCasesNo 
+log.incident_id = incident.dataid
+log.incident_type = incident.incidentReasonCategory
+log.incident_subtype = incident.incidentReasonSubCategory
+
+log.casualties = casualties
+log.casualties_Major = casualties_Major
+log.casualties_Moderate = casualties_Moderate
+log.casualties_Minor =  casualties_Minor
+
+log.occurred_at = incident.IncidentDateTime
+log.IncidentDateTime = incident.IncidentDateTime
+log.RegionReceiveDate = incident.RegionReceiveDate
+log.region = incident.Region
+log.description = incident.incidentReasonCategory+" "+incident.incidentReasonSubCategory
+log.facility_type = incident.FacilityType
+log.facilityName = incident.FacilityName
+log.IncidentLocationType = incident.IncidentLocationType
+log.status = incident.IncidentStatus
+log.IncidentStatus = incident.IncidentStatus
+log.entrydate = incident.entrydate
+log.recordnumber = incident.record_number
+log.employeePosition = incident.EmployeePosition
+log.notes = incident.Notes
+log.IncidentLocation = incident.IncidentLocation  
+if (incident.IsFacility == 1){
+	log.IsFacility = true
+	log.HealthCareFacilityName = incident.HealthCareFacilityName
+	log.response_level = 1
+}else
+{
+	log.IsFacility = false
+	log.HealthCareFacilityName = incident.HealthCareFacilityName
+	if (casualties == 0){
+		log.response_level = 1
+	}else{
+		log.response_level = 3
+	}
+}
+
+if (incident.HealthCareFacilityName == null){
+	log.HealthCareFacilityName = incident.FacilityName
+}
+
+log.incidentCloseDateTime = incident.record_close_date
+log.hospital_id = null
+
+log.Hospitals = incident.Hospitals
+
+ 
+log.newIncident = InvestigationAgent.checkIfIncidentExists(incident.record_number)
+
+
+
+try{
+	insert jp.co.vantiq.TahobData(Data: incident, ts: now(), incident_id:incident.dataid)
+}catch(errorVar) {
+    log.error("Data Backup Error")
+}
+
+ 
+
+PUBLISH log TO SERVICE EVENT "InvestigationAgent/tahobLog"
+return log

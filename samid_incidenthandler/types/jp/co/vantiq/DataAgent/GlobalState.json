@@ -1,0 +1,14 @@
+{
+  "ars_relationships" : [ ],
+  "name" : "jp.co.vantiq.DataAgent.GlobalState",
+  "properties" : {
+    "lastUpdate" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

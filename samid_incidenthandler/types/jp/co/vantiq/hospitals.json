@@ -1,0 +1,132 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "id" ],
+    "options" : {
+      "unique" : true
+    }
+  }, {
+    "keys" : [ "region_id" ],
+    "options" : { }
+  }, {
+    "keys" : [ "health_cluster_id" ],
+    "options" : { }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "jp.co.vantiq.hospitals",
+  "naturalKey" : [ "id" ],
+  "properties" : {
+    "er_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "er_occupied" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "facility_type" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "general_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "general_occupied" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "health_cluster_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "icu_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "icu_occupied" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "name" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "occupied_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "region_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "sector_type" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "total_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

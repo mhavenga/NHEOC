@@ -1,0 +1,502 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "011ed783-7d16-41d8-8799-0055618740b6" : {
+          "x" : -334.30639309353296,
+          "y" : 80
+        },
+        "05b7c6ce-6dcf-4f44-87d2-a157a13da318" : {
+          "x" : 1171.8591447406345,
+          "y" : 80
+        },
+        "1c1b022a-e5af-49b3-8b07-80168ba1b092" : {
+          "x" : 1351.1540775299072,
+          "y" : 0
+        },
+        "2b45cfa5-1334-44d4-994e-2530711f01a0" : {
+          "x" : 1837.3152389526367,
+          "y" : 0
+        },
+        "4447a7e0-8d15-43cd-a9fd-d10d800242dd" : {
+          "x" : 1733.1313214831882,
+          "y" : 160
+        },
+        "5d213cc4-678f-4c4c-acad-393b790b8f81" : {
+          "x" : -2.628377384609621,
+          "y" : 80
+        },
+        "639e58ca-ce40-4742-b367-1421ba4eb4f7" : {
+          "x" : 321.8016143374973,
+          "y" : 80
+        },
+        "67296cca-7896-4340-8764-6b3ba685ea57" : {
+          "x" : 1985.868526034885,
+          "y" : 160
+        },
+        "74246351-e1d2-4693-8de2-697ec2704218" : {
+          "x" : 947.3119773864746,
+          "y" : 0
+        },
+        "78fca872-29dd-48df-85c7-b8d708e7340c" : {
+          "x" : 248.2799596786499,
+          "y" : 0
+        },
+        "7e537633-11ca-498b-975d-3b46eda33862" : {
+          "x" : 1103.0164615207248,
+          "y" : 160
+        },
+        "8fa89570-1d77-41ad-94f5-e5be38b5a9e6" : {
+          "x" : 1733.1313214831882,
+          "y" : 80
+        },
+        "9d9cf19b-ef7f-43b1-8ebb-322fa00b8b43" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "a62aa830-ba23-4d80-8555-a3d9fc2797a2" : {
+          "x" : 638.9835820727878,
+          "y" : 80
+        },
+        "abb29c4e-8dea-440d-9656-714c7831e5e2" : {
+          "x" : 488.1520366668701,
+          "y" : 0
+        },
+        "ae562ac1-5bba-44f7-8410-4ec34884b314" : {
+          "x" : 1451.9619651370579,
+          "y" : 80
+        },
+        "beeceae7-f716-4304-b4f9-283df56047fe" : {
+          "x" : 1598.4385995864868,
+          "y" : 0
+        },
+        "d3c01a21-f505-47a2-8d3b-0af2728d87c8" : {
+          "x" : 721.9359483718872,
+          "y" : 0
+        },
+        "de5e7725-e1dd-4084-b8a6-b061ef9f6a35" : {
+          "x" : 1973.7366366916233,
+          "y" : 80
+        },
+        "dfbb8544-375e-4867-8ad4-be417c30b07d" : {
+          "x" : 1153.4369688034058,
+          "y" : 0
+        },
+        "e56e9dbe-ae2f-4292-b442-3ae5ef0f5fb6" : {
+          "x" : 638.9835820727878,
+          "y" : 160
+        },
+        "ec44df5e-f7a4-4501-926f-55412034473d" : {
+          "x" : -2.628377384609621,
+          "y" : 160
+        },
+        "ef380196-6f6a-4723-bef2-c4f7f60dde8a" : {
+          "x" : 927.3360896640354,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.1550486123334816,
+      "translate" : [ -401.0148981788948, 135.7933516165138 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "ActionAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "TransformActionAgentResult" ],
+        "eventTypeName" : "actionAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "ActionAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "dfbb8544-375e-4867-8ad4-be417c30b07d"
+    },
+    "ActionAgentStarted" : {
+      "configuration" : {
+        "childStreams" : [ "PublishActionAgentStarted" ],
+        "eventTypeName" : "actionAgentStarted",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "ActionAgentStarted",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "74246351-e1d2-4693-8de2-697ec2704218"
+    },
+    "DiagnosticAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "TransformDiagnosticAgentResult" ],
+        "eventTypeName" : "diagnosticAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DiagnosticAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "d3c01a21-f505-47a2-8d3b-0af2728d87c8"
+    },
+    "DiagnosticAgentStarted" : {
+      "configuration" : {
+        "childStreams" : [ "PublishDiagnosticAgentStarted" ],
+        "eventTypeName" : "diagnosticAgentStarted",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DiagnosticAgentStarted",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "abb29c4e-8dea-440d-9656-714c7831e5e2"
+    },
+    "InvestigationAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "TransformInvestigationAgentResult" ],
+        "eventTypeName" : "investigationAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "78fca872-29dd-48df-85c7-b8d708e7340c"
+    },
+    "InvestigationAgentStarted" : {
+      "configuration" : {
+        "childStreams" : [ "PublishInvestigationAgentStarted" ],
+        "eventTypeName" : "investigationAgentStarted",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentStarted",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "9d9cf19b-ef7f-43b1-8ebb-322fa00b8b43"
+    },
+    "OrchestratorAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "TransformOrchestratorResult" ],
+        "eventTypeName" : "orchestratorAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "OrchestratorAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "beeceae7-f716-4304-b4f9-283df56047fe"
+    },
+    "OrchestratorAgentStarted" : {
+      "configuration" : {
+        "childStreams" : [ "PublishOrchestratorAgentStarted" ],
+        "eventTypeName" : "orchestratorAgentStarted",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "OrchestratorAgentStarted",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "1c1b022a-e5af-49b3-8b07-80168ba1b092"
+    },
+    "PublishActionAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "actionAgentResultOut",
+        "parentStreams" : [ "TransformActionAgentResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishActionAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "7e537633-11ca-498b-975d-3b46eda33862"
+    },
+    "PublishActionAgentStarted" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "actionAgentStartedOut",
+        "parentStreams" : [ "ActionAgentStarted" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishActionAgentStarted",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ef380196-6f6a-4723-bef2-c4f7f60dde8a"
+    },
+    "PublishDiagnosticAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentResultOut",
+        "parentStreams" : [ "TransformDiagnosticAgentResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishDiagnosticAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "e56e9dbe-ae2f-4292-b442-3ae5ef0f5fb6"
+    },
+    "PublishDiagnosticAgentStarted" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentStartedOut",
+        "parentStreams" : [ "DiagnosticAgentStarted" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishDiagnosticAgentStarted",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "639e58ca-ce40-4742-b367-1421ba4eb4f7"
+    },
+    "PublishFinalResultOut" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "finalResultOut",
+        "parentStreams" : [ "TransformFinalResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishFinalResultOut",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "67296cca-7896-4340-8764-6b3ba685ea57"
+    },
+    "PublishInvestigationAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentResultOut",
+        "parentStreams" : [ "TransformInvestigationAgentResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishInvestigationAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ec44df5e-f7a4-4501-926f-55412034473d"
+    },
+    "PublishInvestigationAgentStarted" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentStartedOut",
+        "parentStreams" : [ "InvestigationAgentStarted" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishInvestigationAgentStarted",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "011ed783-7d16-41d8-8799-0055618740b6"
+    },
+    "PublishOrchestratorAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentResultOut",
+        "parentStreams" : [ "TransformOrchestratorResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishOrchestratorAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "4447a7e0-8d15-43cd-a9fd-d10d800242dd"
+    },
+    "PublishOrchestratorAgentStarted" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentStartedOut",
+        "parentStreams" : [ "OrchestratorAgentStarted" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishOrchestratorAgentStarted",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ae562ac1-5bba-44f7-8410-4ec34884b314"
+    },
+    "TransformActionAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "PublishActionAgentResult" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "ActionAgentResult" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "message" : {
+            "expression" : "event.has(\"notification_result\") ? event.notification_result.response : event.message",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformActionAgentResult",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "05b7c6ce-6dcf-4f44-87d2-a157a13da318"
+    },
+    "TransformDiagnosticAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "PublishDiagnosticAgentResult" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "DiagnosticAgentResult" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "message" : {
+            "expression" : "AuditLogManager.transformDiagnosticAgentResult(event)",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformDiagnosticAgentResult",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "a62aa830-ba23-4d80-8555-a3d9fc2797a2"
+    },
+    "TransformFinalResult" : {
+      "configuration" : {
+        "childStreams" : [ "PublishFinalResultOut" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "finalResult" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "final_result" : {
+            "expression" : "event.has(\"notification_result\") ? event.notification_result.response : event.message",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformFinalResult",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "de5e7725-e1dd-4084-b8a6-b061ef9f6a35"
+    },
+    "TransformInvestigationAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "PublishInvestigationAgentResult" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "InvestigationAgentResult" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "message" : {
+            "expression" : "\"Received Incident Information details=\" + stringify(event)",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformInvestigationAgentResult",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "5d213cc4-678f-4c4c-acad-393b790b8f81"
+    },
+    "TransformOrchestratorResult" : {
+      "configuration" : {
+        "childStreams" : [ "PublishOrchestratorAgentResult" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "OrchestratorAgentResult" ],
+        "schema" : null,
+        "transformInPlace" : false,
+        "transformation" : {
+          "message" : {
+            "expression" : "event.review_result.message",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "TransformOrchestratorResult",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "8fa89570-1d77-41ad-94f5-e5be38b5a9e6"
+    },
+    "finalResult" : {
+      "configuration" : {
+        "childStreams" : [ "TransformFinalResult" ],
+        "eventTypeName" : "finalResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.UIEventBridger",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "finalResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "2b45cfa5-1334-44d4-994e-2530711f01a0"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.UIEventBridger.AgentEventBridger"
+}

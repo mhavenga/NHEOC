@@ -1,0 +1,18 @@
+package jp.co.vantiq
+stateless PROCEDURE chatService.mitigationRequest(data Object)
+
+var message = "Risk identified:<br>"
+message += "Issue: "+data.incident_subtype+"<br>"
+message += "Location: "+data.facility_type+"<br>"
+message += "Region: "+data.region+"<br>"
+message += "Hospital: "+data.HealthCareFacilityName+"<br><br>"
+
+message += "Risk details<br>"
+message +=  data.incident_type +"<br>"
+message += "Type: "+data.incident_subtype+"<br>"
+message += "Casuallties: "+data.casualties+"<br>"
+message += "Mitigation Strategies Required<br>"
+message += "Do you want me to list the mitigation strategies?<br>"
+
+
+return message

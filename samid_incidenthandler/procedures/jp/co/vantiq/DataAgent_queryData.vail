@@ -1,0 +1,23 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.queryData()
+/*
+try {
+	
+	var SQLQuery = "SELECT TOP (10) * FROM [NHEOC-AI02].[dbo].[table_6]"
+//	var SQLQuery = "SELECT 1"
+    SELECT * FROM source NHEOC_SQL as results with
+    query: SQLQuery
+	return results
+} catch (error) {
+    exception(error.code, error.message)
+}
+*/
+
+try {
+    SELECT * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT TOP (10) * FROM [NHEOC-AI02].[dbo].[table_6]"
+	
+	return results
+} catch (error) {
+    exception(error.code, error.message)
+}

@@ -1,0 +1,43 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "54b95a14-8a50-40e9-8f1b-22479b5c8ba9" ],
+    "widgets" : [ {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "5b9d8b17-1499-43ba-86e6-6987f11309db" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "VerticalLayout96",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "54b95a14-8a50-40e9-8f1b-22479b5c8ba9",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "borderThickness" : 1,
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "horzizontalScrollPolicy" : "auto",
+      "html" : "<link rel=\"stylesheet\" href=\"PASTE_YOUR_PUBLIC_CSS_DOCUMENT_URL_HERE\">\n\n<div id=\"mhNotificationLogRoot\" class=\"mh-notificationlog\">\n  <div class=\"mh-notificationlog__container\">\n\n    <div class=\"mh-notificationlog__header\">\n      <div>\n        <h1 class=\"mh-notificationlog__title\">VANTIQ <strong>Notifications Center</strong></h1>\n        <div class=\"mh-notificationlog__subtitle\">Real-time notification activity</div>\n      </div>\n\n      <div class=\"mh-notificationlog__connection\">\n        <span id=\"mhNotifStatusDot\" class=\"mh-notificationlog__status-dot\"></span>\n        <span id=\"mhNotifConnectionText\">Connecting...</span>\n      </div>\n    </div>\n\n    <div class=\"mh-notificationlog__filters\">\n      <div class=\"mh-notificationlog__filter-group\">\n        <label for=\"mhNotifTypeFilter\">Type:</label>\n        <select id=\"mhNotifTypeFilter\">\n          <option value=\"\">All</option>\n          <option value=\"New\">New</option>\n          <option value=\"Closed\">Closed</option>\n          <option value=\"Mitigation\">Mitigation</option>\n          <option value=\"Reminder\">Reminder</option>\n          <option value=\"Action Plan\">Action Plan</option>\n          <option value=\"Activation\">Activation</option>\n        </select>\n      </div>\n\n      <div class=\"mh-notificationlog__filter-group\">\n        <label for=\"mhNotifStatusFilter\">Incident Status:</label>\n        <select id=\"mhNotifStatusFilter\">\n          <option value=\"\">All</option>\n          <option value=\"open\">Open</option>\n          <option value=\"closed\">Closed</option>\n        </select>\n      </div>\n\n      <div class=\"mh-notificationlog__filter-group\">\n        <label for=\"mhNotifLevelFilter\">Level:</label>\n        <select id=\"mhNotifLevelFilter\">\n          <option value=\"\">All</option>\n          <option value=\"1\">1</option>\n          <option value=\"2\">2</option>\n          <option value=\"3\">3</option>\n          <option value=\"4\">4</option>\n          <option value=\"5\">5</option>\n        </select>\n      </div>\n\n      <div class=\"mh-notificationlog__filter-group\">\n        <label for=\"mhNotifSearchInput\">Search:</label>\n        <input id=\"mhNotifSearchInput\" type=\"text\" placeholder=\"Search notifications...\">\n      </div>\n\n      <button id=\"mhNotifClearFiltersBtn\" class=\"mh-notificationlog__btn mh-notificationlog__btn--secondary\">Clear Filters</button>\n      <button id=\"mhNotifRefreshBtn\" class=\"mh-notificationlog__btn mh-notificationlog__btn--primary\">Refresh</button>\n    </div>\n\n    <div class=\"mh-notificationlog__stats\">\n      <div class=\"mh-notificationlog__stat-card\">\n        <span class=\"mh-notificationlog__stat-label\">Total</span>\n        <span id=\"mhNotifTotal\" class=\"mh-notificationlog__stat-value\">0</span>\n      </div>\n\n      <div class=\"mh-notificationlog__stat-card\">\n        <span class=\"mh-notificationlog__stat-label\">Open</span>\n        <span id=\"mhNotifOpen\" class=\"mh-notificationlog__stat-value mh-notificationlog__stat-value--open\">0</span>\n      </div>\n\n      <div class=\"mh-notificationlog__stat-card\">\n        <span class=\"mh-notificationlog__stat-label\">Closed</span>\n        <span id=\"mhNotifClosed\" class=\"mh-notificationlog__stat-value mh-notificationlog__stat-value--closed\">0</span>\n      </div>\n\n      <div class=\"mh-notificationlog__stat-card\">\n        <span class=\"mh-notificationlog__stat-label\">Showing</span>\n        <span id=\"mhNotifShowing\" class=\"mh-notificationlog__stat-value\">0</span>\n      </div>\n\n      <div class=\"mh-notificationlog__stat-card\">\n        <span class=\"mh-notificationlog__stat-label\">Last Updated</span>\n        <span id=\"mhNotifLastUpdated\" class=\"mh-notificationlog__stat-value mh-notificationlog__stat-value--small\">-</span>\n      </div>\n    </div>\n\n    <div class=\"mh-notificationlog__table-wrapper\">\n      <table id=\"mhNotificationTable\" class=\"mh-notificationlog__table\">\n        <thead id=\"mhNotificationTableHead\"></thead>\n        <tbody id=\"mhNotificationTableBody\">\n          <tr>\n            <td style=\"text-align:center;color:#64748b;\">Loading notifications...</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n\n    <div id=\"mhNotifErrorMessage\" class=\"mh-notificationlog__error\" style=\"display:none;\"></div>\n\n  </div>\n\n  <div id=\"mhNotifDetailModal\" class=\"mh-notificationlog__modal\">\n    <div class=\"mh-notificationlog__modal-content\">\n      <span id=\"mhNotifCloseModal\" class=\"mh-notificationlog__modal-close\">&times;</span>\n      <h2>Notification Details</h2>\n      <div id=\"mhNotifDetailContent\"></div>\n    </div>\n  </div>\n</div>",
+      "name" : "StaticHtml4",
+      "row" : -1,
+      "type" : "StaticHtml",
+      "uuid" : "5b9d8b17-1499-43ba-86e6-6987f11309db",
+      "v" : 19,
+      "vertGravity" : "center",
+      "verticalScrollPolicy" : "auto",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

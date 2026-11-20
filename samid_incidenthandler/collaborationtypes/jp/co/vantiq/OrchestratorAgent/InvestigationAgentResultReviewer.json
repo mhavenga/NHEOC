@@ -1,0 +1,294 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "213db09f-01bb-46cc-bd6f-95c2f4368035" : {
+          "x" : -81.2414813041687,
+          "y" : 160
+        },
+        "28ae51de-fc5f-448a-ab2a-bf3ad0294728" : {
+          "x" : -109.4604902267456,
+          "y" : 400
+        },
+        "311e9225-7604-495c-acf0-c9696d23e517" : {
+          "x" : 240.41412258148193,
+          "y" : 0
+        },
+        "576d2e32-151b-422b-991a-a7fc028a3411" : {
+          "x" : 24.444759845733643,
+          "y" : 320
+        },
+        "5aa045c5-1809-4d99-97c7-e5ac08556c35" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "74634a42-0898-4ddc-8863-caa41d738714" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "aa8278e2-a88c-4c1c-95ed-f4b63605200a" : {
+          "x" : -81.2414813041687,
+          "y" : 240
+        },
+        "b36077b7-5eeb-4fa6-b231-ce6b0654b5a1" : {
+          "x" : -166.65538692474365,
+          "y" : 320
+        },
+        "ba47b529-033c-42b2-808a-52082fc91d01" : {
+          "x" : 57.000463008880615,
+          "y" : 160
+        },
+        "d9a85e9e-5566-4151-9003-dbe02592827a" : {
+          "x" : -35.55451059341431,
+          "y" : 480
+        },
+        "d9e28385-b23a-4ed0-92ad-6566709856ba" : {
+          "x" : -467.6568341255188,
+          "y" : 480
+        },
+        "ec1d84d4-65bb-4d27-a3f2-2373d9078216" : {
+          "x" : -278.3809103965759,
+          "y" : 480
+        },
+        "f3860838-1fc0-41d2-97a7-ab998113890b" : {
+          "x" : -220.24256992340088,
+          "y" : 400
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.6929598432448425,
+      "translate" : [ 488.0484652486599, 28.31589395596069 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "BranchByReviewResult" : {
+      "configuration" : {
+        "ApprovedStreams" : [ "PassToDiagnosticAgent", "InsertIncident" ],
+        "RejectedStreams" : [ "ReturnToInvestigationAgent" ],
+        "childStreams" : [ ],
+        "conditions" : [ {
+          "code" : "event.review_result.approved == true",
+          "label" : "Approved",
+          "language" : ""
+        }, {
+          "code" : "event.review_result.approved == false",
+          "label" : "Rejected",
+          "language" : ""
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "ForUI_Delay5sec" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "Approved" : "f3860838-1fc0-41d2-97a7-ab998113890b",
+        "Rejected" : "28ae51de-fc5f-448a-ab2a-bf3ad0294728"
+      },
+      "name" : "BranchByReviewResult",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "b36077b7-5eeb-4fa6-b231-ce6b0654b5a1"
+    },
+    "ForUI_Delay2sec" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentStart", "Review" ],
+        "delay" : "1 seconds",
+        "imports" : null,
+        "parentStreams" : [ "InvestigationAgentResult" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay2sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "5aa045c5-1809-4d99-97c7-e5ac08556c35"
+    },
+    "ForUI_Delay5sec" : {
+      "configuration" : {
+        "childStreams" : [ "BranchByReviewResult", "LogAgentResult" ],
+        "delay" : "1 seconds",
+        "imports" : null,
+        "parentStreams" : [ "Review" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay5sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "aa8278e2-a88c-4c1c-95ed-f4b63605200a"
+    },
+    "InsertIncident" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "incidentLog" : "event"
+        },
+        "parentStreams" : [ "BranchByReviewResult:Approved" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.insertNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "InsertIncident",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ec1d84d4-65bb-4d27-a3f2-2373d9078216"
+    },
+    "InvestigationAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "ForUI_Delay2sec" ],
+        "eventTypeName" : "investigationAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.OrchestratorAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "74634a42-0898-4ddc-8863-caa41d738714"
+    },
+    "LogAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentOutputLog",
+        "parentStreams" : [ "ForUI_Delay5sec" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "576d2e32-151b-422b-991a-a7fc028a3411"
+    },
+    "LogAgentStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentInputLog",
+        "parentStreams" : [ "ForUI_Delay2sec" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ba47b529-033c-42b2-808a-52082fc91d01"
+    },
+    "PassToDiagnosticAgent" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "investigationAgentResult",
+        "parentStreams" : [ "BranchByReviewResult:Approved" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.DiagnosticAgent"
+      },
+      "downstreamReferences" : { },
+      "name" : "PassToDiagnosticAgent",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "d9e28385-b23a-4ed0-92ad-6566709856ba"
+    },
+    "ReturnToInvestigationAgent" : {
+      "configuration" : {
+        "childStreams" : [ "PassToUI_AgentEnd" ],
+        "level" : null,
+        "parentStreams" : [ "BranchByReviewResult:Rejected" ]
+      },
+      "description" : "**Currently this task is just a placeholder**\n\n\"Investigation Agent\" is a rule-based agent, so there's no possibility of output being rejected.\nAlso, the InvestigationAgent Service doesn't have any process for handling rejected results yet.",
+      "downstreamReferences" : { },
+      "name" : "ReturnToInvestigationAgent",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "d9a85e9e-5566-4151-9003-dbe02592827a"
+    },
+    "Review" : {
+      "configuration" : {
+        "childStreams" : [ "ForUI_Delay5sec" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "ForUI_Delay2sec" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.OrchestratorAgent.reviewInvestigationAgentResult",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "review_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Review",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "213db09f-01bb-46cc-bd6f-95c2f4368035"
+    },
+    "UpdateIncidentStatus" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : {
+          "HealthCareFacilityName" : "event.HealthCareFacilityName",
+          "IncidentLocationType" : "event.IncidentLocationType",
+          "IsFacility" : "event.IsFacility",
+          "casualties" : "event.casualties",
+          "employeePosition" : "event.employeePosition",
+          "facility_type" : "event.facility_type",
+          "hospital_id" : "event.hospital_id",
+          "hospitals" : "event.hospitals",
+          "incidentId" : "event.incident_id",
+          "incidentLevel" : "\"Evaluating...\"",
+          "incidentLocation" : "event.incident_location",
+          "incidentSubType" : "event.incident_subtype",
+          "incidentType" : "event.incident_type",
+          "isOpen" : "false",
+          "occurredAt" : "event.occurred_at",
+          "patientRatio" : "null",
+          "recordnumber" : "event.recordnumber",
+          "region" : "event.region",
+          "status" : "event.status",
+          "updateAt" : "event.entrydate"
+        },
+        "parentStreams" : [ ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.OrchestratorAgent.updateIncidentStatus",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "UpdateIncidentStatus",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "311e9225-7604-495c-acf0-c9696d23e517"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.OrchestratorAgent.InvestigationAgentResultReviewer"
+}

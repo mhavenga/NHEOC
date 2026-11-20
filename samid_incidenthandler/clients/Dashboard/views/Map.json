@@ -1,0 +1,160 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "a19ffaa9-f0d0-403a-a10a-1651fc6f9a2b" ],
+    "widgets" : [ {
+      "allValuesAreStrings" : true,
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "default" : "All",
+      "enumeratedList" : [ {
+        "label" : "All",
+        "value" : "All"
+      }, {
+        "label" : "Open",
+        "value" : "Open"
+      }, {
+        "label" : "Closed",
+        "value" : "Closed"
+      } ],
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : "Status",
+      "name" : "DroplistStatusMap",
+      "row" : 0,
+      "type" : "Droplist",
+      "uuid" : "1fb48457-b35c-4718-842a-71ca5ce62f18",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "borderColor" : "Default",
+      "column" : -1,
+      "dataStreamGroupedByFiltersString" : "",
+      "dataStreamProperty" : "incident_location",
+      "dataStreamUUID" : "edbfff03-b1aa-4dbc-8f17-2636fff30952",
+      "dataType" : null,
+      "fixedCenter" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "labelProperty" : "incident_type",
+      "mapType" : "roadmap",
+      "name" : "DynamicMapViewer1",
+      "naturalKey" : null,
+      "operation" : "insert",
+      "row" : -1,
+      "type" : "DynamicMapViewer",
+      "uuid" : "2cb91fda-d6d9-4474-8e15-8dcfa06c63da",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertWeight" : 1,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "default",
+      "borderColor" : "Default",
+      "children" : [ "d510d77a-36d6-4267-b82b-3a4f1e7f08ea", "2cb91fda-d6d9-4474-8e15-8dcfa06c63da" ],
+      "column" : 0,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "name" : "VerticalLayout41",
+      "row" : 0,
+      "type" : "VerticalLayout",
+      "uuid" : "a19ffaa9-f0d0-403a-a10a-1651fc6f9a2b",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "defaultValue" : "",
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "inputType" : "text",
+      "label" : "Search",
+      "name" : "InputStringSearchMap",
+      "optional" : true,
+      "placeholder" : "",
+      "row" : 0,
+      "type" : "InputString",
+      "uuid" : "acf929fd-a8d8-4329-92f1-b11748d10996",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "platform",
+      "borderColor" : "Default",
+      "buttonLabel" : "Clear Filters",
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : ".",
+      "labelColor" : "#22252b",
+      "name" : "Button10",
+      "row" : 2,
+      "submitValue" : 100,
+      "type" : "Button",
+      "uuid" : "bf59fb66-8716-48d7-bf94-a398b227e5d2",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "backgroundColor" : "#1e293b",
+      "borderColor" : "Default",
+      "children" : [ "1fb48457-b35c-4718-842a-71ca5ce62f18", "db7e9226-af12-4452-8255-ae3bf2e82aef", "acf929fd-a8d8-4329-92f1-b11748d10996", "bf59fb66-8716-48d7-bf94-a398b227e5d2" ],
+      "column" : -1,
+      "heightPolicy" : "sizeToCell",
+      "horzGravity" : "center",
+      "name" : "HorizontalLayout28",
+      "row" : -1,
+      "type" : "HorizontalLayout",
+      "uuid" : "d510d77a-36d6-4267-b82b-3a4f1e7f08ea",
+      "v" : 19,
+      "vertGravity" : "center",
+      "vertMargin" : 0,
+      "widthPolicy" : "sizeToCell"
+    }, {
+      "allValuesAreStrings" : true,
+      "backgroundColor" : "#141b2f",
+      "borderColor" : "Default",
+      "column" : -1,
+      "default" : "All",
+      "enumeratedList" : [ {
+        "label" : "All",
+        "value" : "All"
+      }, {
+        "label" : "1",
+        "value" : "1"
+      }, {
+        "label" : "2",
+        "value" : "2"
+      }, {
+        "label" : "3",
+        "value" : "3"
+      }, {
+        "label" : "4",
+        "value" : "4"
+      }, {
+        "label" : "5",
+        "value" : "5"
+      } ],
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "label" : "Level",
+      "name" : "DroplistLevelMap",
+      "row" : -1,
+      "type" : "Droplist",
+      "uuid" : "db7e9226-af12-4452-8255-ae3bf2e82aef",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "single"
+}

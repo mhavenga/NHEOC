@@ -1,0 +1,16 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.checkRegion()
+
+var data = select region FROM jp.co.vantiq.incident_statuses
+FOR (row in data) {
+	var reg = row.region	
+	var regionCounter = select  counter = count(*) from jp.co.vantiq.region_beds
+	where region == reg	
+	if (regionCounter[0].counter == 0){
+		upsert jp.co.vantiq.debugMorne(region: reg, data: regionCounter[0].counter) 
+	}
+}
+
+
+select * from jp.co.vantiq.debugMorne
+

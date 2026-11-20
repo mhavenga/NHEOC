@@ -1,0 +1,117 @@
+package jp.co.vantiq
+stateless PROCEDURE OrchestratorAgent.updateIncidentStatus(
+	incidentId       String REQUIRED,  
+	occurredAt       DateTime,
+	incidentType     String,
+	incidentSubType     String,
+	incidentLocation GeoJSON,
+	incidentLevel    String,
+	casualties       Integer,
+	updateAt         DateTime,
+	isOpen           Boolean,
+	hospital_id 	 String,
+	hospitals		 String,
+	facility_type    String,
+	region		     String,
+	status			 String,
+	recordnumber     String,
+	IsFacility		Boolean,
+	HealthCareFacilityName String,
+	IncidentLocationType String,
+	patientRatio Integer,
+	employeePosition String
+): Object
+
+var incidentStatus = {
+	"incident_id": incidentId
+}
+
+if recordnumber {
+	incidentStatus.recordnumber = recordnumber
+}
+
+if region {
+	incidentStatus.region = region	
+}
+
+if (employeePosition){
+	incidentStatus.employeePosition = employeePosition
+}
+
+if status {
+	incidentStatus.status = status
+	if (startsWith(status, "Open")){
+		incidentStatus.is_open = true
+	}else{
+		incidentStatus.is_open = false
+	}
+}
+
+if occurredAt {
+	incidentStatus.occurred_at = occurredAt
+}
+if incidentType {
+	incidentStatus.incident_type = incidentType
+}
+if incidentSubType {
+	incidentStatus.incident_subtype = incidentSubType
+}
+if incidentLocation {
+	incidentStatus.incident_location = incidentLocation
+}
+if incidentLevel {
+	incidentStatus.incident_level = incidentLevel
+}
+if casualties {
+	incidentStatus.casualties = casualties
+}
+
+if (casualties == 0){
+	incidentStatus.casualties = casualties
+}
+
+if updateAt {
+	incidentStatus.updated_at = updateAt
+}
+
+if (IsFacility != null){
+	incidentStatus.IsFacility = IsFacility
+	if (IsFacility || incidentStatus.casualties == 0){
+		incidentStatus.response_level = 1
+	}else{
+		incidentStatus.response_level = 3
+	}
+}
+
+if HealthCareFacilityName {
+	incidentStatus.HealthCareFacilityName = HealthCareFacilityName
+}
+
+if hospital_id {
+	incidentStatus.incidentStatus.hospital_id = hospital_id
+}
+if hospitals {
+	incidentStatus.hospitals = hospitals
+}
+if facility_type {
+	incidentStatus.facility_type = facility_type
+}
+
+if IncidentLocationType {
+	incidentStatus.IncidentLocationType = IncidentLocationType
+}
+
+if facility_type {
+	if (startsWith(IncidentLocationType, "Inside the Facility")){
+		incidentStatus.inside_facility = true
+	}else{
+		incidentStatus.inside_facility = false
+	}
+}
+
+if (patientRatio != null) {
+	incidentStatus.patientRatio = patientRatio
+}
+
+UPSERT incident_statuses(incidentStatus)
+return incidentStatus

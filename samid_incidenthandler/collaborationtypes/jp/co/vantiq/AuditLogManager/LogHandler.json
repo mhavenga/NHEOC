@@ -1,0 +1,639 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "111161a3-c3da-4752-8002-84c52699a45e" : {
+          "x" : 728.4939236111111,
+          "y" : 160
+        },
+        "1fd3743d-6149-43c7-9ccb-78a0ce6ee110" : {
+          "x" : 1565.631076388889,
+          "y" : 80
+        },
+        "1fe13009-46f2-4928-9801-0f4286743a22" : {
+          "x" : 2326.237650369849,
+          "y" : -81.0158260744065
+        },
+        "201167eb-6000-449b-8622-25c85a7874fd" : {
+          "x" : 1365.734375,
+          "y" : 0
+        },
+        "21dec5db-8ebf-488d-89b9-384b36c5055b" : {
+          "x" : 1122.671875,
+          "y" : 0
+        },
+        "2b570b6e-7fa8-4f0e-8095-993b331e1cd0" : {
+          "x" : 680.03125,
+          "y" : 0
+        },
+        "31342025-be0b-4472-8c02-9a234bfef3aa" : {
+          "x" : 1815.209201388889,
+          "y" : 80
+        },
+        "43255022-be9e-4f44-80cf-6ca65bf15069" : {
+          "x" : 1965.5574612356281,
+          "y" : 332.5280536149054
+        },
+        "50e65380-db09-49e2-85f0-7d2cce89ef0c" : {
+          "x" : -27.118923611111086,
+          "y" : 80
+        },
+        "5357650b-7ed3-4443-8fd5-9905695fd95a" : {
+          "x" : 2313.5920138888887,
+          "y" : 160
+        },
+        "5c219e72-b6d6-489e-8a59-afeec27a1a5f" : {
+          "x" : -579.3689236111111,
+          "y" : 80
+        },
+        "5f7bb879-31c5-48b2-8416-d52802d64141" : {
+          "x" : -827.4548611111111,
+          "y" : 80
+        },
+        "7d76cf0a-bbe8-4b00-8083-453f3cae7b3a" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "7f01e453-b6fe-487f-8f1e-bf9999553a99" : {
+          "x" : 1113.193576388889,
+          "y" : 80
+        },
+        "8606b27a-621b-4ec6-90c7-5e62e467c5a8" : {
+          "x" : 1620.640625,
+          "y" : 0
+        },
+        "996e0f64-6012-4d91-856d-dee85c24c219" : {
+          "x" : 449.9045138888889,
+          "y" : 80
+        },
+        "9c8eb48b-b436-4ae7-86c5-4707160f192a" : {
+          "x" : 153.078125,
+          "y" : 0
+        },
+        "a3772ca4-8d5a-4362-ab6c-7342e7a95e47" : {
+          "x" : 1332.045138888889,
+          "y" : 80
+        },
+        "b33ff87a-6326-4cea-a74f-1ce005b9fbe8" : {
+          "x" : 897.1857638888889,
+          "y" : 80
+        },
+        "b3d530ed-bb7c-4990-818f-5113d5403a62" : {
+          "x" : -1292.150173611111,
+          "y" : 80
+        },
+        "b4ef7c75-756f-444f-b1e6-c2f274237bec" : {
+          "x" : 410.640625,
+          "y" : 0
+        },
+        "c863e019-bb22-4325-855d-1ec94d48e6ee" : {
+          "x" : 2313.5920138888887,
+          "y" : 80
+        },
+        "d3f24ad9-4810-46b2-8546-6efa46f537a7" : {
+          "x" : 2058.8810763888887,
+          "y" : 80
+        },
+        "d8381547-ce41-42cb-9966-4d217a171b4b" : {
+          "x" : -285.2907986111111,
+          "y" : 80
+        },
+        "e45df005-bdd9-4e5b-965e-2409d3e10547" : {
+          "x" : 2569.6935763888887,
+          "y" : 80
+        },
+        "ea39bba2-5d94-4cb9-9115-8b19a21c26ce" : {
+          "x" : 243.9826388888889,
+          "y" : 80
+        },
+        "ec0c7ea7-9dee-4aa2-9ae2-86bb0679c9ce" : {
+          "x" : -1096.025173611111,
+          "y" : 80
+        },
+        "fd1cf53f-ce37-4725-9b25-943e193c8b21" : {
+          "x" : 686.8185763888889,
+          "y" : 80
+        },
+        "ff144991-8d78-4276-88ea-212adbd636ed" : {
+          "x" : 895.4375,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.160267129951481,
+      "translate" : [ -1884.2655581618023, 128.77577995826135 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "ActionAgentInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildActionInputLog", "ForUI_PassActionStart" ],
+        "eventTypeName" : "actionAgentInputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "ActionAgentInputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "2b570b6e-7fa8-4f0e-8095-993b331e1cd0"
+    },
+    "ActionAgentOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildActionOutputLog", "ForUI_PassActionResult", "ForUI_PassFinalResult" ],
+        "eventTypeName" : "actionAgentOutputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "ActionAgentOutputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "ff144991-8d78-4276-88ea-212adbd636ed"
+    },
+    "BuildActionInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"action\"",
+          "incidentId" : "event.incident_id",
+          "inputSnapshot" : "event"
+        },
+        "parentStreams" : [ "ActionAgentInputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentInputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildActionInputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ea39bba2-5d94-4cb9-9115-8b19a21c26ce"
+    },
+    "BuildActionOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"action\"",
+          "incidentId" : "event.incident_id",
+          "outputSnapshot" : "event.notification_result.response"
+        },
+        "parentStreams" : [ "ActionAgentOutputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentOutputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildActionOutputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "fd1cf53f-ce37-4725-9b25-943e193c8b21"
+    },
+    "BuildDiagnosticInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"diagnostic\"",
+          "incidentId" : "event.incident_id",
+          "inputSnapshot" : "event"
+        },
+        "parentStreams" : [ "DiagnosticAgentInputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentInputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildDiagnosticInputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "a3772ca4-8d5a-4362-ab6c-7342e7a95e47"
+    },
+    "BuildDiagnosticOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"diagnostic\"",
+          "incidentId" : "event.incident_id",
+          "outputSnapshot" : "AuditLogManager.transformDiagnosticAgentResult(event)"
+        },
+        "parentStreams" : [ "DiagnosticAgentOutputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentOutputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildDiagnosticOutputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "31342025-be0b-4472-8c02-9a234bfef3aa"
+    },
+    "BuildIncidentLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "incidentId" : "event.incident_id",
+          "logContent" : "event"
+        },
+        "parentStreams" : [ "IncidentLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildIncidentLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildIncidentLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "b3d530ed-bb7c-4990-818f-5113d5403a62"
+    },
+    "BuildInvestigationInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"investigation\"",
+          "incidentId" : "event.incident_id",
+          "inputSnapshot" : "event"
+        },
+        "parentStreams" : [ "InvestigationAgentInputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentInputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildInvestigationInputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "5f7bb879-31c5-48b2-8416-d52802d64141"
+    },
+    "BuildInvestigationOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"investigation\"",
+          "incidentId" : "event.incident_id",
+          "outputSnapshot" : "\"Incident detected, details=\" + event"
+        },
+        "parentStreams" : [ "InvestigationAgentOutputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentOutputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildInvestigationOutputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "d8381547-ce41-42cb-9966-4d217a171b4b"
+    },
+    "BuildOrchestratorInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog", "ForUI_PassOrchestratorStart" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"orchestrator\"",
+          "incidentId" : "event.incident_id",
+          "inputSnapshot" : "event"
+        },
+        "parentStreams" : [ "OrchestratorAgentInputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentInputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildOrchestratorInputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "c863e019-bb22-4325-855d-1ec94d48e6ee"
+    },
+    "BuildOrchestratorOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "SaveAuditLog" ],
+        "imports" : null,
+        "parameters" : {
+          "agentName" : "\"orchestrator\"",
+          "incidentId" : "event.incident_id",
+          "outputSnapshot" : "event.review_result"
+        },
+        "parentStreams" : [ "OrchestratorAgentOutputLog" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.AuditLogManager.buildAgentOutputLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "BuildOrchestratorOutputLog",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "e45df005-bdd9-4e5b-965e-2409d3e10547"
+    },
+    "DiagnosticAgentInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildDiagnosticInputLog", "ForUI_PassDiagnosticStart" ],
+        "eventTypeName" : "diagnosticAgentInputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DiagnosticAgentInputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "21dec5db-8ebf-488d-89b9-384b36c5055b"
+    },
+    "DiagnosticAgentOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildDiagnosticOutputLog", "ForUI_PassDiagnosticResult" ],
+        "eventTypeName" : "diagnosticAgentOutputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DiagnosticAgentOutputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "201167eb-6000-449b-8622-25c85a7874fd"
+    },
+    "ForUI_PassActionResult" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "actionAgentResult",
+        "parentStreams" : [ "ActionAgentOutputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassActionResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "7f01e453-b6fe-487f-8f1e-bf9999553a99"
+    },
+    "ForUI_PassActionStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "actionAgentStarted",
+        "parentStreams" : [ "ActionAgentInputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassActionStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "996e0f64-6012-4d91-856d-dee85c24c219"
+    },
+    "ForUI_PassDiagnosticResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentResult",
+        "parentStreams" : [ "DiagnosticAgentOutputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassDiagnosticResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "d3f24ad9-4810-46b2-8546-6efa46f537a7"
+    },
+    "ForUI_PassDiagnosticStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "diagnosticAgentStarted",
+        "parentStreams" : [ "DiagnosticAgentInputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassDiagnosticStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "1fd3743d-6149-43c7-9ccb-78a0ce6ee110"
+    },
+    "ForUI_PassFinalResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "finalResult",
+        "parentStreams" : [ "ActionAgentOutputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassFinalResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "b33ff87a-6326-4cea-a74f-1ce005b9fbe8"
+    },
+    "ForUI_PassIncidentLog" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "incidentLog",
+        "parentStreams" : [ "IncidentLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassIncidentLog",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ec0c7ea7-9dee-4aa2-9ae2-86bb0679c9ce"
+    },
+    "ForUI_PassInvestigationResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentResult",
+        "parentStreams" : [ "InvestigationAgentOutputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassInvestigationResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "50e65380-db09-49e2-85f0-7d2cce89ef0c"
+    },
+    "ForUI_PassInvestigationStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentStarted",
+        "parentStreams" : [ "InvestigationAgentInputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassInvestigationStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "5c219e72-b6d6-489e-8a59-afeec27a1a5f"
+    },
+    "ForUI_PassOrchestratorResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentResult",
+        "parentStreams" : [ "OrchestratorAgentOutputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassOrchestratorResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "43255022-be9e-4f44-80cf-6ca65bf15069"
+    },
+    "ForUI_PassOrchestratorStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "orchestratorAgentStarted",
+        "parentStreams" : [ "BuildOrchestratorInputLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.UIEventBridger"
+      },
+      "downstreamReferences" : { },
+      "name" : "ForUI_PassOrchestratorStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "5357650b-7ed3-4443-8fd5-9905695fd95a"
+    },
+    "IncidentLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildIncidentLog", "ForUI_PassIncidentLog" ],
+        "eventTypeName" : "incidentLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "IncidentLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "7d76cf0a-bbe8-4b00-8083-453f3cae7b3a"
+    },
+    "InvestigationAgentInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildInvestigationInputLog", "ForUI_PassInvestigationStart" ],
+        "eventTypeName" : "investigationAgentInputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentInputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "9c8eb48b-b436-4ae7-86c5-4707160f192a"
+    },
+    "InvestigationAgentOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildInvestigationOutputLog", "ForUI_PassInvestigationResult" ],
+        "eventTypeName" : "investigationAgentOutputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "InvestigationAgentOutputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "b4ef7c75-756f-444f-b1e6-c2f274237bec"
+    },
+    "OrchestratorAgentInputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildOrchestratorInputLog" ],
+        "eventTypeName" : "orchestratorAgentInputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "OrchestratorAgentInputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "8606b27a-621b-4ec6-90c7-5e62e467c5a8"
+    },
+    "OrchestratorAgentOutputLog" : {
+      "configuration" : {
+        "childStreams" : [ "BuildOrchestratorOutputLog", "ForUI_PassOrchestratorResult" ],
+        "eventTypeName" : "orchestratorAgentOutputLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.AuditLogManager",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "OrchestratorAgentOutputLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "1fe13009-46f2-4928-9801-0f4286743a22"
+    },
+    "SaveAuditLog" : {
+      "configuration" : {
+        "childStreams" : null,
+        "parentStreams" : [ "BuildActionInputLog", "BuildActionOutputLog", "BuildDiagnosticInputLog", "BuildDiagnosticOutputLog", "BuildIncidentLog", "BuildInvestigationInputLog", "BuildInvestigationOutputLog", "BuildOrchestratorInputLog", "BuildOrchestratorOutputLog" ],
+        "type" : "jp.co.vantiq.audit_logs",
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "SaveAuditLog",
+      "pattern" : "SaveToType",
+      "patternVersion" : 3,
+      "uuid" : "111161a3-c3da-4752-8002-84c52699a45e"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.AuditLogManager.LogHandler"
+}

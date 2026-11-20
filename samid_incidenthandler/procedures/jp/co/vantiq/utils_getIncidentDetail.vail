@@ -1,0 +1,8 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE utils.getIncidentDetail(Inrecordnumber)
+
+var result = select one * from jp.co.vantiq.incident_statuses 
+	where recordnumber == Inrecordnumber
+
+return Utils.stripSystemProperties(result)

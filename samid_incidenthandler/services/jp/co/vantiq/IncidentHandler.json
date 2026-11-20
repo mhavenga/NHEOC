@@ -1,0 +1,119 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "tahobLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.IncidentHandler.tahobLog/TahobLog",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "classifyCaseNumber",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "occupancyRate",
+      "required" : true,
+      "type" : "Real"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Integer"
+    }
+  }, {
+    "name" : "classifyIncidentLevel",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "caseNumber",
+      "required" : true,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "casualties",
+      "required" : true,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "erAvailable",
+      "required" : true,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "facility_type",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "IncidentLocationType",
+      "required" : true,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "enrichTahobLog",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "tahobLog",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "get4sCapability",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "regionId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "FacilityName",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "getsuggestedLevel",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentLog",
+      "required" : true,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "testData",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.IncidentHandler",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

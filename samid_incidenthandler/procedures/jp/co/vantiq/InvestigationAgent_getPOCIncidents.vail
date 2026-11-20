@@ -1,0 +1,95 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.getPOCIncidents()
+
+var lastdate = now().minusMillis(15 days)
+ var lastDates = select status , thedate =  max(updated_at) from jp.co.vantiq.incident_statuses 
+	group by status
+
+	for (record in lastDates){
+		if (record.thedate > lastdate){
+			lastdate = record.thedate
+		}
+	}
+
+var pocFacilities = select * from jp.co.vantiq.pocFacilities
+var pocFacilityList = ""
+
+for (fac in pocFacilities){
+	pocFacilityList = pocFacilityList + "N'"+fac.facilityName+"',"
+}
+pocFacilityList = substr(pocFacilityList, 0, length(pocFacilityList)-1) 
+return pocFacilityList
+//lastdate = lastdate.plusMillis(5 minutes)
+
+
+
+try {
+//	var testDataid = 91443
+
+	SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT dataid, "+
+			"incidentid, "+
+			"userid, "+
+			"positionid, "+
+			"prevdataid, "+
+			"entrydate, "+
+			"globalid, "+
+			"record_date, "+
+			"RegionReceiveDate, "+
+			"InformDate, "+
+			"Region, "+
+			"FacilityType, "+
+			"incidentReasonCategory, "+
+			"incidentReasonSubCategory, "+
+			"Hospitals, "+
+			"selectedHospital, "+
+			"Notes, "+
+			"IncidentResponseLevel, "+
+			"IncidentStatus, "+
+			"CityName, "+
+			"IncidentLocationType, "+
+			"DangerousCasesNo, "+
+			"MediumCasesNo, "+
+			"SimpleCasesNo, "+
+			"DeathsCasesNo, "+
+			"latitude, "+
+			"longitude, "+
+			"Location, "+
+			"EmployeeName, "+
+			"EmployeeMobile, "+
+			"EmployeeEmail, "+
+			"EmployeePosition, "+
+			"record_number, "+
+			"Location_Description, "+
+			"IsDeleted, "+
+			"NotesHistory, "+
+			"IncidentDateTime, "+
+			"record_close_date, "+
+			"IncidentLocation, "+
+			"CasesNumber, "+
+			"ResponseLevelCasesNumber, "+
+			"ResponseLevelExpectedCasesNumber, "+
+			"ResponseLevelExpectedHospitals, "+
+			"ResponseLevelBedsTypes, "+
+			"FacilityId, "+
+			"IncidentResponseLevelDesc, "+
+			"IncidentResponseLevelData, "+
+			"IsFacility, "+
+			"HealthCareFacilityName, "+
+			"FacilityName, " +
+			"FacilityGlobalId "+ 
+  			"FROM [NHEOC-AI02].[dbo].[table_6] "+
+  			"where prevdataid = 0 "+
+			"and FacilityName in ("+pocFacilityList+") " +
+			"and entrydate > '" + lastdate + "' " +
+//			"and dataid = 91443 "+
+			"order by record_date desc "
+	
+	return results
+//	return lastdate
+} catch (error) {
+    exception(error.code, error.message)
+}
+
+
+

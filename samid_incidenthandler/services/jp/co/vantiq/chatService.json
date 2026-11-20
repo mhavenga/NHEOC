@@ -1,0 +1,86 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "endChat" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "startChat" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.chatService.startChat/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "getActionPlan",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "inType",
+      "required" : false,
+      "type" : null
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "inSubType",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getRecoveryPlan",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "inType",
+      "required" : false,
+      "type" : null
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "inSubType",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "mitigationRequest",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "requestICSActivation",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "input",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "tester",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "prompt",
+      "required" : false,
+      "type" : null
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.chatService",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

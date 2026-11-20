@@ -1,0 +1,75 @@
+{
+  "adminAccessLevel" : "ars_readWrite",
+  "ars_properties" : {
+    "sortOrder" : [ "id", "hospitals", "name", "primary_care_centers", "region_id", "total_beds" ]
+  },
+  "ars_relationships" : [ ],
+  "audited" : false,
+  "encapsulated" : false,
+  "foreignKeys" : null,
+  "groupBy" : "",
+  "groupEnabled" : false,
+  "groupRequired" : false,
+  "indexes" : [ {
+    "keys" : [ "id" ],
+    "options" : {
+      "unique" : true
+    }
+  }, {
+    "keys" : [ "region_id" ],
+    "options" : { }
+  } ],
+  "maxObjects" : 0,
+  "maxStorage" : 0,
+  "metadata" : false,
+  "name" : "jp.co.vantiq.health_clusters",
+  "naturalKey" : [ "id" ],
+  "properties" : {
+    "hospitals" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "String",
+      "unique" : false
+    },
+    "name" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "primary_care_centers" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    },
+    "region_id" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "String",
+      "unique" : false
+    },
+    "total_beds" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : true,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "standard",
+  "rulesSuppressed" : false,
+  "userAccessLevel" : "ars_readOnly",
+  "volatile" : false
+}

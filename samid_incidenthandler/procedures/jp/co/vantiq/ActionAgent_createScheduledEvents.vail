@@ -1,0 +1,18 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.createScheduledEvents(incident String)
+
+var scheduledevent = {
+	"name": "jp.co.vantiq."+incident,
+   	"periodic": true,
+   	"message": {
+      	"incident": incident,
+      	"intervalIndex": -1
+   	},
+   	"interval": 60000*30,  // 30 minutes
+   	"active": true,
+   	"occursAt": now(),
+   	"resource": "/services/jp.co.vantiq.ActionAgent/triggerReminder",
+   	"op": "publish"
+}	
+
+insert system.scheduledevents(scheduledevent) 

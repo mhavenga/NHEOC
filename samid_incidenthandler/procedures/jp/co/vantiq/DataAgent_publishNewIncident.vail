@@ -1,0 +1,71 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE DataAgent.publishNewIncident(incident Object REQUIRED): Object
+
+
+var log =  {}
+
+
+var casualties = 0
+
+try {
+//	casualties = toInteger(incident.DangerousCasesNo) + toInteger(incident.SimpleCasesNo) + toInteger(incident.MediumCasesNo) 
+		casualties = toInteger(incident.ResponseLevelCasesNumber)
+} catch(errorVar) {
+    log.error("Error in casualties")
+}
+ 
+//casualties = 1700
+
+
+// incident.DangerousCasesNo incident.SimpleCasesNo incident.MediumCasesNo 
+log.incident_id = incident.dataid
+log.incident_type = incident.incidentReasonCategory
+log.incident_subtype = incident.incidentReasonSubCategory
+log.casualties = casualties
+log.occurred_at = incident.IncidentDateTime 
+log.region = incident.Region
+log.description = incident.incidentReasonCategory+" "+incident.incidentReasonSubCategory
+log.facility_type = incident.FacilityType
+log.IncidentLocationType = incident.IncidentLocationType
+log.status = incident.IncidentStatus
+log.entrydate = incident.entrydate
+log.recordnumber = incident.record_number
+log.employeePosition = incident.EmployeePosition
+if (incident.IsFacility == 1){
+	log.IsFacility = true
+	log.HealthCareFacilityName = incident.HealthCareFacilityName
+	log.response_level = 1
+}else
+{
+	log.IsFacility = false
+	log.HealthCareFacilityName = null
+	if (casualties == 0){
+		log.response_level = 1
+	}else{
+		log.response_level = 3
+	}
+}
+
+log.hospital_id = null
+//"IncidentLocationType": "Inside the Facility - داخل المنشأة"
+/*
+if (incident.Hospitals != ""){
+	var hospObj = parse(incident.Hospitals)
+	log.hospital_id = hospObj[0].id
+	log.hospitals = incident.Hospitals
+}else{
+	log.hospital_id = ""
+	
+}
+*/
+
+//if (incident.entrydate > DataAgent.getlastUpdate()){
+//	DataAgent.updatelastUpdate(incident.entrydate)
+//}
+
+
+//insert jp.co.vantiq.TahobData(Data: incident)
+
+PUBLISH log TO SERVICE EVENT "InvestigationAgent/tahobLog"
+return log

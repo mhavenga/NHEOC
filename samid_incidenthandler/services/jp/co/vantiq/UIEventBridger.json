@@ -1,0 +1,152 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : "This service bridges the Vantiq app and UI apps, publishing processed results to Vantiq endpoints for UI.",
+  "eventTypes" : {
+    "actionAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/ActionAgentResult",
+      "isReliable" : false
+    },
+    "actionAgentResultOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "actionAgentStarted" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/ActionAgentStarted",
+      "isReliable" : false
+    },
+    "actionAgentStartedOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "dataRetrieval" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.DataSourceEventBridger/DataRetrieval",
+      "isReliable" : false
+    },
+    "dataRetrievalOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "diagnosticAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/DiagnosticAgentResult",
+      "isReliable" : false
+    },
+    "diagnosticAgentResultOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "diagnosticAgentStarted" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/DiagnosticAgentStarted",
+      "isReliable" : false
+    },
+    "diagnosticAgentStartedOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "finalResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/finalResult",
+      "isReliable" : false
+    },
+    "finalResultOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "incidentLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.InputEventBridger/IncidentLog",
+      "isReliable" : false
+    },
+    "incidentLogOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "investigationAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/InvestigationAgentResult",
+      "isReliable" : false
+    },
+    "investigationAgentResultOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "investigationAgentStarted" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/InvestigationAgentStarted",
+      "isReliable" : false
+    },
+    "investigationAgentStartedOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "orchestratorAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/OrchestratorAgentResult",
+      "isReliable" : false
+    },
+    "orchestratorAgentResultOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    },
+    "orchestratorAgentStarted" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.UIEventBridger.AgentEventBridger/OrchestratorAgentStarted",
+      "isReliable" : false
+    },
+    "orchestratorAgentStartedOut" : {
+      "direction" : "OUTBOUND",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "getAuditLogCount",
+    "parameters" : [ ]
+  }, {
+    "name" : "getIncidensCounts",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "level",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "getIncidentDetail",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident_id",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getIncidentNotifications",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident_id",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "test",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.UIEventBridger",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

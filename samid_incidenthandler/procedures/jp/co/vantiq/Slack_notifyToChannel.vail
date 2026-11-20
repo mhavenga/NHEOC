@@ -1,0 +1,33 @@
+package jp.co.vantiq
+stateless PROCEDURE Slack.notifyToChannel(
+	channelName String REQUIRED, 
+	text        String REQUIRED, 
+	codeBlock   Any
+): Object
+var headers = {
+	"Authorization": "Bearer @secrets(slack-secret)"
+}
+var body = {
+  "channel": "#" + channelName,
+  "blocks": []
+}
+var textSection = {
+	"type": "section",
+	"text": {
+		"type": "mrkdwn",
+		"text": text
+	}
+}
+body.blocks.push(textSection)
+if codeBlock != null {
+	var codeSection = {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "```" + codeBlock + "```"
+      }
+    }
+	body.blocks.push(codeSection)
+}
+var response = SELECT ONE FROM SOURCE Slack WITH method = "POST", headers = headers, body = body
+return response

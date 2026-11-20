@@ -1,0 +1,28 @@
+package jp.co.vantiq
+stateless PROCEDURE UIEventBridger.getIncidensCounts(level String)
+
+var returnValue = {}
+//var  level = "3"
+
+var allCounter = 0
+var openCounter = 0 
+var closedCounter = 0
+
+if (level == "All")
+{
+	allCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses
+	openCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses where is_open == true 
+	closedCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses where is_open == false
+}else{
+	allCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses where suggested_level == level
+	openCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses where is_open == true and suggested_level == level 
+	closedCounter = select  counter = count(incident_id) from jp.co.vantiq.incident_statuses where is_open == false and suggested_level == level
+}
+
+
+returnValue.all = toString(allCounter[0].counter) 
+returnValue.open = toString(openCounter[0].counter)
+returnValue.closed = toString(closedCounter[0].counter)
+
+
+return returnValue

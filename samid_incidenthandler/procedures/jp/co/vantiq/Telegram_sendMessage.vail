@@ -1,0 +1,26 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.sendMessage(
+	text 		String REQUIRED,
+	translate	Boolean REQUIRED,
+	incidentID String REQUIRED
+)
+
+var body = {}
+body.chat_id = -1003483158844
+
+if (translate){
+	body.text = text +"\n\n"
+	body.text += jp.co.vantiq.Telegram.translateEnglishArabic(text) 
+	
+}else{
+	body.text = text
+}
+
+var response = SELECT ONE FROM SOURCE Telegram WITH method = "POST", headers = {}, body = body, path = "sendMessage"
+
+update jp.co.vantiq.incident_statuses(telegram_message_id: response.result.message_id) where incident_id == incidentID
+
+jp.co.vantiq.Telegram.createScheduledEvents(incidentID)
+
+return response
+

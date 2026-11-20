@@ -1,0 +1,7 @@
+package jp.co.vantiq
+stateless PROCEDURE utils.convertToLocalDate(utcDate DateTime)
+
+var localDate = utcDate.plusMillis(3 Hours)
+var dateString = substr(replace(toString(localDate), "T", " "),0,19)
+
+return  dateString

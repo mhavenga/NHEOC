@@ -1,0 +1,6 @@
+PACKAGE jp.co.vantiq 
+global PROCEDURE Telegram.updateOffsetGet()
+
+var result = updateOffset
+
+

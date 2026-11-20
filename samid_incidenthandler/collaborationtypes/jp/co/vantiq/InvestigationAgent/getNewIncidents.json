@@ -1,0 +1,119 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "49a8d1d7-1d7f-4a07-9f51-0d769e3a6404" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "4e1296a3-96a7-4ad5-aa85-42f079a7f371" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "85d67a90-76e3-4e77-847b-a77f0b3706a1" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "dfb0e960-68c0-48ed-af45-97f5369b7d15" : {
+          "x" : 0,
+          "y" : 240
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.118017662574845,
+      "translate" : [ 421.4412748232626, 45.66900677793245 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "getIncidents" ],
+        "eventTypeName" : "getNewIncidents",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.InvestigationAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "49a8d1d7-1d7f-4a07-9f51-0d769e3a6404"
+    },
+    "Unwind" : {
+      "configuration" : {
+        "childStreams" : [ "publishNewIncident" ],
+        "outboundProperty" : null,
+        "parentStreams" : [ "getIncidents" ],
+        "unwindProperty" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Unwind",
+      "pattern" : "Unwind",
+      "patternVersion" : 7,
+      "uuid" : "4e1296a3-96a7-4ad5-aa85-42f079a7f371"
+    },
+    "getIncidents" : {
+      "configuration" : {
+        "childStreams" : [ "Unwind" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.getIncidents",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "getIncidents",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "85d67a90-76e3-4e77-847b-a77f0b3706a1"
+    },
+    "publishNewIncident" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "Unwind" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.publishNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "publishNewIncident",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "dfb0e960-68c0-48ed-af45-97f5369b7d15"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.InvestigationAgent.getNewIncidents"
+}

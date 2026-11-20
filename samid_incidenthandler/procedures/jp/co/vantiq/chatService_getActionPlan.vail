@@ -1,0 +1,13 @@
+package jp.co.vantiq
+stateless PROCEDURE chatService.getActionPlan(inType, inSubType)
+
+var qResult = select one plan from jp.co.vantiq.incidentActioPlan
+where type == inType
+and subtype == inSubType
+
+if (qResult == null){
+	qResult = {}
+	qResult.plan = "No plan available for this incident type"
+}
+
+return qResult

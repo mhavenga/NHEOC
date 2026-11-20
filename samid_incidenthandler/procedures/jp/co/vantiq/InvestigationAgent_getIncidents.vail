@@ -1,0 +1,84 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.getIncidents()
+
+var lastdate = now().minusMillis(1 days)
+ var lastDates = select IncidentLocationType , thedate =  max(updated_at) from jp.co.vantiq.incident_statuses 
+	group by IncidentLocationType
+
+	for (record in lastDates){
+		if (record.thedate > lastdate){
+			lastdate = record.thedate
+		}
+	}
+//lastdate = lastdate.plusMillis(5 minutes)
+
+var testDataid = 91364
+try {
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+//    query: "SELECT TOP (300) dataid, "+
+    query: "SELECT dataid, "+
+			"incidentid, "+
+			"userid, "+
+			"positionid, "+
+			"prevdataid, "+
+			"entrydate, "+
+			"globalid, "+
+			"record_date, "+
+			"RegionReceiveDate, "+
+			"InformDate, "+
+			"Region, "+
+			"FacilityType, "+
+			"incidentReasonCategory, "+
+			"incidentReasonSubCategory, "+
+			"Hospitals, "+
+			"selectedHospital, "+
+			"Notes, "+
+			"IncidentResponseLevel, "+
+			"IncidentStatus, "+
+			"CityName, "+
+			"IncidentLocationType, "+
+			"DangerousCasesNo, "+
+			"MediumCasesNo, "+
+			"SimpleCasesNo, "+
+			"DeathsCasesNo, "+
+			"latitude, "+
+			"longitude, "+
+			"Location, "+
+			"EmployeeName, "+
+			"EmployeeMobile, "+
+			"EmployeeEmail, "+
+			"EmployeePosition, "+
+			"record_number, "+
+			"Location_Description, "+
+			"IsDeleted, "+
+			"NotesHistory, "+
+			"IncidentDateTime, "+
+			"record_close_date, "+
+			"IncidentLocation, "+
+			"CasesNumber, "+
+			"ResponseLevelCasesNumber, "+
+			"ResponseLevelExpectedCasesNumber, "+
+			"ResponseLevelExpectedHospitals, "+
+			"ResponseLevelBedsTypes, "+
+			"FacilityId, "+
+			"IncidentResponseLevelDesc, "+
+			"IncidentResponseLevelData, "+
+			"IsFacility, "+
+			"HealthCareFacilityName, "+
+			"FacilityName, " +
+			"FacilityGlobalId, "+
+			"record_close_date "+
+  			"FROM [NHEOC-AI02].[dbo].[table_6] "+
+  			"where prevdataid = 0 "+
+			"and entrydate > '" + lastdate + "' " +
+//	"and dataid = " + testDataid + " "+
+			"order by record_date desc "
+	
+	insert jp.co.vantiq.debugMorne(ts: now(), region: "New Incidents",data: length(results))
+	
+	return results
+//	return lastdate
+} catch (error) {
+    exception(error.code, error.message)
+}
+

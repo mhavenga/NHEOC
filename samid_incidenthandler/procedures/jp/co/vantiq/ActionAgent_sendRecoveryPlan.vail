@@ -1,0 +1,22 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendRecoveryPlan(data Object)
+
+//var messageString  = data.lastMessage.msg
+
+
+update jp.co.vantiq.incident_statuses(ActionRequired: "None") where incident_id == data.data.incident_id 
+
+var messageString  = replace(data.lastMessage.msg,"\<br>\<br>Do you want me to send the Recovery Objectives to ICS members\?\<br>","")
+
+
+var messageObj = {
+	level = data.data.suggested_level,
+	subject = "RecoveryPlan for "+data.data.recordnumber,
+	message = messageString 
+}
+
+ActionAgent.routeMessage(messageObj)
+
+insert jp.co.vantiq.notifications(id: uuid(), incidentId: data.data.incident_id, messageBody: messageString, createdAt: now(),
+									notificationType: "Action Plan", status: "Received", metadata: data.data, 
+									incident_level: data.data.suggested_level, occurred_at: data.data.occurred_at)

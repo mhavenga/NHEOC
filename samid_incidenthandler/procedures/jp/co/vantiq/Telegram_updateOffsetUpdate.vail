@@ -1,0 +1,5 @@
+PACKAGE jp.co.vantiq 
+global PROCEDURE Telegram.updateOffsetUpdate( newValue Integer)
+
+updateOffset = newValue
+

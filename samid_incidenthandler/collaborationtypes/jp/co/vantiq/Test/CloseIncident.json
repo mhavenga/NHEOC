@@ -1,0 +1,103 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "9ca08fe1-5c6c-4aaa-8927-52acf7ca193a" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "9cf299bb-f4d8-4816-ab3a-0498c9e070ba" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "d8e89254-8090-40ef-8610-1ff310c721c9" : {
+          "x" : 0,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.5577839669241054,
+      "translate" : [ 587.2889198346205, 103.59025066042628 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "sendClose" ],
+        "eventTypeName" : "CloseIncident",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.Test",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "9cf299bb-f4d8-4816-ab3a-0498c9e070ba"
+    },
+    "Procedure" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "sendClose" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.publishNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Procedure",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "9ca08fe1-5c6c-4aaa-8927-52acf7ca193a"
+    },
+    "sendClose" : {
+      "configuration" : {
+        "childStreams" : [ "Procedure" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.Test.sendClose",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendClose",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "d8e89254-8090-40ef-8610-1ff310c721c9"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.Test.CloseIncident"
+}

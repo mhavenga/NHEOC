@@ -1,0 +1,93 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.getsuggestedLevel(incidentLog Object REQUIRED)
+
+var returnValue = {}
+
+var hospitals = SELECT FROM region_beds 
+//	WHERE (region == incidentLog.region or alias == incidentLog.region)
+	WHERE (region == incidentLog.region)
+//	and networktype == "MOH"
+
+var Available = 0
+var Beds      = 0
+var Occupied  = 0
+var OccRate   = 0
+var MOH = true
+var PrivateGov = false
+
+if (length(hospitals)){
+	for h in hospitals {
+		Available     += h.available
+		Occupied += h.occupied
+	}
+	Beds = Available + Occupied
+	OccRate = Occupied / Beds * 100
+
+	if (Available > incidentLog.casualties){
+		MOH = true
+	}else{
+		// Check Private and Gov
+		hospitals = SELECT FROM region_beds 
+		WHERE (region == incidentLog.region)
+//		WHERE (region == incidentLog.region or alias == incidentLog.region)
+		and (networktype == "Private" or networktype == "Other Government Hospitals	")
+		Available = 0
+		Beds      = 0
+		Occupied  = 0
+		OccRate   = 0
+
+		if (length(hospitals)){
+			for h in hospitals {
+				Available     += h.available
+				Occupied += h.occupied
+			}
+			Beds = Available + Occupied
+			OccRate = Occupied / Beds * 100
+		}
+
+		if (Available > incidentLog.casualties){
+			PrivateGov = true
+		}
+	}
+}
+
+incidentLog.suggestedLevel = incidentLog.incident_level.level
+// Level 1
+if ((includes(incidentLog.employeePosition,"HCF") || includes(incidentLog.employeePosition,"hospital")) && incidentLog.incident_level.level == 1){
+	incidentLog.suggestedLevel = 1
+}
+
+// Level 2
+if ((includes(incidentLog.employeePosition,"HCF") || includes(incidentLog.employeePosition,"hospital")) && incidentLog.incident_level.level > 1){
+	incidentLog.suggestedLevel = 2
+}
+// still need to check if all responding facilities are MOH flag
+if (includes(incidentLog.employeePosition,"RHEOC") && incidentLog.incident_level.level < 3 && MOH){
+//	incidentLog.suggestedLevel = 2
+	incidentLog.suggestedLevel = 1
+}
+
+// Level 3
+if (includes(incidentLog.employeePosition,"National EOC") && incidentLog.incident_level.level < 3 ){
+	incidentLog.suggestedLevel = 3
+}
+// still need to check if all responding facilities are MOH, Private, other Gov flag
+if (includes(incidentLog.employeePosition,"RHEOC") && incidentLog.incident_level.level < 3 && PrivateGov){
+	incidentLog.suggestedLevel = 3
+}
+if (includes(incidentLog.employeePosition,"RHEOC") && incidentLog.incident_level.level == 3 ){
+	incidentLog.suggestedLevel = 3
+}
+
+
+//Level 4
+if (includes(incidentLog.employeePosition,"National EOC") && incidentLog.incident_level.level > 3 ){
+	incidentLog.suggestedLevel = 4
+}
+if (includes(incidentLog.employeePosition,"RHEOC") && incidentLog.response_level > 3 ){
+	incidentLog.suggestedLevel = 4
+}
+
+
+
+return incidentLog

@@ -1,0 +1,102 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "8964f748-9042-43c5-82e1-32a963d2e7c9" : {
+          "x" : 0,
+          "y" : 160
+        },
+        "b420c7e4-b198-42fa-86c3-a05a6a28d7f3" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "b73f26ef-c9a6-4239-adcb-f599e217fc56" : {
+          "x" : 0,
+          "y" : 0
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.64855444279158,
+      "translate" : [ 574.5, 86.11563952495689 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "deEsculate" ],
+        "eventTypeName" : "deesculate",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.Test",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "b73f26ef-c9a6-4239-adcb-f599e217fc56"
+    },
+    "Procedure" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "deEsculate" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.publishNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "Procedure",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "8964f748-9042-43c5-82e1-32a963d2e7c9"
+    },
+    "deEsculate" : {
+      "configuration" : {
+        "childStreams" : [ "Procedure" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.Test.deEsculate",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "deEsculate",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "b420c7e4-b198-42fa-86c3-a05a6a28d7f3"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.Test.deesculate"
+}

@@ -1,0 +1,32 @@
+/*
+	- Original Incident Mapping from publishNewIncident Procedure - 
+	ID, Pattern, Region
+	1   Case1, Outside threshold (RG01 - 75% occupancy)
+	2   Case1, Level1 (RG01)
+	3   Case1, Level2 (RG01)
+	4   Case1, Level3 (RG01)
+	5   Case1, Level4 (RG01)
+	6   Case1, Level5 (RG01)
+	7   Case2, Level1 (RG02 - 85% occupancy)
+	8   Case2, Level2 (RG02)
+	9   Case2, Level3 (RG02)
+	10  Case2, Level4 (RG02)
+	11  Case2, Level5 (RG02)
+	12  Case3, Level1 (RG03 - 95% occupancy)
+	13  Case3, Level2 (RG03)
+	14  Case3, Level3 (RG03)
+	15  Case3, Level4 (RG03)
+	16  Case3, Level5 - CBRNE (RG03)
+*/
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE Tahob.publishUpdatedIncident(
+	id         Integer REQUIRED, 
+	casualties Integer REQUIRED
+): Object
+var log = SELECT EXACTLY ONE FROM dummy_tahob_logs WHERE id == id
+log = Utils.stripSystemProperties(log)
+log.casualties = casualties // Update casualties
+log.updated_at = now()
+PUBLISH log TO SERVICE EVENT "InvestigationAgent/tahobLog"
+return log

@@ -1,0 +1,66 @@
+{
+  "bodyChildren" : {
+    "rootArray" : [ "da8e1717-311e-4fa9-a9fe-996e053075fd" ],
+    "widgets" : [ {
+      "backgroundColor" : "#a2a1a6",
+      "borderColor" : "Default",
+      "children" : [ "f88961eb-8add-409a-aaa9-23a28224b917" ],
+      "column" : -1,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "center",
+      "innerMargin" : 20,
+      "minimumHeight" : 100,
+      "minimumWidth" : 1200,
+      "name" : "VerticalLayout86",
+      "row" : -1,
+      "type" : "VerticalLayout",
+      "uuid" : "da8e1717-311e-4fa9-a9fe-996e053075fd",
+      "v" : 19,
+      "vertGravity" : "center",
+      "widthPolicy" : "sizeToCell",
+      "x" : 0,
+      "y" : 0
+    }, {
+      "borderColor" : "Default",
+      "clearOnDataArrive" : true,
+      "column" : -1,
+      "columnDescriptors" : [ {
+        "colorRules" : null,
+        "dataType" : "DateTime",
+        "propertyName" : "ars_createdAt",
+        "selected" : false,
+        "title" : "Notify Date"
+      }, {
+        "colorRules" : null,
+        "dataType" : "String",
+        "propertyName" : "messageBody",
+        "selected" : false,
+        "title" : "Message"
+      } ],
+      "columnSort" : false,
+      "dataStreamGroupedByFiltersString" : "",
+      "dataStreamUUID" : "e2d1bcad-6fb9-444b-90e9-e1b1cd9deae8",
+      "dataType" : null,
+      "heightPolicy" : "naturalSize",
+      "horzGravity" : "left",
+      "name" : "DataTableNotifications1",
+      "operation" : "insert",
+      "row" : -1,
+      "rowBackgroundColor" : "#1e293b",
+      "rowsPerPage" : 15,
+      "showMaximizeButton" : false,
+      "showPaging" : true,
+      "type" : "DataTable",
+      "uuid" : "f88961eb-8add-409a-aaa9-23a28224b917",
+      "v" : 19,
+      "vertGravity" : "top",
+      "widthPolicy" : "sizeToCell"
+    } ]
+  },
+  "data" : {
+    "properties" : { }
+  },
+  "footerChildren" : [ ],
+  "hasFooter" : false,
+  "layoutType" : "browser"
+}

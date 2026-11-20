@@ -1,0 +1,135 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "178b45c3-de0d-473f-99b7-1d62799f90ee" : {
+          "x" : 46.420687675476074,
+          "y" : 160
+        },
+        "58b0ee3d-5a3b-4444-b994-5c3e11f6efd0" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "69d2390f-3297-4505-8699-e4b91cb8ffbc" : {
+          "x" : -156.58171701431274,
+          "y" : 160
+        },
+        "aae14b70-cdef-45f3-aa86-640771694752" : {
+          "x" : -71.46337604522705,
+          "y" : 80
+        },
+        "e0b45c37-faba-4f8a-80c0-e537132bc47f" : {
+          "x" : 76.64429569244385,
+          "y" : 80
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.202415097589752,
+      "translate" : [ 653.7812893225093, 130.4635108243115 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AttachDetails" : {
+      "configuration" : {
+        "childStreams" : [ "PublishOrchestratorAgent", "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "tahobLog" : "event"
+        },
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.enrichTahobLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "AttachDetails",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "aae14b70-cdef-45f3-aa86-640771694752"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "AttachDetails", "LogIncident" ],
+        "eventTypeName" : "incidentLogInvestigator",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.InvestigationAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "58b0ee3d-5a3b-4444-b994-5c3e11f6efd0"
+    },
+    "LogAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentOutputLog",
+        "parentStreams" : [ "AttachDetails" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "178b45c3-de0d-473f-99b7-1d62799f90ee"
+    },
+    "LogIncident" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "incidentLog",
+        "parentStreams" : [ "EventStream" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogIncident",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "e0b45c37-faba-4f8a-80c0-e537132bc47f"
+    },
+    "PublishOrchestratorAgent" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentResult",
+        "parentStreams" : [ "AttachDetails" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.OrchestratorAgent"
+      },
+      "downstreamReferences" : { },
+      "name" : "PublishOrchestratorAgent",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "69d2390f-3297-4505-8699-e4b91cb8ffbc"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.InvestigationAgent.incidentLog"
+}

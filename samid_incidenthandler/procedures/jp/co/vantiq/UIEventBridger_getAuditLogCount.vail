@@ -1,0 +1,16 @@
+package jp.co.vantiq
+stateless PROCEDURE UIEventBridger.getAuditLogCount()
+
+var returnValue = {}
+var auditCounter = select counter = count(_id) from jp.co.vantiq.audit_logs
+var agentEventCounter = select counter = count(_id) from jp.co.vantiq.audit_logs where event_type == "agent"
+var incidentCounter = select counter = count(_id) from jp.co.vantiq.audit_logs where event_type == "incident"
+
+
+returnValue.auditCount = toString(auditCounter[0].counter) 
+returnValue.agentEventCount = toString(agentEventCounter[0].counter) 
+returnValue.incidentCount = toString(incidentCounter[0].counter) 
+
+
+return returnValue
+

@@ -1,0 +1,61 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "CloseIncident" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.Test.CloseIncident/EventStream",
+      "isReliable" : false
+    },
+    "deesculate" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.Test.deesculate/EventStream",
+      "isReliable" : false
+    },
+    "exculate" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.Test.exculate/EventStream",
+      "isReliable" : false
+    },
+    "newIncidents" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.Test.newIncidents/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "Esculate",
+    "parameters" : [ ]
+  }, {
+    "name" : "deEsculate",
+    "parameters" : [ ]
+  }, {
+    "name" : "deleteTestData",
+    "parameters" : [ ]
+  }, {
+    "name" : "getRecords",
+    "parameters" : [ ]
+  }, {
+    "name" : "sendClose",
+    "parameters" : [ ]
+  }, {
+    "name" : "sendNew",
+    "parameters" : [ ]
+  }, {
+    "name" : "test",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.Test",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

@@ -1,0 +1,9 @@
+package jp.co.vantiq
+stateless PROCEDURE OrchestratorAgent.reviewInvestigationAgentResult(investigationResult Object REQUIRED): Object
+/*
+	TODO: Implement review function by LLM when needed
+*/
+return {
+	"approved": true,
+	"message" : "[Approved] The content is appropriate. Pass to Diagnostic Agent."
+}

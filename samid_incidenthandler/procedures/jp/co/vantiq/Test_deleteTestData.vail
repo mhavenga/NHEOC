@@ -1,0 +1,7 @@
+package jp.co.vantiq
+stateless PROCEDURE Test.deleteTestData()
+
+delete jp.co.vantiq.incident_statuses where incident_id == "94207"
+
+
+delete jp.co.vantiq.notifications where incidentId == "94207" 

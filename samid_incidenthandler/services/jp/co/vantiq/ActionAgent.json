@@ -1,0 +1,297 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "diagnosticAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.ActionAgent.ActionHandler/DiagnosticAgentResult",
+      "isReliable" : false
+    },
+    "triggerReminder" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.ActionAgent.triggerReminder/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : "jp.co.vantiq.ActionAgent.GlobalState",
+  "interface" : [ {
+    "name" : "BuildIncidentNotification",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "event",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "acknowledgeNotification",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "id",
+      "required" : true,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "closeIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentID",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "createScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "deleteScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getAlertSchedule",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "level",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getnotifyType",
+    "parameters" : [ ]
+  }, {
+    "name" : "notifyIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "channelName",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentDetails",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyLevel1Targets",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyLevel2Targets",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyLevel3Targets",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyLevel4Targets",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyLevel5Targets",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "notifyTypeReset",
+    "parameters" : [ ]
+  }, {
+    "name" : "notifyTypeUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "newValue",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "routeMessage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "messageObj",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendActivationRequest",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendDeEsculationRequest",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendEsculationRequest",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendIAP",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendMail",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "messageObj",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendMitigationMail",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendRecoveryPlan",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "data",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendSMS",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "messageObj",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "sendUpdateReminderMessage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentID",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "translate",
+      "required" : true,
+      "type" : "Boolean"
+    } ]
+  }, {
+    "name" : "testDateFormat",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "message",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "updateScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : null
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.ActionAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

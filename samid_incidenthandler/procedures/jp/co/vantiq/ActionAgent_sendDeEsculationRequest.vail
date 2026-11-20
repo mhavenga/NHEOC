@@ -1,0 +1,29 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendDeEsculationRequest(data Object)
+
+
+var messageString = "De-Esculate to Operational Level"+data.data.evaluatedLevel+" for Incident "+data.data.recordnumber
+
+
+// Set activated = true
+update jp.co.vantiq.incident_statuses(activated: true, response_level: data.data.evaluatedLevel, ActionRequired: "None", suggested_level: data.data.evaluatedLevel) where incident_id == data.data.incident_id 
+
+
+// from Esculation Test
+//update jp.co.vantiq.incident_statuses(evaluatedLevel: toInteger(data.data.activeLevel)+1, ActionRequired: "Esculate") where incident_id == data.data.incident_id 
+
+
+
+
+var messageObj
+
+messageObj =  ActionAgent.BuildIncidentNotification(data.data)
+messageObj.subject = "De-Esculation request for "+data.data.recordnumber
+ActionAgent.routeMessage(messageObj)
+
+
+insert jp.co.vantiq.notifications(id: uuid(), incidentId: data.data.incident_id, messageBody: messageString, createdAt: now(),
+									notificationType: "DeEsculation", status: "Received", metadata: data.data, 
+									incident_level: data.data.evaluatedLevel, occurred_at: data.data.occurred_at)
+
+

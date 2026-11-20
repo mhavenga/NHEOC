@@ -1,0 +1,96 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "getNewIncidents" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.InvestigationAgent.getNewIncidents/EventStream",
+      "isReliable" : false
+    },
+    "incidentLogInvestigator" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.InvestigationAgent.incidentLog/EventStream",
+      "isReliable" : false
+    },
+    "tahobLog" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.InvestigationAgent.TahobLogInvestigator/TahobLog",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "checkIfIncidentExists",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "IncidentNumber",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "getHospitalBeds",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "inHospital",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getIncidents",
+    "parameters" : [ ]
+  }, {
+    "name" : "getPOCFacilityList",
+    "parameters" : [ ]
+  }, {
+    "name" : "getPOCIncidents",
+    "parameters" : [ ]
+  }, {
+    "name" : "getRegionBeds",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "inRegion",
+      "required" : false,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "insertNewIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentLog",
+      "required" : false,
+      "type" : "Object"
+    } ]
+  }, {
+    "name" : "publishNewIncident",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "test",
+    "parameters" : [ ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.InvestigationAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

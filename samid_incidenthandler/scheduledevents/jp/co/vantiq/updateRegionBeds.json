@@ -1,0 +1,11 @@
+{
+  "active" : false,
+  "ars_relationships" : [ ],
+  "interval" : 300000,
+  "message" : { },
+  "name" : "jp.co.vantiq.updateRegionBeds",
+  "occursAt" : "2026-05-07T18:26:42.000Z",
+  "op" : "publish",
+  "periodic" : true,
+  "resource" : "/services/jp.co.vantiq.DataAgent/updateRegionBeds"
+}

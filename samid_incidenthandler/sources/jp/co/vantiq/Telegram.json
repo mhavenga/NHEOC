@@ -1,0 +1,22 @@
+{
+  "activationConstraint" : "",
+  "active" : false,
+  "ars_properties" : null,
+  "ars_relationships" : [ ],
+  "autoUnwind" : false,
+  "config" : {
+    "oauthContentType" : "application/x-www-form-urlencoded",
+    "oauthGrantType" : "client_credentials",
+    "oauthUseBasicAuth" : false,
+    "passwordType" : "string",
+    "pollingInterval" : 0,
+    "query" : { },
+    "requestDefaults" : { },
+    "uri" : "https://api.telegram.org/bot8300864880:AAFyJqB7PhoCdgGDI1AAP1wxv666UT11wC0/"
+  },
+  "isUnavailable" : false,
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "jp.co.vantiq.Telegram",
+  "type" : "REMOTE"
+}

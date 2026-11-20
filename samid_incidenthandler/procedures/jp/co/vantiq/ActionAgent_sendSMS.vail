@@ -1,0 +1,21 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendSMS(messageObj Object)
+
+/*
+messageObj = {
+	"level": 1,
+	"subject": "This is the message subject",
+	"body": "This is the message body"
+	
+}
+*/
+var doSend = true
+var smsList = select one sms FROM jp.co.vantiq.emailGroups
+where emailGroup == "POC"  //toString(messageObj.level)
+
+
+if (doSend){
+	log.info(messageObj.message)
+}
+
+return smsList

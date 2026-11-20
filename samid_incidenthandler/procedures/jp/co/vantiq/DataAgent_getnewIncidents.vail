@@ -1,0 +1,18 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.getnewIncidents()
+
+var dataid = 90775
+try {
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT * "+ 
+  			"FROM [NHEOC-AI02].[dbo].[table_6] "+
+  			"where prevdataid = 0 "+
+  			"and dataid >= "+ dataid +
+//			"and IncidentStatus = N'Open - مفتوح' "+
+//			"and incidentReasonCategory != N'Technological hazards - مخاطر تكنولوجية'" + 
+  			"order by record_date desc "
+	
+	return results
+} catch (error) {
+    exception(error.code, error.message)
+}

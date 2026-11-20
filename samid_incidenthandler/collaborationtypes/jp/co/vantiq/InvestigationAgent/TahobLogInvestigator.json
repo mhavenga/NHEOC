@@ -1,0 +1,189 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "0d6414c6-8df8-4c3d-bd6c-e66ebd4e2345" : {
+          "x" : -152.37455081939697,
+          "y" : 240.98749254696332
+        },
+        "3b81349c-bc85-4ab3-840b-8b2c0e5a5578" : {
+          "x" : -54.60873460769653,
+          "y" : 320
+        },
+        "431ff4b0-714d-4339-80fa-eb0fe4983649" : {
+          "x" : -71.44667863845825,
+          "y" : 80
+        },
+        "7a5412e8-5aea-4b0c-855e-0284a39d0dc8" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "8ae5d2f8-645e-4651-b35c-63cc976bd904" : {
+          "x" : 88.1044545173645,
+          "y" : 80
+        },
+        "a1f0e557-455d-442b-8b93-7503cc4b59dd" : {
+          "x" : 5.198516845703125,
+          "y" : 160
+        },
+        "a68e06c5-53cb-461e-86eb-2b3355c4698f" : {
+          "x" : -152.37455081939697,
+          "y" : 160
+        },
+        "cbd0a51b-643e-4b7f-89f1-943559dc5028" : {
+          "x" : -237.48000478744507,
+          "y" : 320
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.0126658708211316,
+      "translate" : [ 393.28064821913904, 41.1287345636689 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "AttachDetails" : {
+      "configuration" : {
+        "childStreams" : [ "ForUI_Delay5sec" ],
+        "imports" : null,
+        "parameters" : {
+          "tahobLog" : "event"
+        },
+        "parentStreams" : [ "ForUI_Delay3sec" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.IncidentHandler.enrichTahobLog",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "AttachDetails",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "a68e06c5-53cb-461e-86eb-2b3355c4698f"
+    },
+    "ForUI_Delay3sec" : {
+      "configuration" : {
+        "childStreams" : [ "AttachDetails", "LogAgentStart" ],
+        "delay" : "3 seconds",
+        "imports" : null,
+        "parentStreams" : [ "TahobLog" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay3sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "431ff4b0-714d-4339-80fa-eb0fe4983649"
+    },
+    "ForUI_Delay5sec" : {
+      "configuration" : {
+        "childStreams" : [ "PassToOrchestrator", "LogAgentResult" ],
+        "delay" : "1 seconds",
+        "imports" : null,
+        "parentStreams" : [ "AttachDetails" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay5sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "0d6414c6-8df8-4c3d-bd6c-e66ebd4e2345"
+    },
+    "LogAgentResult" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentOutputLog",
+        "parentStreams" : [ "ForUI_Delay5sec" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "3b81349c-bc85-4ab3-840b-8b2c0e5a5578"
+    },
+    "LogAgentStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentInputLog",
+        "parentStreams" : [ "ForUI_Delay3sec" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "a1f0e557-455d-442b-8b93-7503cc4b59dd"
+    },
+    "LogIncident" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "incidentLog",
+        "parentStreams" : [ "TahobLog" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogIncident",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "8ae5d2f8-645e-4651-b35c-63cc976bd904"
+    },
+    "PassToOrchestrator" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "investigationAgentResult",
+        "parentStreams" : [ "ForUI_Delay5sec" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.OrchestratorAgent"
+      },
+      "downstreamReferences" : { },
+      "name" : "PassToOrchestrator",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "cbd0a51b-643e-4b7f-89f1-943559dc5028"
+    },
+    "TahobLog" : {
+      "configuration" : {
+        "childStreams" : [ "LogIncident", "ForUI_Delay3sec" ],
+        "eventTypeName" : "tahobLog",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.InvestigationAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "TahobLog",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "7a5412e8-5aea-4b0c-855e-0284a39d0dc8"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.InvestigationAgent.TahobLogInvestigator"
+}

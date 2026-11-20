@@ -1,0 +1,15 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.routeMessage(messageObj Object)
+
+var notifyType = "sms"  //ActionAgent.getnotifyType() 
+
+if (includes(notifyType,"email")){
+	ActionAgent.sendMail(messageObj)
+}
+
+if (includes(notifyType,"sms")){
+	ActionAgent.sendSMS(messageObj)
+}
+
+
+return notifyType

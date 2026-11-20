@@ -1,0 +1,10 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.notifyLevel3Targets(incident Object REQUIRED): Object
+//log.info("Sent notification to Level 3 targets")
+var response = ActionAgent.notifyIncident(
+	channelName     : "level3", 
+	incidentDetails : incident
+)
+return {
+	"response": "Notification sent to #level3, Response=" + response
+}

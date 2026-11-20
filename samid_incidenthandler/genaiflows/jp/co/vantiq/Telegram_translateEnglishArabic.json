@@ -1,0 +1,54 @@
+{
+  "name": "translateEnglishArabic",
+  "disableTracing": false,
+  "ars_properties": {
+    "groups": {
+      "aicomponents.resources": true,
+      "aicomponents.primitives": true
+    },
+    "v": 1,
+    "graph": {
+      "scale": 4.770998213055783,
+      "translate": [
+        660.885,
+        154.2622785887893
+      ],
+      "lastZoomRequest": 0,
+      "positions": {
+        "Input": {
+          "x": 0,
+          "y": 0
+        },
+        "LLM": {
+          "x": 1.04799871572317,
+          "y": 80.6287992294339
+        }
+      }
+    }
+  },
+  "isPrivate": false,
+  "isComponent": false,
+  "returnType": null,
+  "serviceName": "jp.co.vantiq.Telegram",
+  "assembly": {
+    "Input": {
+      "component": "io.vantiq.ai.components.InitialInput",
+      "configuration": {},
+      "enableAuditing": false,
+      "children": [
+        "LLM"
+      ]
+    },
+    "LLM": {
+      "component": "io.vantiq.ai.components.LLM",
+      "configuration": {
+        "outputType": "String",
+        "llm": "jp.co.vantiq.openai_gpt-4o",
+        "outputTypeSchema": null
+      },
+      "enableAuditing": false,
+      "children": []
+    }
+  },
+  "ars_relationships": []
+}

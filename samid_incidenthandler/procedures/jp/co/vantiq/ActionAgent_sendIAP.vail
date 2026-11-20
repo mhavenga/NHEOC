@@ -1,0 +1,19 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendIAP(data Object)
+
+//var messageString  = data.lastMessage.msg
+
+
+var messageString  = replace(data.lastMessage.msg,"\<br>\<br>Do you want me to send Incident Action Plan to ICS members\?\<br>","")
+
+var messageObj = {
+	level = data.data.suggested_level,
+	subject = "Incident action objectives for "+data.data.recordnumber,
+	message = messageString 
+}
+
+ActionAgent.routeMessage(messageObj)
+
+insert jp.co.vantiq.notifications(id: uuid(), incidentId: data.data.incident_id, messageBody: messageString, createdAt: now(),
+									notificationType: "Action Plan", status: "Received", metadata: data.data, 
+									incident_level: data.data.suggested_level, occurred_at: data.data.occurred_at)

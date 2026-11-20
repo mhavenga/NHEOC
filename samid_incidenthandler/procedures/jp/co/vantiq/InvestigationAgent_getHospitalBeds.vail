@@ -1,0 +1,6 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.getHospitalBeds(inHospital)
+
+select  hospital, hospitalEN, available = sum(available), occupied = sum(occupied) from jp.co.vantiq.hospital_beds
+where hospital == inHospital 
+group by hospital, hospitalEN

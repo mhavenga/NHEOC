@@ -1,0 +1,10 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE UIEventBridger.getIncidentDetail(incident_id)
+// 04-26-01174
+var evt = select one * from jp.co.vantiq.incident_statuses
+where incident_id == incident_id
+//where recordnumber == incident_id
+
+evt = Utils.stripSystemProperties(evt)
+return evt

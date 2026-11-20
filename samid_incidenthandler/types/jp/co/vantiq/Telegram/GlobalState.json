@@ -1,0 +1,22 @@
+{
+  "ars_relationships" : [ ],
+  "groupBy" : "",
+  "name" : "jp.co.vantiq.Telegram.GlobalState",
+  "properties" : {
+    "lastDate" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "DateTime",
+      "unique" : false
+    },
+    "updateOffset" : {
+      "encrypted" : false,
+      "multi" : false,
+      "required" : false,
+      "type" : "Integer",
+      "unique" : false
+    }
+  },
+  "role" : "schema"
+}

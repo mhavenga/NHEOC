@@ -1,0 +1,12 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.test()
+
+var lastdate = now().minusMillis(5 days)
+ var lastDates = select IncidentLocationType , thedate =  max(updated_at) from jp.co.vantiq.incident_statuses 
+	group by 	IncidentLocationType
+
+//	for (record in lastDates){
+//		if (record.thedate > lastdate){
+//			lastdate = record.thedate
+//		}
+//	}

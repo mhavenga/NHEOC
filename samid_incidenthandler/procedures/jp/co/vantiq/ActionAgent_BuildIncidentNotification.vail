@@ -1,0 +1,250 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.BuildIncidentNotification(event Object)
+
+// ── 1. Extract core fields ───────────────────────────────────
+var incidentId  = event.incidentId
+
+var level       =  1 
+
+if (typeOf(event.incident_level) == "Object"){
+	if (has(event.incident_level,"level")){
+		level = toString(event.incident_level.level)
+	}else{
+		level = toString(event.incident_level)
+	}
+}else{
+	level = toString(event.incident_level)
+}
+
+var notifType   = event.notifyType   // "Closed" | "Update" | "New"
+var occurredAt  = event.occurred_at
+var meta        = event.metadata
+if (meta == null){
+	meta = event
+}
+
+// ── 2. Extract metadata fields ───────────────────────────────
+var incidentType    = meta.incident_type         // e.g. "Human hazards - مخاطر بشرية"
+var incidentSubtype = meta.incident_subtype      // e.g. "Border Strip - الشريط الحدودي"
+var location        = meta.IncidentLocation      // e.g. "الشريط الحدودي - علب"
+var locationType    = meta.IncidentLocationType  // e.g. "Outside the Facility - خارج المنشأة"
+var region          = meta.region                // e.g. "عسير" (already Arabic)
+var iStatus         = meta.status                // e.g. "Closed - مغلق"
+var casualties      = toString(meta.casualties)
+var notes           = meta.notes
+var recordNumber    = meta.recordnumber
+var reportingEntity = meta.employeePosition      // e.g. "RHEOC ASEER"
+var hospitalsRaw    = meta.Hospitals             // JSON string of hospitals array
+var incidentDate    = meta.IncidentDateTime
+var entryDate       = meta.entrydate
+var responseLevel   = toString(meta.response_level)
+
+if (entryDate == null){
+	entryDate = meta.occurred_at
+}
+
+// ── 3. Parse hospitals list ──────────────────────────────────
+var hospitalNames = ""
+if (hospitalsRaw != null && hospitalsRaw != "") {
+    var hospitalsList = parse(hospitalsRaw)
+    var i = 0
+    for (i in range(0, length(hospitalsList))) {
+        var hospital = hospitalsList[i]
+        if (i > 0) {
+            hospitalNames += ", "
+        }
+        hospitalNames += trim(hospital.name)
+        i += 1
+    }
+}
+
+// ── 4. Convert UTC timestamps to Saudi Arabia Time (AST = UTC+3) ────
+var incidentDateString = substring(incidentDate, 0, 19)+"Z"
+var entryDatetring     = substring(entryDate, 0, 19)+"Z"
+var eventDateAST  = toDate(incidentDateString).plusMillis(3 hours)
+var reportDateAST = toDate(entryDatetring).plusMillis(3 hours)
+
+// Format: DD-MM-YYYY  and  HH:mm (24h)
+var eventDateStr  = format("{0,date,dd-MM-yyyy}", eventDateAST)
+var eventTimeStr  = format("{0,date,HH:mm}", eventDateAST)
+var reportTimeStr = format("{0,date,HH:mm}", reportDateAST)
+
+// ── 5. Determine alert label from notificationType ───────────
+var alertLabel   = "Update"
+var alertLabelAR = "تحديث"
+if (notifType == "New") {
+    alertLabel   = "Alert"
+    alertLabelAR = "تنبيه"
+}
+
+// ── 6. Determine status classification (Human/Technical + Level) ──
+var categoryLabel   = incidentType //"Human"
+var categoryLabelAR = incidentType //"بشري"
+/*if (contains(toLowerCase(incidentType), "technical") ||
+	contains(toLowerCase(incidentType), "technological") ||
+    contains(toLowerCase(incidentType), "electrical") ||
+    contains(toLowerCase(incidentType), "network") ||
+    contains(toLowerCase(incidentType), "internet")) {
+    categoryLabel   = "Technical"
+    categoryLabelAR = "تقني"
+}*/
+var statusLabel   = format("{0} {1}", categoryLabel, responseLevel)
+var statusLabelAR = format("{0} {1}", categoryLabelAR, responseLevel)
+
+// ── 7. Extract Arabic portions from bilingual fields ─────────
+// Bilingual fields follow the pattern "English - Arabic"
+// indexOf returns -1 if not found, so we fall back to the full value
+var sepIdx = 0
+
+var sepIdx        = indexOf(incidentType, " - ")
+var incidentTypeAR = incidentType
+if (sepIdx >= 0) {
+    incidentTypeAR = substring(incidentType, sepIdx + 3)
+}
+
+sepIdx = indexOf(incidentSubtype, " - ")
+var incidentSubtypeAR = incidentSubtype
+if (sepIdx >= 0) {
+    incidentSubtypeAR = substring(incidentSubtype, sepIdx + 3)
+}
+
+sepIdx = indexOf(locationType, " - ")
+var locationTypeAR = locationType
+if (sepIdx >= 0) {
+    locationTypeAR = substring(locationType, sepIdx + 3)
+}
+
+sepIdx = indexOf(iStatus, " - ")
+var iStatusAR = iStatus
+if (sepIdx >= 0) {
+    iStatusAR = substring(iStatus, sepIdx + 3)
+}
+
+// ── 8. End-of-incident label ─────────────────────────────────
+var endOfIncident   = ""
+var endOfIncidentAR = ""
+if (notifType == "Closed") {
+    endOfIncident   = "End of Incident, "
+    endOfIncidentAR = "انتهاء الحدث، "
+}
+
+// ── 9. Build hospital transfer line ──────────────────────────
+var transferLine   = ""
+var transferLineAR = ""
+if (hospitalNames != "") {
+    transferLine   = format("- Casualty transferred to: {0}\n", hospitalNames)
+    transferLineAR = format("- تم نقل المصاب إلى: {0}\n", hospitalNames)
+}
+
+// ── 10. Build summary lines ───────────────────────────────────
+var summaryLine = format(
+    "({0}: Level {1}, {2}{3} - {4} at {5})",
+    alertLabel, level, endOfIncident,
+    incidentType, incidentSubtype, location
+)
+
+// Summary line AR follows PDF template prose style:
+// (تنبيه: درجة X، انتهاء الحدث، نوع الحدث - النوع الفرعي في الموقع، المنطقة، أهم الإجراءات)
+var summaryLineAR = format(
+    "({0}: درجة {1}، {2}{3} - {4} في {5}، المنطقة: {6})",
+    alertLabelAR, level, endOfIncidentAR,
+    incidentTypeAR, incidentSubtypeAR, location, region
+)
+
+// ── 11. Assemble English message ──────────────────────────────
+var messageHeader = format(
+    "{0}\n" +
+    "Status: ({1})\n" +
+    "Event Date: {2}\n" +
+    "Event Time: {3}\n" +
+    "Reported Time: {4}\n" +
+    "Reporting Entity: {5}\n" +
+    "Record No.: {6}\n",
+    summaryLine, statusLabel,
+    eventDateStr, eventTimeStr, reportTimeStr,
+    reportingEntity, recordNumber
+)
+
+var messageDetail = format(
+    "\nIncident Description:\n" +
+    "- Type: {0}\n" +
+    "- Subtype: {1}\n" +
+    "- Location: {2} ({3})\n" +
+    "- Region: {4}\n" +
+    "- Casualties: {5}\n\n" +
+    "Actions Taken:\n" +
+    "{6}" +
+    "- Notes: {7}\n\n" +
+    "Incident Status: {8}",
+    incidentType, incidentSubtype,
+    location, locationType,
+    region, casualties,
+    transferLine, notes, iStatus
+)
+
+var message = messageHeader + messageDetail
+
+// ── 12. Assemble Arabic message ───────────────────────────────
+var messageHeaderAR = format(
+    "{0}\n" +
+    "الحالة: ({1})\n" +
+    "تاريخ الحدث: {2}\n" +
+    "وقت الحدث: {3}\n" +
+    "وقت التبليغ: {4}\n" +
+    "الجهة المُبلِّغة: {5}\n" +
+    "رقم السجل: {6}\n",
+    summaryLineAR, statusLabelAR,
+    eventDateStr, eventTimeStr, reportTimeStr,
+    reportingEntity, recordNumber
+)
+
+var messageDetailAR = format(
+    "\nوصف البلاغ:\n" +
+    "- النوع: {0}\n" +
+    "- النوع الفرعي: {1}\n" +
+    "- الموقع: {2} ({3})\n" +
+    "- المنطقة: {4}\n" +
+    "- الإصابات: {5}\n\n" +
+    "الإجراءات المتخذة:\n" +
+    "{6}" +
+    "- ملاحظات: {7}\n\n" +
+    "حالة الحدث: {8}",
+    incidentTypeAR, incidentSubtypeAR,
+    location, locationTypeAR,
+    region, casualties,
+    transferLineAR, notes, iStatusAR
+)
+
+var messageAR = messageHeaderAR + messageDetailAR
+
+// ── 13. Build subject lines ───────────────────────────────────
+
+
+
+var subject   = ""
+var subjectAR = ""
+if (notifType == "New") {
+    subject   = "New Level " + level + " Incident Occurred (" + recordNumber + ") at " + location
+    subjectAR = "حدث جديد درجة " + level + " (" + recordNumber + ") في " + location
+} else {
+    if (startsWith(iStatus, "Open")) {
+        subject   = "Incident " + recordNumber + " Updated - Incident Ongoing"
+        subjectAR = "تحديث الحدث " + recordNumber + " - الحدث مستمر"
+    } else {
+        subject   = "Incident " + recordNumber + " Updated - Incident Resolved"
+        subjectAR = "تحديث الحدث " + recordNumber + " - تم إغلاق الحدث"
+    }
+}
+
+// ── 14. Return result object ──────────────────────────────────
+var result = {}
+result.subject      = subject
+result.subjectAR    = subjectAR
+result.message      = message
+result.messageAR    = messageAR
+result.incidentId   = incidentId
+result.level        = level
+result.status       = iStatus
+result.recordNumber = recordNumber
+
+return result

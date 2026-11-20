@@ -1,0 +1,6 @@
+package jp.co.vantiq
+stateless PROCEDURE Telegram.test()
+
+//select telegram_message_id FROM jp.co.vantiq.incident_statuses where incident_id == "TAHOB-2026-C1-00-d4274f9a-92e8-444e-8f39-b3dc615a8dcd"
+
+var evt = select one * from system.scheduledevents //where  name == incident

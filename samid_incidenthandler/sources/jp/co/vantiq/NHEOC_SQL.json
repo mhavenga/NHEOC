@@ -1,0 +1,26 @@
+{
+  "activationConstraint" : "",
+  "active" : false,
+  "ars_properties" : {
+    "additionalConfigProps" : [ "jdbcConfig.general.username", "jdbcConfig.general.password", "jdbcConfig.general.dbURL" ]
+  },
+  "ars_relationships" : [ ],
+  "autoUnwind" : false,
+  "config" : {
+    "jdbcConfig" : {
+      "general" : {
+        "dbURL" : "jdbc:sqlserver://tahob-pr-db1.moh.gov.sa:1435;databaseName=NHEOC-AI02;integratedSecurity=true;authenticationScheme=NTLM;domain=MOH;encrypt=false",
+        "password" : "Aahs@mohapp533423",
+        "username" : "Nheoc-ai_svc"
+      }
+    },
+    "vantiq" : {
+      "packageRows" : "true"
+    }
+  },
+  "isUnavailable" : false,
+  "messageType" : null,
+  "mockProcedures" : { },
+  "name" : "jp.co.vantiq.NHEOC_SQL",
+  "type" : "JDBC"
+}

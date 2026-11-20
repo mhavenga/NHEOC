@@ -1,0 +1,22 @@
+package jp.co.vantiq
+stateless PROCEDURE AuditLogManager.transformDiagnosticAgentResult(
+	diagnosticAgentResult Object REQUIRED
+): String
+var caseNumber   = diagnosticAgentResult.case_number
+var level        = diagnosticAgentResult.incident_level
+var fourSCapability = diagnosticAgentResult.4s_capability
+var message    = "Classified as "
+if caseNumber != null {
+	message += "Case " + caseNumber + ", "
+}
+if level != null {
+	message += "Level " + level + ". "
+} else {
+	message += "Out of threshold. "	
+}
+if fourSCapability != null {
+	message += "Current 4s capability info=" + fourSCapability
+} else {
+	message += "Incident Type=CBRNE"
+}
+return message

@@ -1,0 +1,18 @@
+package jp.co.vantiq
+import service Utils
+stateless PROCEDURE UIEventBridger.getIncidentNotifications(incident_id)
+
+var notifications = select * from jp.co.vantiq.notifications
+	where incidentId == incident_id
+	order by createdAt DESC
+
+var returnValue = []
+for (notify in notifications){
+	notify = Utils.stripSystemProperties(notify)
+	notify.localDate = jp.co.vantiq.utils.convertToLocalDate(notify.createdAt)
+	returnValue.push(notify)
+}
+
+
+return returnValue
+

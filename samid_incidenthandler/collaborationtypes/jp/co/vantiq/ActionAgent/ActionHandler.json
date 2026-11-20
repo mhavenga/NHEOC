@@ -1,0 +1,346 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "026f2caa-255d-4123-8bdb-e247ee45caf9" : {
+          "x" : -10.381955450436726,
+          "y" : -11.420150995480398
+        },
+        "15863623-7890-4270-af97-722194c960bd" : {
+          "x" : 180.5353889465332,
+          "y" : 240
+        },
+        "3419bba6-3e22-4d45-81cd-faf0646b2e45" : {
+          "x" : -352.126174290975,
+          "y" : 320
+        },
+        "4304c056-dd35-4c71-afd4-a953fb9cd8ca" : {
+          "x" : -188.48615646362305,
+          "y" : 240
+        },
+        "49061e16-795d-4abd-8819-08fc2af03403" : {
+          "x" : -4.737966537475586,
+          "y" : 240
+        },
+        "4d26ab2a-8989-4322-83df-00537109626c" : {
+          "x" : -80.9453125,
+          "y" : 160
+        },
+        "521b369b-4991-4227-930c-62fd622d71a9" : {
+          "x" : 182.80351320902506,
+          "y" : 320
+        },
+        "53669218-50cf-4aaf-a44a-caf0afd2d63d" : {
+          "x" : 88.10184621810913,
+          "y" : 80
+        },
+        "555c7d17-c61b-4f06-80f4-c5d8a06706cd" : {
+          "x" : -528.173049290975,
+          "y" : 320
+        },
+        "599a97a3-99ab-4c69-afa5-00c0bc147efe" : {
+          "x" : 87.9975643157959,
+          "y" : 240
+        },
+        "83439bae-1934-4e8f-998a-62ec9d6de6d7" : {
+          "x" : -311.10363388061523,
+          "y" : 240
+        },
+        "a31e240f-f300-4a17-8156-3b8e42754bb9" : {
+          "x" : 23.920700709025063,
+          "y" : 320
+        },
+        "c29661aa-73bd-465e-b3ad-f91e185249bd" : {
+          "x" : -80.9453125,
+          "y" : 80
+        },
+        "c7603a00-6609-494f-83dd-4d919b8d6120" : {
+          "x" : -97.21224212646484,
+          "y" : 240
+        },
+        "e8b93aed-6acd-46cc-bff7-a52ec205ee03" : {
+          "x" : -164.70429929097494,
+          "y" : 320.9038017165493
+        },
+        "ef857296-ce55-475f-887b-20f70bb73d41" : {
+          "x" : -82.79804929097497,
+          "y" : 400
+        },
+        "ff100e65-9427-4688-98fd-db9615fef99d" : {
+          "x" : 341.491013209025,
+          "y" : 320
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 0.9632096812339281,
+      "translate" : [ 657.1284776746737, 127.11979304091302 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "BranchByLevel" : {
+      "configuration" : {
+        "Level1Streams" : [ "NotifyLevel1" ],
+        "Level2Streams" : [ "NotifyLevel2" ],
+        "Level3Streams" : [ "NotifyLevel3" ],
+        "Level4Streams" : [ "NotifyLevel4" ],
+        "Level5Streams" : [ "NotifyLevel5" ],
+        "OutOfThresholdStreams" : [ "NoAction" ],
+        "childStreams" : [ ],
+        "conditions" : [ {
+          "code" : "event.suggestedLevel == null",
+          "label" : "OutOfThreshold",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.suggestedLevel == 1",
+          "label" : "Level1",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.suggestedLevel == 2",
+          "label" : "Level2",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.suggestedLevel == 3",
+          "label" : "Level3",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.suggestedLevel== 4",
+          "label" : "Level4",
+          "language" : "VAIL"
+        }, {
+          "code" : "event.suggestedLevel == 5",
+          "label" : "Level5",
+          "language" : "VAIL"
+        } ],
+        "imports" : null,
+        "parentStreams" : [ "ForUI_Delay3sec" ]
+      },
+      "downstreamReferences" : { },
+      "downstreamUUIDS" : {
+        "Level1" : "4304c056-dd35-4c71-afd4-a953fb9cd8ca",
+        "Level2" : "c7603a00-6609-494f-83dd-4d919b8d6120",
+        "Level3" : "49061e16-795d-4abd-8819-08fc2af03403",
+        "Level4" : "599a97a3-99ab-4c69-afa5-00c0bc147efe",
+        "Level5" : "15863623-7890-4270-af97-722194c960bd",
+        "OutOfThreshold" : "83439bae-1934-4e8f-998a-62ec9d6de6d7"
+      },
+      "name" : "BranchByLevel",
+      "pattern" : "Branch",
+      "patternVersion" : 1,
+      "uuid" : "4d26ab2a-8989-4322-83df-00537109626c"
+    },
+    "DiagnosticAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentStart", "ForUI_Delay3sec" ],
+        "eventTypeName" : "diagnosticAgentResult",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.ActionAgent",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "DiagnosticAgentResult",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "026f2caa-255d-4123-8bdb-e247ee45caf9"
+    },
+    "ForUI_Delay3sec" : {
+      "configuration" : {
+        "childStreams" : [ "BranchByLevel" ],
+        "delay" : "3 seconds",
+        "imports" : null,
+        "parentStreams" : [ "DiagnosticAgentResult" ]
+      },
+      "description" : "**NOTE**\nThis task is for Multi-Agent dashboard. \"Delay\" is added to make step-by-step processing easier to verify during dashboard behavior. This will be removed once dashboard integration is no longer needed or when we switch from rule-based to LLM-based processing.",
+      "downstreamReferences" : { },
+      "name" : "ForUI_Delay3sec",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "c29661aa-73bd-465e-b3ad-f91e185249bd"
+    },
+    "LogAgentResult" : {
+      "configuration" : {
+        "childStreams" : [ ],
+        "eventTypeName" : "actionAgentOutputLog",
+        "parentStreams" : [ "NotifyLevel5", "NotifyLevel4", "NotifyLevel3", "NotifyLevel2", "NotifyLevel1", "NoAction" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentResult",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "ef857296-ce55-475f-887b-20f70bb73d41"
+    },
+    "LogAgentStart" : {
+      "configuration" : {
+        "childStreams" : null,
+        "eventTypeName" : "actionAgentInputLog",
+        "parentStreams" : [ "DiagnosticAgentResult" ],
+        "processedByClause" : null,
+        "service" : "jp.co.vantiq.AuditLogManager"
+      },
+      "downstreamReferences" : { },
+      "name" : "LogAgentStart",
+      "pattern" : "PublishToService",
+      "patternVersion" : 3,
+      "uuid" : "53669218-50cf-4aaf-a44a-caf0afd2d63d"
+    },
+    "NoAction" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "outboundResource" : null,
+        "outboundResourceConfig" : null,
+        "outboundResourceId" : null,
+        "parentStreams" : [ "BranchByLevel:OutOfThreshold" ],
+        "schema" : null,
+        "transformInPlace" : true,
+        "transformation" : {
+          "notification_result" : {
+            "expression" : "{}",
+            "type" : "expression"
+          },
+          "notification_result.response" : {
+            "expression" : "\"No action needed\"",
+            "type" : "expression"
+          }
+        },
+        "upsert" : false
+      },
+      "downstreamReferences" : { },
+      "name" : "NoAction",
+      "pattern" : "Transformation",
+      "patternVersion" : 5,
+      "uuid" : "555c7d17-c61b-4f06-80f4-c5d8a06706cd"
+    },
+    "NotifyLevel1" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incident" : "event"
+        },
+        "parentStreams" : [ "BranchByLevel:Level1" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.notifyLevel1Targets",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notification_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyLevel1",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "3419bba6-3e22-4d45-81cd-faf0646b2e45"
+    },
+    "NotifyLevel2" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incident" : "event"
+        },
+        "parentStreams" : [ "BranchByLevel:Level2" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.notifyLevel2Targets",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notification_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyLevel2",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "e8b93aed-6acd-46cc-bff7-a52ec205ee03"
+    },
+    "NotifyLevel3" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incident" : "event"
+        },
+        "parentStreams" : [ "BranchByLevel:Level3" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.notifyLevel3Targets",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notification_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyLevel3",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "a31e240f-f300-4a17-8156-3b8e42754bb9"
+    },
+    "NotifyLevel4" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incident" : "event"
+        },
+        "parentStreams" : [ "BranchByLevel:Level4" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.notifyLevel4Targets",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notification_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyLevel4",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "521b369b-4991-4227-930c-62fd622d71a9"
+    },
+    "NotifyLevel5" : {
+      "configuration" : {
+        "childStreams" : [ "LogAgentResult" ],
+        "imports" : null,
+        "parameters" : {
+          "incident" : "event"
+        },
+        "parentStreams" : [ "BranchByLevel:Level5" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.ActionAgent.notifyLevel5Targets",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Attach Return Value to returnProperty",
+        "returnProperty" : "notification_result",
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "NotifyLevel5",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "ff100e65-9427-4688-98fd-db9615fef99d"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.ActionAgent.ActionHandler"
+}

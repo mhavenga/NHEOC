@@ -1,0 +1,35 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.getHospitalBedsAll()
+
+    SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT Region, RegionEN, Cluster, ClusterEN, City, CityEN, Hospital_Name_ARA, Hospital_Name_ENU, status,  count(*) as beds FROM [NHEOC-AI02].[dbo].[BedStatus] "+ 
+			"where General_Sector_ENU = 'Emergency Beds' " +
+  			"group by Region, RegionEN, Cluster, ClusterEN, City, CityEN, Hospital_Name_ARA, Hospital_Name_ENU, status"
+
+		FOR (row in results) {
+			if (row.status == "Available"){
+				UPSERT jp.co.vantiq.hospital_beds(hospital: row.Hospital_Name_ARA, 
+				hospitalEN: row.Hospital_Name_ENU,
+				region: row.Region,
+				regionEN: row.RegionEN,
+				cluster: row.Cluster,
+				clusterEN: row.ClusterEN,
+				city: row.City,
+				cityEN: row.CityEN,
+				available: row.beds)
+			}else{
+				UPSERT jp.co.vantiq.hospital_beds(hospital: row.Hospital_Name_ARA, 
+				hospitalEN: row.Hospital_Name_ENU,
+				region: row.Region,
+				regionEN: row.RegionEN,
+				cluster: row.Cluster,
+				clusterEN: row.ClusterEN,
+				city: row.City,
+				cityEN: row.CityEN,
+				occupied: row.beds)
+			}
+      }
+
+	update jp.co.vantiq.hospital_beds(occupied: 0) where occupied == null
+	update jp.co.vantiq.hospital_beds(available: 0) where available == null
+	return results

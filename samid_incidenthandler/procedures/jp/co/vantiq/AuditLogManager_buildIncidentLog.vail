@@ -1,0 +1,12 @@
+package jp.co.vantiq
+stateless PROCEDURE AuditLogManager.buildIncidentLog(
+	incidentId String REQUIRED, 
+	logContent Any    REQUIRED
+): Object
+var log = {
+	"incident_id": incidentId,
+	"event_type" : "incident",
+	"log_content": logContent,
+	"created_at" : now()
+}
+return log

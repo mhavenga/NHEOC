@@ -1,0 +1,7 @@
+package jp.co.vantiq
+stateless PROCEDURE chatService.tester(prompt)
+
+var  test = includes(toLowerCase(prompt), "available")
+
+
+update jp.co.vantiq.incident_statuses(activated: false) where activated == null

@@ -1,0 +1,125 @@
+{
+  "active" : false,
+  "agentVersion" : null,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "triggerReminder" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.Telegram.triggerReminder/EventStream",
+      "isReliable" : false
+    }
+  },
+  "globalType" : "jp.co.vantiq.Telegram.GlobalState",
+  "interface" : [ {
+    "name" : "createScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : "Integer"
+    } ]
+  }, {
+    "name" : "deleteScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getAlertSchedule",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "level",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getNextReminder",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : null
+    } ]
+  }, {
+    "name" : "getUpdates",
+    "parameters" : [ ]
+  }, {
+    "name" : "sendMessage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "text",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "translate",
+      "required" : true,
+      "type" : "Boolean"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentID",
+      "required" : true,
+      "type" : "String"
+    } ]
+  }, {
+    "name" : "sendUpdateReminderMessage",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentID",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "translate",
+      "required" : true,
+      "type" : "Boolean"
+    } ]
+  }, {
+    "name" : "test",
+    "parameters" : [ ]
+  }, {
+    "name" : "updateOffsetGet",
+    "parameters" : [ ]
+  }, {
+    "name" : "updateOffsetUpdate",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "newValue",
+      "required" : false,
+      "type" : "Integer"
+    } ]
+  }, {
+    "name" : "updateScheduledEvents",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incident",
+      "required" : false,
+      "type" : null
+    } ]
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.Telegram",
+  "partitionedType" : "jp.co.vantiq.Telegram.GlobalState",
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

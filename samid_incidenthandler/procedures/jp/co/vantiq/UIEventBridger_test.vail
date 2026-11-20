@@ -1,0 +1,4 @@
+package jp.co.vantiq
+stateless PROCEDURE UIEventBridger.test()
+
+var allCounter = select  counter = count(is_open) from jp.co.vantiq.incident_statuses

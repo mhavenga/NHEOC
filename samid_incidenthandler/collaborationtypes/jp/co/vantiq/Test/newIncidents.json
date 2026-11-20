@@ -1,0 +1,195 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "19b2bb75-4a2c-4c09-8492-6e68b63afc6c" : {
+          "x" : 0,
+          "y" : 240
+        },
+        "20e45f03-d34f-478b-8b33-b16cb3336698" : {
+          "x" : 0,
+          "y" : 80
+        },
+        "57a40cfe-056c-49c0-adc2-62f60ade4a07" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "edb77226-5c7e-4a8a-9c00-58ffe2fa3fad" : {
+          "x" : 0,
+          "y" : 160
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 1.9026790932599504,
+      "translate" : [ 616.0924526888309, 77.5199253122293 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "ServiceProcedures" : true,
+        "actions" : true,
+        "ai" : true,
+        "collab" : true,
+        "filters" : true,
+        "flowControl" : true,
+        "math" : true,
+        "modifiers" : true,
+        "vision" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : {
+        "events" : true,
+        "procedures" : true
+      },
+      "serviceGroupOpenHash" : {
+        "Chat" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Notification" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "Recommend" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-ActionAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-AuditLogManager" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-DataAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-IncidentHandler" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-InvestigationAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-MultiAgentFlow" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-OrchestratorAgent" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Tahob" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-Telegram" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-UIEventBridger" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-chatService" : {
+          "events" : true,
+          "procedures" : true
+        },
+        "jp-co-vantiq-utils" : {
+          "events" : true,
+          "procedures" : true
+        }
+      }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 338,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "deleteTestData" ],
+        "eventTypeName" : "newIncidents",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.Test",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "57a40cfe-056c-49c0-adc2-62f60ade4a07"
+    },
+    "deleteTestData" : {
+      "configuration" : {
+        "childStreams" : [ "sendNew" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "EventStream" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.Test.deleteTestData",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "deleteTestData",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "20e45f03-d34f-478b-8b33-b16cb3336698"
+    },
+    "publishNewIncident" : {
+      "configuration" : {
+        "childStreams" : null,
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "sendNew" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.InvestigationAgent.publishNewIncident",
+        "redeliverOnError" : null,
+        "returnBehavior" : "Use Return Value as Outbound event",
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "publishNewIncident",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "19b2bb75-4a2c-4c09-8492-6e68b63afc6c"
+    },
+    "sendNew" : {
+      "configuration" : {
+        "childStreams" : [ "publishNewIncident" ],
+        "imports" : null,
+        "parameters" : null,
+        "parentStreams" : [ "deleteTestData" ],
+        "partitionKey" : null,
+        "procedure" : "jp.co.vantiq.Test.sendNew",
+        "redeliverOnError" : null,
+        "returnBehavior" : null,
+        "returnProperty" : null,
+        "schema" : null
+      },
+      "downstreamReferences" : { },
+      "name" : "sendNew",
+      "pattern" : "Procedure",
+      "patternVersion" : 5,
+      "uuid" : "edb77226-5c7e-4a8a-9c00-58ffe2fa3fad"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.Test.newIncidents"
+}

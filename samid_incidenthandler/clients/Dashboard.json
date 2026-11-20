@@ -1,0 +1,575 @@
+{
+  "ars_properties" : {
+    "tags" : [ "#launchable" ]
+  },
+  "ars_public" : false,
+  "ars_relationships" : [ ],
+  "controllers" : {
+    "client" : {
+      "customCode" : "RELOCATED to controllers/client/customCode.js",
+      "onStart" : "RELOCATED to controllers/client/onStart.js"
+    },
+    "dataStream" : {
+      "seDataRetrieval" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/seDataRetrieval/onDataArrived.js"
+      },
+      "tqAuditLog" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/tqAuditLog/onDataArrived.js"
+      },
+      "tqIncidents" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/tqIncidents/onDataArrived.js"
+      },
+      "tqNotifications" : {
+        "onDataArrived" : "RELOCATED to controllers/dataStream/tqNotifications/onDataArrived.js"
+      }
+    },
+    "page" : {
+      "AuditLogs" : {
+        "onStart" : "RELOCATED to controllers/page/AuditLogs/onStart.js",
+        "widgets" : {
+          "Button7" : {
+            "onClick" : "RELOCATED to controllers/page/AuditLogs/widgets/Button7/onClick.js"
+          },
+          "Button9" : {
+            "onClick" : "RELOCATED to controllers/page/AuditLogs/widgets/Button9/onClick.js"
+          },
+          "DataTableAuditLog" : {
+            "onDataConsumed" : "RELOCATED to controllers/page/AuditLogs/widgets/DataTableAuditLog/onDataConsumed.js",
+            "onFormatCellCallback" : "RELOCATED to controllers/page/AuditLogs/widgets/DataTableAuditLog/onFormatCellCallback.js"
+          },
+          "DroplistAgentName" : {
+            "onChange" : "RELOCATED to controllers/page/AuditLogs/widgets/DroplistAgentName/onChange.js"
+          },
+          "DroplistEventType" : {
+            "onChange" : "RELOCATED to controllers/page/AuditLogs/widgets/DroplistEventType/onChange.js"
+          },
+          "DroplistIncidentID" : {
+            "onChange" : "RELOCATED to controllers/page/AuditLogs/widgets/DroplistIncidentID/onChange.js"
+          }
+        }
+      },
+      "IncidentDashboard" : {
+        "onStart" : "RELOCATED to controllers/page/IncidentDashboard/onStart.js",
+        "widgets" : {
+          "Button5" : {
+            "onClick" : "RELOCATED to controllers/page/IncidentDashboard/widgets/Button5/onClick.js"
+          },
+          "Button6" : {
+            "onClick" : "RELOCATED to controllers/page/IncidentDashboard/widgets/Button6/onClick.js"
+          },
+          "CheckboxRefresh" : {
+            "onChange" : "RELOCATED to controllers/page/IncidentDashboard/widgets/CheckboxRefresh/onChange.js"
+          },
+          "DataTableIncidents" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/IncidentDashboard/widgets/DataTableIncidents/onButtonClickCallback.js",
+            "onDataConsumed" : "RELOCATED to controllers/page/IncidentDashboard/widgets/DataTableIncidents/onDataConsumed.js",
+            "onFormatCellCallback" : "RELOCATED to controllers/page/IncidentDashboard/widgets/DataTableIncidents/onFormatCellCallback.js"
+          },
+          "DroplistLevel" : {
+            "onChange" : "RELOCATED to controllers/page/IncidentDashboard/widgets/DroplistLevel/onChange.js"
+          },
+          "DroplistStatus" : {
+            "onChange" : "RELOCATED to controllers/page/IncidentDashboard/widgets/DroplistStatus/onChange.js"
+          },
+          "InputStringSearch" : {
+            "onEnterKey" : "RELOCATED to controllers/page/IncidentDashboard/widgets/InputStringSearch/onEnterKey.js"
+          }
+        }
+      },
+      "IncidentNotifications" : {
+        "widgets" : {
+          "DataTableNotifications1" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/IncidentNotifications/widgets/DataTableNotifications1/onButtonClickCallback.js",
+            "onDataConsumed" : "RELOCATED to controllers/page/IncidentNotifications/widgets/DataTableNotifications1/onDataConsumed.js",
+            "onSelect" : "RELOCATED to controllers/page/IncidentNotifications/widgets/DataTableNotifications1/onSelect.js"
+          }
+        }
+      },
+      "Map" : {
+        "widgets" : {
+          "Button10" : {
+            "onClick" : "RELOCATED to controllers/page/Map/widgets/Button10/onClick.js"
+          },
+          "DroplistLevelMap" : {
+            "onChange" : "RELOCATED to controllers/page/Map/widgets/DroplistLevelMap/onChange.js"
+          },
+          "DroplistStatusMap" : {
+            "onChange" : "RELOCATED to controllers/page/Map/widgets/DroplistStatusMap/onChange.js"
+          },
+          "InputStringSearchMap" : {
+            "onEnterKey" : "RELOCATED to controllers/page/Map/widgets/InputStringSearchMap/onEnterKey.js"
+          }
+        }
+      },
+      "MultiAgentFlow" : {
+        "widgets" : {
+          "Button8" : {
+            "onClick" : "RELOCATED to controllers/page/MultiAgentFlow/widgets/Button8/onClick.js"
+          }
+        }
+      },
+      "Notifications" : {
+        "widgets" : {
+          "Button11" : {
+            "onClick" : "RELOCATED to controllers/page/Notifications/widgets/Button11/onClick.js"
+          },
+          "Button25" : {
+            "onClick" : "RELOCATED to controllers/page/Notifications/widgets/Button25/onClick.js"
+          },
+          "DataTableNotifications" : {
+            "onButtonClickCallback" : "RELOCATED to controllers/page/Notifications/widgets/DataTableNotifications/onButtonClickCallback.js",
+            "onDataConsumed" : "RELOCATED to controllers/page/Notifications/widgets/DataTableNotifications/onDataConsumed.js"
+          },
+          "DroplistNotificationLevel" : {
+            "onChange" : "RELOCATED to controllers/page/Notifications/widgets/DroplistNotificationLevel/onChange.js"
+          },
+          "DroplistNotificationStatus" : {
+            "onChange" : "RELOCATED to controllers/page/Notifications/widgets/DroplistNotificationStatus/onChange.js"
+          },
+          "DroplistNotificationType" : {
+            "onChange" : "RELOCATED to controllers/page/Notifications/widgets/DroplistNotificationType/onChange.js"
+          },
+          "InputStringNotificationSearch" : {
+            "onEnterKey" : "RELOCATED to controllers/page/Notifications/widgets/InputStringNotificationSearch/onEnterKey.js"
+          }
+        }
+      },
+      "Start" : {
+        "onStart" : "RELOCATED to controllers/page/Start/onStart.js"
+      }
+    },
+    "sidebar" : {
+      "widgets" : {
+        "MenuButton10" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButton10/onClick.js"
+        },
+        "MenuButton11" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButton11/onClick.js"
+        },
+        "MenuButton16" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButton16/onClick.js"
+        },
+        "MenuButton9" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButton9/onClick.js"
+        },
+        "MenuButtonAuditLogs" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButtonAuditLogs/onClick.js"
+        },
+        "MenuButtonIncidents" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButtonIncidents/onClick.js"
+        },
+        "MenuButtonMap" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButtonMap/onClick.js"
+        },
+        "MenuButtonMultiAgent" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButtonMultiAgent/onClick.js"
+        },
+        "MenuButtonNotifications" : {
+          "onClick" : "RELOCATED to controllers/sidebar/widgets/MenuButtonNotifications/onClick.js"
+        }
+      }
+    }
+  },
+  "isComponent" : false,
+  "isLaunchable" : true,
+  "models" : {
+    "dataObjects" : {
+      "__GLOBAL__" : {
+        "properties" : { }
+      },
+      "__PARAMETERS__" : {
+        "properties" : { }
+      }
+    },
+    "dataStreams" : [ {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ {
+        "name" : "is_open",
+        "operator" : "EQ",
+        "value" : false
+      } ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "jp.co.vantiq.incident_statuses"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 1000,
+      "name" : "tqIncidents",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : "occurred_at",
+      "sortDescending" : true,
+      "type" : 4,
+      "updateInterval" : 30,
+      "uuid" : "edbfff03-b1aa-4dbc-8f17-2636fff30952",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "jp.co.vantiq.audit_logs"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 1000,
+      "name" : "tqAuditLog",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : "created_at",
+      "sortDescending" : false,
+      "type" : 4,
+      "updateInterval" : 5,
+      "uuid" : "1c22db7a-e8ef-4b01-ae6a-326ea073d208",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "seDataRetrieval",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "service" : "jp.co.vantiq.UIEventBridger",
+      "serviceEventName" : "dataRetrievalOut",
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 8,
+      "updateInterval" : 60,
+      "uuid" : "5b31d412-3a95-466f-83a8-65d4dec68003",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "jp.co.vantiq.notifications"
+      } ],
+      "isDeleteOp" : true,
+      "isInsertOp" : true,
+      "isUpdateOp" : true,
+      "maxRecords" : 100,
+      "name" : "odcNotifications",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : null,
+      "sortDescending" : false,
+      "type" : 1,
+      "updateInterval" : 60,
+      "uuid" : "e4ff94b1-530b-404a-8489-28cd898ec92b",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "jp.co.vantiq.notifications"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 500,
+      "name" : "tqNotifications",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : "createdAt",
+      "sortDescending" : true,
+      "type" : 4,
+      "updateInterval" : 5,
+      "uuid" : "1511a609-4efb-47a6-8192-e63345b4591f",
+      "v" : 1
+    }, {
+      "advancedWhereClause" : null,
+      "basicQueryElement" : [ {
+        "name" : "id",
+        "operator" : "EQ",
+        "value" : "000"
+      } ],
+      "dataObjectName" : null,
+      "dataTypeList" : [ {
+        "label" : null,
+        "type" : "jp.co.vantiq.notifications"
+      } ],
+      "isDeleteOp" : false,
+      "isInsertOp" : false,
+      "isUpdateOp" : false,
+      "maxRecords" : 100,
+      "name" : "selectedIncidentNotification",
+      "pauseAtStartup" : false,
+      "property" : null,
+      "sortByProperty" : "ars_createdAt",
+      "sortDescending" : true,
+      "type" : 4,
+      "updateInterval" : 60,
+      "uuid" : "e2d1bcad-6fb9-444b-90e9-e1b1cd9deae8",
+      "v" : 1
+    } ]
+  },
+  "name" : "Dashboard",
+  "options" : {
+    "RELOCATE" : [ {
+      "path" : "controllers",
+      "type" : "js"
+    }, {
+      "path" : "views",
+      "type" : "json"
+    }, {
+      "path" : "options.sidebar",
+      "type" : "jsonObj"
+    } ],
+    "activeTab" : "edit",
+    "badgeCount" : 0,
+    "componentConfiguration" : {
+      "configurationProperties" : [ ]
+    },
+    "description" : "",
+    "docAssets" : [ ],
+    "hasSidebar" : true,
+    "hideRTCNavbar" : true,
+    "productV" : "7.18o",
+    "showCategoryButtons" : true,
+    "showCategoryDataDisplay" : true,
+    "showCategoryDataInput" : true,
+    "showCategoryLayout" : true,
+    "showGridWhileEditing" : false,
+    "sidebar" : "RELOCATED to options/sidebar.json",
+    "theme" : {
+      "appTitlebarBgColor" : null,
+      "appTitlebarBgColor-setting" : null,
+      "appTitlebarFgColor" : null,
+      "appTitlebarFgColor-setting" : null,
+      "backgroundColor" : "#22252b",
+      "backgroundColor-setting" : "#22252b",
+      "bgImgPosition" : "center",
+      "bgImgPosition-setting" : "center",
+      "bgImgRepeat" : "no-repeat",
+      "bgImgRepeat-setting" : "no-repeat",
+      "bgImgSize" : "auto",
+      "bgImgSize-setting" : "auto",
+      "bgImgUrl" : null,
+      "bgImgUrl-setting" : null,
+      "borderColor" : "#999999",
+      "borderColor-setting" : "#999999",
+      "borderRadius" : 8,
+      "borderRadius-setting" : 8,
+      "borderStyle" : "solid",
+      "borderStyle-setting" : "solid",
+      "borderThickness" : 0,
+      "borderThickness-setting" : 0,
+      "btnBgColor" : "#1b70f0",
+      "btnBgColor-setting" : "#1b70f0",
+      "btnBorderColor" : "#5d6169",
+      "btnBorderColor-setting" : "#5d6169",
+      "btnBorderRadius" : 4,
+      "btnBorderRadius-setting" : 4,
+      "btnBorderStyle" : "solid",
+      "btnBorderStyle-setting" : "solid",
+      "btnBorderThickness" : 0,
+      "btnBorderThickness-setting" : 0,
+      "btnDropShadow" : null,
+      "btnDropShadow-setting" : null,
+      "btnDropShadow-transparent" : false,
+      "btnFgColor" : "#ffffff",
+      "btnFgColor-setting" : "#ffffff",
+      "btnFontSize" : 12,
+      "btnFontSize-setting" : 12,
+      "btnFontStyle" : "normal",
+      "btnFontStyle-setting" : "normal",
+      "btnFontTypeface" : "inherit",
+      "btnFontTypeface-setting" : "inherit",
+      "btnFontWeight" : "bold",
+      "btnFontWeight-setting" : "bold",
+      "cardAccentColor" : "#ffffff",
+      "cardAccentColor-setting" : "#ffffff",
+      "cardColor" : "#111216",
+      "cardColor-setting" : "#111216",
+      "cmBgColor" : "#2770b3",
+      "cmBgColor-setting" : "#2770b3",
+      "cmFgColor" : "#ffffff",
+      "cmFgColor-setting" : "#ffffff",
+      "cmFontSize" : 14,
+      "cmFontSize-setting" : 14,
+      "cmFontStyle" : "normal",
+      "cmFontStyle-setting" : "normal",
+      "cmFontTypeface" : "inherit",
+      "cmFontTypeface-setting" : "inherit",
+      "cmFontWeight" : "normal",
+      "cmFontWeight-setting" : "normal",
+      "cmIcon" : "icon-more",
+      "cmIcon-setting" : "icon-more",
+      "dataDisplayColors" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataDisplayColors-setting" : [ "#3cbce1", "#996db8", "#86d557", "#ff9800", "#425b71", "#cc467c", "#01aa93", "#ffca28", "#f583a9", "#1c84d4", "#ff6767", "#4caf50" ],
+      "dataInputColor" : "#111216",
+      "dataInputColor-setting" : "#111216",
+      "fontSize" : 16,
+      "fontSize-setting" : 16,
+      "fontStyle" : "normal",
+      "fontStyle-setting" : "normal",
+      "fontTypeface" : "inherit",
+      "fontTypeface-setting" : "inherit",
+      "fontWeight" : "normal",
+      "fontWeight-setting" : "normal",
+      "foregroundColor" : "#ffffff",
+      "foregroundColor-setting" : "#ffffff",
+      "inputBorderColor" : "#5d6169",
+      "inputBorderColor-setting" : "#5d6169",
+      "inputBorderRadius" : 4,
+      "inputBorderRadius-setting" : 4,
+      "inputBorderStyle" : "solid",
+      "inputBorderStyle-setting" : "solid",
+      "inputBorderThickness" : 1,
+      "inputBorderThickness-setting" : 1,
+      "inputDropShadow" : null,
+      "inputDropShadow-setting" : null,
+      "inputDropShadow-transparent" : false,
+      "inputFgColor" : "#ffffff",
+      "inputFgColor-setting" : "#ffffff",
+      "inputFontSize" : 14,
+      "inputFontSize-setting" : 14,
+      "inputFontStyle" : "normal",
+      "inputFontStyle-setting" : "normal",
+      "inputFontTypeface" : "inherit",
+      "inputFontTypeface-setting" : "inherit",
+      "inputFontWeight" : "normal",
+      "inputFontWeight-setting" : "normal",
+      "label" : "Custom",
+      "labelFgColor" : "#ffffff",
+      "labelFgColor-setting" : "#ffffff",
+      "labelFontSize" : 16,
+      "labelFontSize-setting" : 16,
+      "labelFontStyle" : "normal",
+      "labelFontStyle-setting" : "normal",
+      "labelFontTypeface" : "inherit",
+      "labelFontTypeface-setting" : "inherit",
+      "labelFontWeight" : "bold",
+      "labelFontWeight-setting" : "bold",
+      "layoutBgColor" : "transparent",
+      "layoutBgColor-setting" : "transparent",
+      "layoutBorderColor" : "#5d6169",
+      "layoutBorderColor-setting" : "#5d6169",
+      "layoutBorderRadius" : 8,
+      "layoutBorderRadius-setting" : 8,
+      "layoutBorderStyle" : "solid",
+      "layoutBorderStyle-setting" : "solid",
+      "layoutBorderThickness" : 1,
+      "layoutBorderThickness-setting" : 1,
+      "layoutDropShadow" : null,
+      "layoutDropShadow-setting" : null,
+      "layoutDropShadow-transparent" : false,
+      "layoutFgColor" : "#ffffff",
+      "layoutFgColor-setting" : "#ffffff",
+      "layoutFontSize" : 16,
+      "layoutFontSize-setting" : 16,
+      "layoutFontStyle" : "normal",
+      "layoutFontStyle-setting" : "normal",
+      "layoutFontTypeface" : "inherit",
+      "layoutFontTypeface-setting" : "inherit",
+      "layoutFontWeight" : "bold",
+      "layoutFontWeight-setting" : "bold",
+      "name" : "custom",
+      "numberBgColor" : "#1a1a1b",
+      "numberBgColor-setting" : "#1a1a1b",
+      "numberBorderColor" : "#5d6169",
+      "numberBorderColor-setting" : "#5d6169",
+      "numberBorderRadius" : 4,
+      "numberBorderRadius-setting" : 4,
+      "numberBorderStyle" : "solid",
+      "numberBorderStyle-setting" : "solid",
+      "numberBorderThickness" : 1,
+      "numberBorderThickness-setting" : 1,
+      "numberDropShadow" : null,
+      "numberDropShadow-setting" : null,
+      "numberDropShadow-transparent" : false,
+      "numberFgColor" : "#ffffff",
+      "numberFgColor-setting" : "#ffffff",
+      "numberFontSize" : 48,
+      "numberFontSize-setting" : 48,
+      "numberFontStyle" : "normal",
+      "numberFontStyle-setting" : "normal",
+      "numberFontTypeface" : "inherit",
+      "numberFontTypeface-setting" : "inherit",
+      "numberFontWeight" : "normal",
+      "numberFontWeight-setting" : "normal",
+      "tableBorderColor" : "#5d6169",
+      "tableBorderColor-setting" : "#5d6169",
+      "tableBorderRadius" : 4,
+      "tableBorderRadius-setting" : 4,
+      "tableBorderStyle" : "solid",
+      "tableBorderStyle-setting" : "solid",
+      "tableBorderThickness" : 1,
+      "tableBorderThickness-setting" : 1,
+      "tableBtnBgColor" : "#1b70f0",
+      "tableBtnBgColor-setting" : "#1b70f0",
+      "tableBtnFgColor" : "#ffffff",
+      "tableBtnFgColor-setting" : "#ffffff",
+      "tableDropShadow" : null,
+      "tableDropShadow-setting" : null,
+      "tableDropShadow-transparent" : false,
+      "tableHeaderBgColor" : "#353a44",
+      "tableHeaderBgColor-setting" : "#353a44",
+      "tableHeaderFgColor" : "#f7f7f8",
+      "tableHeaderFgColor-setting" : "#f7f7f8",
+      "tableHeaderFontSize" : 14,
+      "tableHeaderFontSize-setting" : 14,
+      "tableHeaderFontStyle" : "normal",
+      "tableHeaderFontStyle-setting" : "normal",
+      "tableHeaderFontTypeface" : "inherit",
+      "tableHeaderFontTypeface-setting" : "inherit",
+      "tableHeaderFontWeight" : "bold",
+      "tableHeaderFontWeight-setting" : "bold",
+      "tableRowBgColor" : "#22252b",
+      "tableRowBgColor-setting" : "#22252b",
+      "tableRowFgColor" : "#ffffff",
+      "tableRowFgColor-setting" : "#ffffff",
+      "tableRowFontSize" : 14,
+      "tableRowFontSize-setting" : 14,
+      "tableRowFontStyle" : "normal",
+      "tableRowFontStyle-setting" : "normal",
+      "tableRowFontTypeface" : "inherit",
+      "tableRowFontTypeface-setting" : "inherit",
+      "tableRowFontWeight" : "normal",
+      "tableRowFontWeight-setting" : "normal",
+      "titleBarColor" : "#353a44",
+      "titleBarColor-setting" : "#353a44",
+      "titleForegroundColor" : "#f7f7f8",
+      "titleForegroundColor-setting" : "#f7f7f8",
+      "v" : 10
+    },
+    "v" : 5
+  },
+  "resourceBinding" : {
+    "requiredResources" : [ {
+      "resource" : "types",
+      "resourceId" : "jp.co.vantiq.incident_statuses"
+    }, {
+      "resource" : "types",
+      "resourceId" : "jp.co.vantiq.audit_logs"
+    }, {
+      "resource" : "services",
+      "resourceId" : "jp.co.vantiq.UIEventBridger"
+    }, {
+      "resource" : "types",
+      "resourceId" : "jp.co.vantiq.notifications"
+    } ]
+  },
+  "targetDevice" : "all",
+  "userList" : [ ],
+  "views" : {
+    "AuditLogs" : "RELOCATED to views/AuditLogs.json",
+    "IncidentDashboard" : "RELOCATED to views/IncidentDashboard.json",
+    "IncidentNotifications" : "RELOCATED to views/IncidentNotifications.json",
+    "Map" : "RELOCATED to views/Map.json",
+    "MultiAgentFlow" : "RELOCATED to views/MultiAgentFlow.json",
+    "Notifications" : "RELOCATED to views/Notifications.json",
+    "Start" : "RELOCATED to views/Start.json"
+  }
+}

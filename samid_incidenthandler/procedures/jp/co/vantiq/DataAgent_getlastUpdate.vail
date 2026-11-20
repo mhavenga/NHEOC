@@ -1,0 +1,4 @@
+package jp.co.vantiq
+global PROCEDURE DataAgent.getlastUpdate()
+
+ return lastUpdate

@@ -1,0 +1,5 @@
+PACKAGE jp.co.vantiq 
+global PROCEDURE ActionAgent.notifyTypeUpdate( newValue String)
+
+notifyType = newValue
+

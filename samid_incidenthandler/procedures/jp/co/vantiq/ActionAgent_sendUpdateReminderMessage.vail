@@ -1,0 +1,23 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.sendUpdateReminderMessage(
+	incidentID String REQUIRED,
+	translate	Boolean REQUIRED
+)
+
+
+var newSched = jp.co.vantiq.ActionAgent.updateScheduledEvents(incidentID)
+
+IF (newSched){
+	if (newSched.message.intervalIndex > 0){
+		
+		var incidentDatail = jp.co.vantiq.utils.getIncidentDetailFromID(incidentID)
+
+		var messageBody = "This is a friendly reminder to update incident "+incidentDatail.recordnumber
+
+		var notifyType  = "Reminder"
+
+
+		insert jp.co.vantiq.notifications(id: uuid(), incidentId: incidentID, messageBody: messageBody, createdAt: now(),
+										notificationType: "Reminder", status: "Received", metadata: incidentDatail)
+	}
+}

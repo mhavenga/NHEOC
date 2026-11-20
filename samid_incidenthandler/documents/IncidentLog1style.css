@@ -1,0 +1,630 @@
+/*
+.chatBubbleOther {
+	background-color: #1e6666
+}
+.chatBubbleOther::before{
+	background-color: #1e6666
+}
+*/
+
+#mhIncidentLog1Root, #mhIncidentLog1Root * {
+  box-sizing: border-box;
+}
+
+#mhIncidentLog1Root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.mh-incidentlog1__row-attention {
+	background: rgba(239,68,68,0.15);
+	border-left: 4px solid #ef4444;
+}
+
+.mh-incidentlog1__row-attention:hover{
+	background: rgba(239,68,68,0.25);
+}
+
+.mh-incidentlog1__row-attention {
+	animation: mhAttentionPulse 2s infinite; 
+}
+
+@keyframes mhAttentionPulse {
+	0% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+	70% { box-shadow: 0 0 0 3px rgba(239,68,68,0.7); }
+	100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}
+
+
+.mh-incidentlog1__row-btn {
+  padding: 6px 12px;
+  background: #60a5fa;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.mh-incidentlog1__row-btn:hover {
+  background: #3b82f6;
+}
+
+
+.mh-incidentlog1__row-btn--attention {
+  background: #ef4444;
+  color: white;
+  border: none;
+
+}
+
+.mh-incidentlog1__row-btn--attention:hover {
+  background: #dc2626;
+}
+
+
+#mhIncidentLog1Root .mh-incidentlog1__container {
+  max-width: 1800px;
+  margin: 0 auto;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__header {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #e2e8f0;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__title {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0;
+  color: #f1f5f9;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__title strong {
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__api-endpoint {
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+  color: #cbd5e1;
+  min-width: 350px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__api-endpoint:read-only {
+  opacity: 0.7;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__btn {
+  padding: 12px 24px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__btn--primary {
+  background: #60a5fa;
+  color: white;
+  border-color: #60a5fa;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__btn--primary:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__btn--secondary {
+  background: rgba(100, 116, 139, 0.3);
+  color: #e2e8f0;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__btn--secondary:hover {
+  background: rgba(100, 116, 139, 0.5);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__auto-refresh-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 12px;
+  background: rgba(100, 116, 139, 0.2);
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__auto-refresh-toggle:hover {
+  background: rgba(100, 116, 139, 0.3);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__auto-refresh-toggle input[type="checkbox"] {
+  cursor: pointer;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__auto-refresh-toggle span {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__filters {
+  display: flex;
+  gap: 15px;
+  padding: 20px 30px;
+  background: rgba(15, 23, 42, 0.4);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__filter-group select,
+#mhIncidentLog1Root .mh-incidentlog1__filter-group input[type="text"] {
+  padding: 10px 14px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+  min-width: 150px;
+  transition: border-color 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__filter-group select:focus,
+#mhIncidentLog1Root .mh-incidentlog1__filter-group input[type="text"]:focus {
+  outline: none;
+  border-color: #60a5fa;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 25px 30px;
+  background: rgba(15, 23, 42, 0.3);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-card {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 16px;
+  min-height: auto; 
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-label {
+  font-size: 14px;
+  line-height: 1.2;	
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-value {
+  font-size: 18px; 
+  line-height: 1.2;  	
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-value--open {
+  color: #f59e0b;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__stat-value--closed {
+  color: #10b981;
+}
+
+/* stronger table styling */
+#mhIncidentLog1Root .mh-incidentlog1__table-wrapper {
+  padding: 30px;
+  overflow-x: auto;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  background: rgba(30, 41, 59, 0.4) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  color: #e2e8f0 !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead th {
+  padding: 15px 12px !important;
+  text-align: left !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #cbd5e1 !important;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.2) !important;
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead th.mh-incidentlog1__sortable {
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: background 0.2s !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead th.mh-incidentlog1__sortable:hover {
+  background: rgba(30, 41, 59, 0.8) !important;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__sort-icon {
+  font-size: 10px;
+  opacity: 0.5;
+  margin-left: 4px;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead th.mh-incidentlog1__sortable--asc .mh-incidentlog1__sort-icon::before {
+  content: '↑';
+  opacity: 1;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table thead th.mh-incidentlog1__sortable--desc .mh-incidentlog1__sort-icon::before {
+  content: '↓';
+  opacity: 1;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table tbody tr {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1) !important;
+  transition: background 0.2s !important;
+  cursor: pointer !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table tbody tr:hover {
+  background: rgba(51, 65, 85, 0.4) !important;
+}
+
+#mhIncidentLog1Root table.mh-incidentlog1__table tbody td {
+  padding: 14px 12px !important;
+  font-size: 14px !important;
+  color: #e2e8f0 !important;
+  vertical-align: middle !important;
+  background: transparent !important;
+}
+
+@keyframes mhIncidentLog1HighlightFlash {
+  0%, 100% { background-color: transparent; }
+  50% { background-color: rgba(255, 215, 0, 0.3); }
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__cell-changed {
+  animation: mhIncidentLog1HighlightFlash 2s ease-in-out;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__status-badge,
+#mhIncidentLog1Root .mh-incidentlog1__level-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__status-badge--open {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__status-badge--closed {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__level-badge--critical {
+  background: rgba(220, 53, 69, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(220, 53, 69, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__level-badge--high {
+  background: rgba(253, 126, 20, 0.2);
+  color: #fb923c;
+  border: 1px solid rgba(253, 126, 20, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__level-badge--medium {
+  background: rgba(255, 193, 7, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(255, 193, 7, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__level-badge--low {
+  background: rgba(40, 167, 69, 0.2);
+  color: #4ade80;
+  border: 1px solid rgba(40, 167, 69, 0.4);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__casualties-high {
+  color: #f87171;
+  font-weight: 700;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__casualties-medium {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__casualties-low {
+  color: #4ade80;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 30px;
+  gap: 20px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(148, 163, 184, 0.2);
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: mhIncidentLog1Spin 1s linear infinite;
+}
+
+@keyframes mhIncidentLog1Spin {
+  to { transform: rotate(360deg); }
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__loading p {
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__error-message {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.4);
+  color: #f87171;
+  padding: 15px 30px;
+  margin: 20px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__modal-content {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  margin: 5% auto;
+  padding: 30px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  color: #e2e8f0;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__close {
+  color: #94a3b8;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  line-height: 1;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__close:hover,
+#mhIncidentLog1Root .mh-incidentlog1__close:focus {
+  color: #f87171;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__modal-content h2 {
+  margin-bottom: 20px;
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__detail-section {
+  margin-bottom: 25px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__detail-section h3 {
+  font-size: 16px;
+  color: #60a5fa;
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__log-field {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__log-field strong {
+  color: #60a5fa;
+  margin-right: 8px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__detail-json {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__collapsible-section {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 6px;
+  padding: 15px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__collapsible-header {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  background: rgba(51, 65, 85, 0.5);
+  border-radius: 6px 6px 0 0;
+  transition: background 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__collapsible-header:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__collapse-icon {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__collapsible-content {
+  margin-top: 10px;
+}
+
+#mhIncidentLog1Root .mh-incidentlog1__json-key { color: #9cdcfe; font-weight: 600; }
+#mhIncidentLog1Root .mh-incidentlog1__json-string { color: #ce9178; }
+#mhIncidentLog1Root .mh-incidentlog1__json-number { color: #b5cea8; }
+#mhIncidentLog1Root .mh-incidentlog1__json-boolean { color: #569cd6; font-weight: 600; }
+#mhIncidentLog1Root .mh-incidentlog1__json-null { color: #569cd6; font-style: italic; }
+
+@media (max-width: 768px) {
+  #mhIncidentLog1Root .mh-incidentlog1__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__header-controls {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__api-endpoint {
+    min-width: 100%;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__filter-group select,
+  #mhIncidentLog1Root .mh-incidentlog1__filter-group input[type="text"] {
+    width: 100%;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__stats {
+    grid-template-columns: 1fr;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__table-wrapper {
+    padding: 15px;
+  }
+
+  #mhIncidentLog1Root .mh-incidentlog1__modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}

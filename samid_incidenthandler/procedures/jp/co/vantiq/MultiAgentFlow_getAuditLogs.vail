@@ -1,0 +1,11 @@
+package jp.co.vantiq
+stateless PROCEDURE MultiAgentFlow.getAuditLogs(Incident)
+
+for (alog in select * from jp.co.vantiq.audit_logs where incident_id == Incident
+order by created_at asc){
+//	log.info(alog.created_at)
+	PUBLISH alog TO SERVICE EVENT  "jp.co.vantiq.MultiAgentFlow/auditLogData"
+
+//	sleep(3000)
+	
+}

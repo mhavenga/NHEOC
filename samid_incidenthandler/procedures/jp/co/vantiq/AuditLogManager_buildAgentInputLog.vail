@@ -1,0 +1,14 @@
+package jp.co.vantiq
+stateless PROCEDURE AuditLogManager.buildAgentInputLog(
+	incidentId    String REQUIRED, 
+	agentName     String REQUIRED, 
+	inputSnapshot Any    REQUIRED
+): Object
+var log = {
+	"incident_id"   : incidentId,
+	"event_type"    : "agent",
+	"agent_name"    : agentName,
+	"input_snapshot": inputSnapshot,
+	"created_at"    : now()
+}
+return log

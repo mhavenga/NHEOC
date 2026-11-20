@@ -1,0 +1,21 @@
+package jp.co.vantiq
+stateless PROCEDURE chatService.requestICSActivation(input String)
+
+log.info(input)
+
+var Message = "" 
+
+if (input ==""){
+	Message = "ICS Activation is requested\n\n" 
+	Message += "Suggested operations\n\n"
+	Message += "Level 3 (Full ICS Activation)\n\n"
+	Message += "Do you want me to send Activation from ICS members? \n\n"
+}else if (input == "yes") {
+
+	Message = "E-mails / SMS messages sent to ICS members.\n"
+	Message += "Do you want me to suggest Response Objectives?\n"	
+	
+	
+}
+
+return Message

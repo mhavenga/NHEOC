@@ -1,0 +1,12 @@
+package jp.co.vantiq
+stateless PROCEDURE ActionAgent.testDateFormat(message)
+
+
+var messageString  = replace(message,"\<br>\<br>Do you want to send this as Email notification\?\<br>","")
+
+
+//var theDate = now().plusMillis(3 hours)
+//var dateString =  toString(theDate)
+
+
+//return substr(replace(dateString, "T", " "),0,19)

@@ -1,0 +1,38 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.testData()
+
+var hospitals = SELECT FROM hospital_beds WHERE hospital == "مستشفى النور التخصصي "
+
+return hospitals
+//var dateString = "2026-04-26T04:32:28.000+0000"
+//var dateString = "2026-04-26T04:32:28.000Z"
+
+//return toDate(substr(dateString,0,19)+"z")
+
+/*
+var hospitals = SELECT FROM jp.co.vantiq.region_beds 
+	WHERE region == "الرياض"
+	//and networktype == "MOH"
+
+return hospitals
+/*
+
+var hospitals = SELECT FROM region_beds 
+		where (region == "الرياض"
+			or alias == "الرياض")
+		//WHERE region == "الريـاض"
+		//and networktype == "MOH"
+*/
+
+//update jp.co.vantiq.region_beds(alias: "الرياض") where region == "الريـاض"
+
+
+
+
+/*
+ SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT Region, Network_TypeEN, status,  count(*) as beds FROM [NHEOC-AI02].[dbo].[BedStatus] "+ 
+		"where Region = N'الرياض'"+	
+		"group by Region, Network_TypeEN, status"
+		
+*/

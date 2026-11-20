@@ -1,0 +1,220 @@
+{
+  "active" : false,
+  "ars_properties" : {
+    "filterPrivateGenerated" : false,
+    "filterPublicGenerated" : false,
+    "fragmentList" : [ ]
+  },
+  "ars_relationships" : [ ],
+  "description" : null,
+  "eventTypes" : {
+    "diagnosticAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.OrchestratorAgent.DiagnosticAgentResultReviewer/DiagnosticAgentResult",
+      "isReliable" : false
+    },
+    "investigationAgentResult" : {
+      "direction" : "INBOUND",
+      "implementingResource" : "/collaborationtypes/jp.co.vantiq.OrchestratorAgent.InvestigationAgentResultReviewer/InvestigationAgentResult",
+      "isReliable" : false
+    }
+  },
+  "globalType" : null,
+  "interface" : [ {
+    "name" : "reviewDiagnosticAgentResult",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "diagnosisResult",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "reviewInvestigationAgentResult",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "investigationResult",
+      "required" : true,
+      "type" : "Object"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "updateIncidentLevel",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "suggestedLevel",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentLevel",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "patientRatio",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "notes",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  }, {
+    "name" : "updateIncidentStatus",
+    "parameters" : [ {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentId",
+      "required" : true,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "occurredAt",
+      "required" : false,
+      "type" : "DateTime"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentType",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentSubType",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentLocation",
+      "required" : false,
+      "type" : "GeoJSON"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "incidentLevel",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "casualties",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "updateAt",
+      "required" : false,
+      "type" : "DateTime"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "isOpen",
+      "required" : false,
+      "type" : "Boolean"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "hospital_id",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "hospitals",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "facility_type",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "region",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "status",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "recordnumber",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "IsFacility",
+      "required" : false,
+      "type" : "Boolean"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "HealthCareFacilityName",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "IncidentLocationType",
+      "required" : false,
+      "type" : "String"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "patientRatio",
+      "required" : false,
+      "type" : "Integer"
+    }, {
+      "description" : null,
+      "multi" : false,
+      "name" : "employeePosition",
+      "required" : false,
+      "type" : "String"
+    } ],
+    "returnType" : {
+      "multi" : false,
+      "type" : "Object"
+    }
+  } ],
+  "internalEventHandlers" : [ ],
+  "isAgent" : false,
+  "name" : "jp.co.vantiq.OrchestratorAgent",
+  "partitionedType" : null,
+  "replicationFactor" : 1,
+  "scheduledProcedures" : { }
+}

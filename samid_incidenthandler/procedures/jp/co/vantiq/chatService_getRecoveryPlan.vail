@@ -1,0 +1,22 @@
+package jp.co.vantiq
+stateless PROCEDURE chatService.getRecoveryPlan(inType, inSubType)
+/*
+var qResult = select one plan from jp.co.vantiq.incidentActioPlan
+where type == inType
+and subtype == inSubType
+
+if (qResult == null){
+	qResult = {}
+	qResult.plan = "No plan available for this incident type"
+}
+
+
+*/
+
+var qResult = {}
+	qResult.plan = "Recovery objectives : \n"
+	qResult.plan += "1. Resume normal ICU and ER operations and verify the functionality of all critical medical equipment within 24 hours \n"
+	qResult.plan += "2. Complete root cause analysis and corrective maintenance for the failed electrical and backup generator systems within 30 days \n"
+	qResult.plan += "3. Strengthen hospital electrical resilience through system upgrades, preventive maintenance, and staff training within 12 months to minimize recurrence of similar incidents. \n"
+
+return qResult

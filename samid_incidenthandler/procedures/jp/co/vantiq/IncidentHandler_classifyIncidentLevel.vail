@@ -1,0 +1,48 @@
+package jp.co.vantiq
+stateless PROCEDURE IncidentHandler.classifyIncidentLevel(
+	caseNumber  Integer REQUIRED, 
+	casualties  Integer REQUIRED, 
+	erAvailable Integer REQUIRED,
+	facility_type String REQUIRED,
+	IncidentLocationType String REQUIRED
+
+): Object
+
+if (erAvailable == 0){
+	erAvailable = 1000
+}
+var patientRatio = casualties / erAvailable * 100
+var level = 1 
+var returnValue = {}
+
+//if (IncidentLocationType == "Inside the Facility - داخل المنشأة" || casualties == 0){
+if (IncidentLocationType == "Outside the Facility - خارج المنشأة"){
+	level = 3
+}
+else if (casualties == 0){
+	level = 1
+}
+else if caseNumber == 1 {
+    if patientRatio > 100 { level = 5 }
+    else if patientRatio >= 96 { level = 4 }
+    else if patientRatio >= 91 { level = 3 }
+    else if patientRatio >= 86 { level = 2 }
+    else if patientRatio >= 80 { level = 1 }
+	else { level = 1 }
+} else if caseNumber == 2 {
+    if patientRatio >= 96 { level = 5 }
+    else if patientRatio >= 91 { level = 4 }
+    else if patientRatio >= 86 { level = 3 }
+    else if patientRatio >= 80 { level = 2 }
+    else { level = 1 }
+} else if caseNumber == 3 {
+    if patientRatio >= 91 { level = 5 }
+    else if patientRatio >= 86 { level = 4 }
+    else if patientRatio >= 80 { level = 3 }
+    else if patientRatio >= 70 { level = 2 }
+    else { level = 1 }
+}
+
+returnValue.level = level
+returnValue.patientRatio = toInteger(patientRatio)
+return returnValue

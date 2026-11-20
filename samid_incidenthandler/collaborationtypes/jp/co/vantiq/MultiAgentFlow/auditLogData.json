@@ -1,0 +1,88 @@
+{
+  "active" : true,
+  "ars_properties" : {
+    "dataVersion" : 5,
+    "graph" : {
+      "coordinates" : {
+        "0d0f3365-76de-4278-bc00-7ac215182a6f" : {
+          "x" : 0,
+          "y" : 0
+        },
+        "14140fc4-4b91-4790-9db5-dfbde5dcffb2" : {
+          "x" : 0.3370799538081135,
+          "y" : 137.75272304866448
+        },
+        "c6272178-f2a0-4b34-8e08-faabead75123" : {
+          "x" : -0.33707995380811395,
+          "y" : 60.11228272532128
+        }
+      },
+      "lastZoomRequest" : 0,
+      "scale" : 2.9666552065841922,
+      "translate" : [ 722.4326927385946, 120.32890859700782 ]
+    },
+    "groupSettings" : {
+      "appGroupOpenHash" : {
+        "actions" : true,
+        "filters" : true,
+        "flowControl" : true
+      },
+      "ctGroupOpenHash" : {
+        "actions" : true,
+        "mobile" : true
+      },
+      "ctServiceOpen" : false,
+      "serviceGroupOpenHash" : { }
+    },
+    "isHidden" : false,
+    "paletteWidth" : 170,
+    "propertyWidth" : 280
+  },
+  "ars_relationships" : [ ],
+  "assembly" : {
+    "Delay5s" : {
+      "configuration" : {
+        "childStreams" : [ "LogStream" ],
+        "delay" : "5 seconds",
+        "imports" : null,
+        "parentStreams" : [ "EventStream" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "Delay5s",
+      "pattern" : "Delay",
+      "patternVersion" : 5,
+      "uuid" : "c6272178-f2a0-4b34-8e08-faabead75123"
+    },
+    "EventStream" : {
+      "configuration" : {
+        "childStreams" : [ "Delay5s" ],
+        "eventTypeName" : "auditLogData",
+        "inboundResource" : "services",
+        "inboundResourceId" : "jp.co.vantiq.MultiAgentFlow",
+        "parentStreams" : [ ]
+      },
+      "downstreamReferences" : { },
+      "name" : "EventStream",
+      "pattern" : "EventStream",
+      "patternVersion" : 5,
+      "uuid" : "0d0f3365-76de-4278-bc00-7ac215182a6f"
+    },
+    "LogStream" : {
+      "configuration" : {
+        "level" : null,
+        "parentStreams" : [ "Delay5s" ]
+      },
+      "downstreamReferences" : { },
+      "name" : "LogStream",
+      "pattern" : "LogStream",
+      "patternVersion" : 2,
+      "uuid" : "14140fc4-4b91-4790-9db5-dfbde5dcffb2"
+    }
+  },
+  "contextualizedAssembly" : { },
+  "disableBadging" : false,
+  "isComponent" : false,
+  "isEventHandler" : true,
+  "keyTypes" : [ "collaborations" ],
+  "name" : "jp.co.vantiq.MultiAgentFlow.auditLogData"
+}

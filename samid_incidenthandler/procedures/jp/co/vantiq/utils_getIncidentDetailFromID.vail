@@ -1,0 +1,5 @@
+package jp.co.vantiq
+stateless PROCEDURE utils.getIncidentDetailFromID(In_incident_id)
+
+select one * from jp.co.vantiq.incident_statuses 
+	where incident_id == In_incident_id

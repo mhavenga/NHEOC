@@ -1,0 +1,8 @@
+package jp.co.vantiq
+stateless PROCEDURE InvestigationAgent.getRegionBeds(inRegion String)
+
+
+select  region, regionEN, available = sum(available), occupied = sum(occupied) from jp.co.vantiq.hospital_beds
+where region == inRegion
+group by region, regionEN
+

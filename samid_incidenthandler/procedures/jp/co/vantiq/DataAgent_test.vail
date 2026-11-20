@@ -1,0 +1,65 @@
+package jp.co.vantiq
+stateless PROCEDURE DataAgent.test()
+
+/*
+delete jp.co.vantiq.incident_statuses
+where incident_id == "94081"
+
+delete jp.co.vantiq.notifications
+where incidentId == "94081"
+
+select * from jp.co.vantiq.notifications
+where incidentId == "93833"
+//and notificationType !=  "New"
+*/
+
+update jp.co.vantiq.incident_statuses (ActionRequired = "Activate", suggested_level = 1, response_level = 1)
+ where incident_id == "94073"
+
+
+update jp.co.vantiq.incident_statuses (activated = false)
+ where incident_id == "94073"
+
+delete jp.co.vantiq.notifications
+where incidentId == "94073"
+and notificationType !=  "New"
+
+
+/*
+delete jp.co.vantiq.notifications
+where incidentId == "93833"
+and notificationType !=  "New"
+*/
+
+/*
+delete jp.co.vantiq.notifications
+where messageBody regex "^This is a friendly reminder to update incident*" 
+*/
+//var Hospitals = "[{\"id\":\"1810\",\"name\":\"مستشفى نفي العام \"}]"
+
+//var hospObj = parse(Hospitals)
+//return hospObj[0].id
+
+//update jp.co.vantiq.region_beds(alias: "الدمام") where region == "المنطقة الشرقية"		
+/*
+
+  SELECT one * FROM SOURCE NHEOC_SQL AS results WITH
+    query: "SELECT Region, RegionEN, Hospital_Name_ARA, Hospital_Name_ENU, status,  count(*) as beds FROM [NHEOC-AI02].[dbo].[BedStatus] "+ 
+			"where General_Sector_ENU = 'Emergency Beds' " +
+  			"group by Region, RegionEN, Hospital_Name_ARA, Hospital_Name_ENU, status"
+			
+*/
+/*
+select * from jp.co.vantiq.incident_statuses
+where recordnumber == "04-26-00578"
+*/
+
+//delete jp.co.vantiq.incident_statuses where dataid == "92267"
+/*
+var qResult = select * from jp.co.vantiq.incident_statuses where evaluatedLevel == null
+
+for (incident in  qResult){
+	update jp.co.vantiq.incident_statuses(evaluatedLevel: incident.suggested_level) where incident_id == incident.incident_id
+}
+
+*/
